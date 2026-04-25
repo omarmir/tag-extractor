@@ -1,4 +1,4 @@
-import { buildTagText, rankTagsByKeywordOverlap, scoreLexicalOverlap } from './lexical'
+import { applyNegationPenalty, buildTagText, rankTagsByKeywordOverlap, scoreLexicalOverlap } from './lexical'
 import { resolveTagExtractorConfig } from './defaults'
 import type { DynamicTagSuggestion, TagDefinition, TagExtractionInput, TagExtractionResult, TagExtractorScorerConfig, TagSuggestion } from './types'
 
@@ -52,22 +52,26 @@ export async function scoreTagSuggestions(
       mergedConfig.maxSuggestions,
       mergedConfig.exactAliasBoost,
       locale,
+      mergedConfig.negationPenalty,
+      mergedConfig.negationWindow,
     ).filter((item) => item.score >= mergedConfig.minScore)
   }
 
   const textEmbedding = await embed(text)
   const scored = await Promise.all(tags.map(async (tag) => {
     const semanticScore = cosineSimilarity(textEmbedding, await embed(buildTagText(tag, locale)))
-    const lexical = scoreLexicalOverlap(text, tag, mergedConfig.exactAliasBoost, locale)
+    const lexical = scoreLexicalOverlap(text, tag, mergedConfig.exactAliasBoost, locale, mergedConfig.negationWindow)
+    const rawScore = Math.min(
+      1,
+      (semanticScore * mergedConfig.semanticWeight) + (lexical.lexicalScore * mergedConfig.lexicalWeight),
+    )
     return {
       key: tag.key,
       semanticScore,
       lexicalScore: lexical.lexicalScore,
       exactAliasMatches: lexical.exactAliasMatches,
-      score: Math.min(
-        1,
-        (semanticScore * mergedConfig.semanticWeight) + (lexical.lexicalScore * mergedConfig.lexicalWeight),
-      ),
+      negatedTermMatches: lexical.negatedTermMatches,
+      score: applyNegationPenalty(rawScore, lexical.negatedTermMatches, mergedConfig.negationPenalty),
     }
   }))
 

@@ -6,6 +6,10 @@ export type ModelCandidate = {
   dynamicModelId?: string
   dtype: 'q8' | 'fp32'
   estimatedAssetMb: number
+  benchmarkConfig?: {
+    minScore?: number
+    maxSuggestions?: number
+  }
   notes: string
 }
 
@@ -26,7 +30,11 @@ export const MODEL_CANDIDATES: ModelCandidate[] = [
     modelId: 'Xenova/paraphrase-MiniLM-L3-v2',
     dtype: 'q8',
     estimatedAssetMb: 18,
-    notes: 'Smaller MiniLM variant for low-latency browser use.',
+    benchmarkConfig: {
+      minScore: 0.2,
+      maxSuggestions: 2,
+    },
+    notes: 'Smaller MiniLM variant for low-latency browser use. A corpus-wide sweep selected top-2 fixed suggestions for the best F1 balance.',
   },
   {
     id: 'all-minilm-l12-v2-q8',

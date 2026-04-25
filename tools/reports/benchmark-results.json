@@ -215,8 +215,7 @@
           "community-benefit"
         ],
         "predictedTags": [
-          "arts-culture",
-          "health-services"
+          "arts-culture"
         ],
         "predictedDynamicTags": [
           "weekend music festival",
@@ -228,8 +227,7 @@
         ],
         "truePositives": [],
         "falsePositives": [
-          "arts-culture",
-          "health-services"
+          "arts-culture"
         ],
         "falseNegatives": [],
         "dynamicHits": [],
@@ -249,8 +247,7 @@
           "community-benefit"
         ],
         "predictedTags": [
-          "arts-culture",
-          "health-services"
+          "arts-culture"
         ],
         "predictedDynamicTags": [
           "weekend music festival",
@@ -262,8 +259,7 @@
         ],
         "truePositives": [],
         "falsePositives": [
-          "arts-culture",
-          "health-services"
+          "arts-culture"
         ],
         "falseNegatives": [],
         "dynamicHits": [],
@@ -1483,8 +1479,7 @@
         "community-benefit"
       ],
       "predictedTags": [
-        "arts-culture",
-        "health-services"
+        "arts-culture"
       ],
       "predictedDynamicTags": [
         "weekend music festival",
@@ -1496,8 +1491,7 @@
       ],
       "truePositives": [],
       "falsePositives": [
-        "arts-culture",
-        "health-services"
+        "arts-culture"
       ],
       "falseNegatives": [],
       "dynamicHits": [],
@@ -1517,8 +1511,7 @@
         "community-benefit"
       ],
       "predictedTags": [
-        "arts-culture",
-        "health-services"
+        "arts-culture"
       ],
       "predictedDynamicTags": [
         "weekend music festival",
@@ -1530,8 +1523,7 @@
       ],
       "truePositives": [],
       "falsePositives": [
-        "arts-culture",
-        "health-services"
+        "arts-culture"
       ],
       "falseNegatives": [],
       "dynamicHits": [],
@@ -4080,8 +4072,8 @@
         "capacity-building"
       ],
       "predictedTags": [
-        "research-evaluation",
-        "food-security"
+        "food-security",
+        "research-evaluation"
       ],
       "predictedDynamicTags": [
         "buys kitchen freezers",
@@ -4093,8 +4085,8 @@
       ],
       "truePositives": [],
       "falsePositives": [
-        "research-evaluation",
-        "food-security"
+        "food-security",
+        "research-evaluation"
       ],
       "falseNegatives": [],
       "dynamicHits": [],
@@ -4114,8 +4106,8 @@
         "capacity-building"
       ],
       "predictedTags": [
-        "research-evaluation",
-        "food-security"
+        "food-security",
+        "research-evaluation"
       ],
       "predictedDynamicTags": [
         "buys kitchen freezers",
@@ -4127,8 +4119,8 @@
       ],
       "truePositives": [],
       "falsePositives": [
-        "research-evaluation",
-        "food-security"
+        "food-security",
+        "research-evaluation"
       ],
       "falseNegatives": [],
       "dynamicHits": [],
@@ -4510,8 +4502,8 @@
         "community-benefit"
       ],
       "predictedTags": [
-        "arts-culture",
-        "digital-access"
+        "digital-access",
+        "arts-culture"
       ],
       "predictedDynamicTags": [
         "broadband installation remote",
@@ -4523,8 +4515,8 @@
       ],
       "truePositives": [],
       "falsePositives": [
-        "arts-culture",
-        "digital-access"
+        "digital-access",
+        "arts-culture"
       ],
       "falseNegatives": [],
       "dynamicHits": [],
@@ -4544,8 +4536,8 @@
         "community-benefit"
       ],
       "predictedTags": [
-        "arts-culture",
-        "digital-access"
+        "digital-access",
+        "arts-culture"
       ],
       "predictedDynamicTags": [
         "broadband installation remote",
@@ -4557,8 +4549,8 @@
       ],
       "truePositives": [],
       "falsePositives": [
-        "arts-culture",
-        "digital-access"
+        "digital-access",
+        "arts-culture"
       ],
       "falseNegatives": [],
       "dynamicHits": [],
@@ -6208,8 +6200,8 @@
       ],
       "predictedTags": [
         "digital-access",
-        "housing-support",
-        "public-safety"
+        "public-safety",
+        "housing-support"
       ],
       "predictedDynamicTags": [
         "digital literacy classes",
@@ -6222,8 +6214,8 @@
       "truePositives": [],
       "falsePositives": [
         "digital-access",
-        "housing-support",
-        "public-safety"
+        "public-safety",
+        "housing-support"
       ],
       "falseNegatives": [],
       "dynamicHits": [],
@@ -6244,8 +6236,8 @@
       ],
       "predictedTags": [
         "digital-access",
-        "housing-support",
-        "public-safety"
+        "public-safety",
+        "housing-support"
       ],
       "predictedDynamicTags": [
         "digital literacy classes",
@@ -6258,8 +6250,8 @@
       "truePositives": [],
       "falsePositives": [
         "digital-access",
-        "housing-support",
-        "public-safety"
+        "public-safety",
+        "housing-support"
       ],
       "falseNegatives": [],
       "dynamicHits": [],
@@ -7112,8 +7104,8 @@
         "community-benefit"
       ],
       "predictedTags": [
-        "digital-access",
-        "housing-support"
+        "housing-support",
+        "digital-access"
       ],
       "predictedDynamicTags": [
         "pays emergency shelter",
@@ -7125,8 +7117,8 @@
       ],
       "truePositives": [],
       "falsePositives": [
-        "digital-access",
-        "housing-support"
+        "housing-support",
+        "digital-access"
       ],
       "falseNegatives": [],
       "dynamicHits": [],
@@ -7146,8 +7138,8 @@
         "community-benefit"
       ],
       "predictedTags": [
-        "digital-access",
-        "housing-support"
+        "housing-support",
+        "digital-access"
       ],
       "predictedDynamicTags": [
         "pays emergency shelter",
@@ -7159,8 +7151,8 @@
       ],
       "truePositives": [],
       "falsePositives": [
-        "digital-access",
-        "housing-support"
+        "housing-support",
+        "digital-access"
       ],
       "falseNegatives": [],
       "dynamicHits": [],
@@ -8417,8 +8409,7 @@
         "health-services"
       ],
       "predictedTags": [
-        "digital-access",
-        "health-services"
+        "digital-access"
       ],
       "predictedDynamicTags": [
         "installs broadband towers",
@@ -8430,8 +8421,7 @@
       ],
       "truePositives": [],
       "falsePositives": [
-        "digital-access",
-        "health-services"
+        "digital-access"
       ],
       "falseNegatives": [],
       "dynamicHits": [],
@@ -8451,8 +8441,7 @@
         "health-services"
       ],
       "predictedTags": [
-        "digital-access",
-        "health-services"
+        "digital-access"
       ],
       "predictedDynamicTags": [
         "installs broadband towers",
@@ -8464,8 +8453,7 @@
       ],
       "truePositives": [],
       "falsePositives": [
-        "digital-access",
-        "health-services"
+        "digital-access"
       ],
       "falseNegatives": [],
       "dynamicHits": [],
@@ -10142,9 +10130,9 @@
         "research-evaluation"
       ],
       "predictedTags": [
+        "housing-support",
         "digital-access",
-        "research-evaluation",
-        "housing-support"
+        "research-evaluation"
       ],
       "predictedDynamicTags": [
         "renovates shelter kitchen",
@@ -10156,9 +10144,9 @@
       ],
       "truePositives": [],
       "falsePositives": [
+        "housing-support",
         "digital-access",
-        "research-evaluation",
-        "housing-support"
+        "research-evaluation"
       ],
       "falseNegatives": [],
       "dynamicHits": [],
@@ -10178,9 +10166,9 @@
         "research-evaluation"
       ],
       "predictedTags": [
+        "housing-support",
         "digital-access",
-        "research-evaluation",
-        "housing-support"
+        "research-evaluation"
       ],
       "predictedDynamicTags": [
         "renovates shelter kitchen",
@@ -10192,9 +10180,9 @@
       ],
       "truePositives": [],
       "falsePositives": [
+        "housing-support",
         "digital-access",
-        "research-evaluation",
-        "housing-support"
+        "research-evaluation"
       ],
       "falseNegatives": [],
       "dynamicHits": [],
@@ -11907,8 +11895,8 @@
         "public-safety"
       ],
       "predictedTags": [
-        "public-safety",
-        "workforce-development"
+        "workforce-development",
+        "public-safety"
       ],
       "predictedDynamicTags": [
         "apprenticeship mentors climate",
@@ -11920,8 +11908,8 @@
       ],
       "truePositives": [],
       "falsePositives": [
-        "public-safety",
-        "workforce-development"
+        "workforce-development",
+        "public-safety"
       ],
       "falseNegatives": [],
       "dynamicHits": [],
@@ -11941,8 +11929,8 @@
         "public-safety"
       ],
       "predictedTags": [
-        "public-safety",
-        "workforce-development"
+        "workforce-development",
+        "public-safety"
       ],
       "predictedDynamicTags": [
         "apprenticeship mentors climate",
@@ -11954,8 +11942,8 @@
       ],
       "truePositives": [],
       "falsePositives": [
-        "public-safety",
-        "workforce-development"
+        "workforce-development",
+        "public-safety"
       ],
       "falseNegatives": [],
       "dynamicHits": [],

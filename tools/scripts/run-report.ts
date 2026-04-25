@@ -58,14 +58,17 @@ async function runModelBakeoff() {
   const summaries = []
 
   for (const candidate of candidates) {
+    const benchmarkConfig = {
+      minScore: candidate.benchmarkConfig?.minScore ?? 0.2,
+      maxSuggestions: candidate.benchmarkConfig?.maxSuggestions ?? 4,
+    }
     const extractor = candidate.strategy === 'dual-model'
       ? createDualModelTagExtractor({
           predefinedModelId: candidate.predefinedModelId,
           dynamicModelId: candidate.dynamicModelId,
           predefinedDtype: candidate.dtype,
           dynamicDtype: candidate.dtype,
-          minScore: 0.2,
-          maxSuggestions: 4,
+          ...benchmarkConfig,
           modelSource: {
             mode: 'huggingface',
             useBrowserCache: false,
@@ -74,8 +77,7 @@ async function runModelBakeoff() {
       : createTransformersTagExtractor({
           modelId: candidate.modelId,
           dtype: candidate.dtype,
-          minScore: 0.2,
-          maxSuggestions: 4,
+          ...benchmarkConfig,
           modelSource: {
             mode: 'huggingface',
             useBrowserCache: false,

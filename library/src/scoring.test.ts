@@ -51,6 +51,24 @@ describe('tag scoring', () => {
     expect(result[0]?.score).toBeGreaterThan(0)
   })
 
+  it('penalizes negated fixed-tag evidence generically', async () => {
+    const result = await scoreTagSuggestions(
+      {
+        text: 'The project has no training, coaching, or skills development component.',
+        tags,
+      },
+      resolveTagExtractorConfig({
+        minScore: 0,
+        negationPenalty: 0.4,
+      }),
+      async () => [1, 0],
+    )
+
+    const capacityBuilding = result.find((item) => item.key === 'capacity-building')
+    expect(capacityBuilding?.negatedTermMatches).toContain('training')
+    expect(capacityBuilding?.score).toBeLessThan(capacityBuilding?.semanticScore ?? 0)
+  })
+
   it('extracts dynamic candidate tags without a predefined taxonomy', async () => {
     const result = await extractTags({
       text: 'The program provides solar training, solar installation coaching, and community retrofit planning.',

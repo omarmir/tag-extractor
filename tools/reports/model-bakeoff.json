@@ -12,80 +12,12 @@
       "status": "completed",
       "summary": {
         "caseCount": 300,
-        "meanPrecision": 0.383888888888889,
-        "meanRecall": 0.7016666666666667,
-        "meanF1": 0.48899999999999993,
+        "meanPrecision": 0.39055555555555566,
+        "meanRecall": 0.7083333333333334,
+        "meanF1": 0.49566666666666653,
         "meanDynamicRecall": 0.7588888888888886,
-        "exactMatchRate": 0.016666666666666666,
+        "exactMatchRate": 0.023333333333333334,
         "topMisses": [
-          {
-            "id": "rural-training-8",
-            "text": "The proposal discusses repainting office walls and replacing chairs without any participant training or employment outcomes. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "capacity-building",
-              "workforce-development"
-            ],
-            "predictedTags": [
-              "workforce-development",
-              "capacity-building"
-            ],
-            "predictedDynamicTags": [
-              "discusses repainting office",
-              "outcomes budget narrative",
-              "budget narrative mostly",
-              "budget narrative",
-              "office walls",
-              "office walls replacing"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "workforce-development",
-              "capacity-building"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "rural-training-9",
-            "text": "The proposal discusses repainting office walls and replacing chairs without any participant training or employment outcomes. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "capacity-building",
-              "workforce-development"
-            ],
-            "predictedTags": [
-              "workforce-development",
-              "capacity-building"
-            ],
-            "predictedDynamicTags": [
-              "discusses repainting office",
-              "outcomes budget narrative",
-              "budget narrative mostly",
-              "budget narrative",
-              "office walls",
-              "office walls replacing"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "workforce-development",
-              "capacity-building"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
           {
             "id": "clinic-navigation-8",
             "text": "The agreement funds a weekend music festival and does not mention health services or resident care. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
@@ -97,7 +29,6 @@
             ],
             "predictedTags": [
               "arts-culture",
-              "health-services",
               "food-security"
             ],
             "predictedDynamicTags": [
@@ -111,7 +42,6 @@
             "truePositives": [],
             "falsePositives": [
               "arts-culture",
-              "health-services",
               "food-security"
             ],
             "falseNegatives": [],
@@ -133,7 +63,6 @@
             ],
             "predictedTags": [
               "arts-culture",
-              "health-services",
               "food-security"
             ],
             "predictedDynamicTags": [
@@ -147,7 +76,6 @@
             "truePositives": [],
             "falsePositives": [
               "arts-culture",
-              "health-services",
               "food-security"
             ],
             "falseNegatives": [],
@@ -168,10 +96,10 @@
               "infrastructure"
             ],
             "predictedTags": [
-              "infrastructure",
-              "housing-support",
               "environmental-sustainability",
-              "community-benefit"
+              "community-benefit",
+              "food-security",
+              "arts-culture"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -183,10 +111,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "infrastructure",
-              "housing-support",
               "environmental-sustainability",
-              "community-benefit"
+              "community-benefit",
+              "food-security",
+              "arts-culture"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -206,10 +134,10 @@
               "infrastructure"
             ],
             "predictedTags": [
-              "infrastructure",
-              "housing-support",
               "environmental-sustainability",
-              "community-benefit"
+              "community-benefit",
+              "food-security",
+              "arts-culture"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -221,10 +149,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "infrastructure",
-              "housing-support",
               "environmental-sustainability",
-              "community-benefit"
+              "community-benefit",
+              "food-security",
+              "arts-culture"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -244,7 +172,6 @@
               "community-benefit"
             ],
             "predictedTags": [
-              "food-security",
               "arts-culture"
             ],
             "predictedDynamicTags": [
@@ -257,7 +184,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "food-security",
               "arts-culture"
             ],
             "falseNegatives": [],
@@ -278,7 +204,6 @@
               "community-benefit"
             ],
             "predictedTags": [
-              "food-security",
               "arts-culture"
             ],
             "predictedDynamicTags": [
@@ -291,7 +216,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "food-security",
               "arts-culture"
             ],
             "falseNegatives": [],
@@ -312,8 +236,6 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "digital-access",
-              "capacity-building",
               "research-evaluation",
               "infrastructure"
             ],
@@ -327,8 +249,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "digital-access",
-              "capacity-building",
               "research-evaluation",
               "infrastructure"
             ],
@@ -350,8 +270,6 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "digital-access",
-              "capacity-building",
               "research-evaluation",
               "infrastructure"
             ],
@@ -365,8 +283,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "digital-access",
-              "capacity-building",
               "research-evaluation",
               "infrastructure"
             ],
@@ -388,7 +304,6 @@
               "infrastructure"
             ],
             "predictedTags": [
-              "environmental-sustainability",
               "infrastructure",
               "food-security",
               "arts-culture"
@@ -403,7 +318,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "environmental-sustainability",
               "infrastructure",
               "food-security",
               "arts-culture"
@@ -426,7 +340,6 @@
               "infrastructure"
             ],
             "predictedTags": [
-              "environmental-sustainability",
               "infrastructure",
               "food-security",
               "arts-culture"
@@ -441,7 +354,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "environmental-sustainability",
               "infrastructure",
               "food-security",
               "arts-culture"
@@ -464,7 +376,6 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "public-safety",
               "food-security"
             ],
             "predictedDynamicTags": [
@@ -477,7 +388,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "public-safety",
               "food-security"
             ],
             "falseNegatives": [],
@@ -498,7 +408,6 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "public-safety",
               "food-security"
             ],
             "predictedDynamicTags": [
@@ -511,7 +420,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "public-safety",
               "food-security"
             ],
             "falseNegatives": [],
@@ -532,8 +440,7 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "food-security",
-              "research-evaluation"
+              "food-security"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -545,8 +452,7 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "food-security",
-              "research-evaluation"
+              "food-security"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -566,8 +472,7 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "food-security",
-              "research-evaluation"
+              "food-security"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -579,8 +484,7 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "food-security",
-              "research-evaluation"
+              "food-security"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -601,7 +505,6 @@
             ],
             "predictedTags": [
               "digital-access",
-              "arts-culture",
               "community-benefit",
               "infrastructure"
             ],
@@ -616,7 +519,6 @@
             "truePositives": [],
             "falsePositives": [
               "digital-access",
-              "arts-culture",
               "community-benefit",
               "infrastructure"
             ],
@@ -639,7 +541,6 @@
             ],
             "predictedTags": [
               "digital-access",
-              "arts-culture",
               "community-benefit",
               "infrastructure"
             ],
@@ -654,7 +555,6 @@
             "truePositives": [],
             "falsePositives": [
               "digital-access",
-              "arts-culture",
               "community-benefit",
               "infrastructure"
             ],
@@ -676,7 +576,6 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "workforce-development",
               "infrastructure",
               "environmental-sustainability",
               "arts-culture"
@@ -691,7 +590,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "workforce-development",
               "infrastructure",
               "environmental-sustainability",
               "arts-culture"
@@ -714,7 +612,6 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "workforce-development",
               "infrastructure",
               "environmental-sustainability",
               "arts-culture"
@@ -729,9 +626,76 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "workforce-development",
               "infrastructure",
               "environmental-sustainability",
+              "arts-culture"
+            ],
+            "falseNegatives": [],
+            "dynamicHits": [],
+            "dynamicMisses": [],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 1
+          },
+          {
+            "id": "supportive-housing-data-8",
+            "text": "The recipient will stage theatre workshops and does not address housing or outcome measurement. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
+            "expectedTags": [],
+            "expectedDynamicTags": [],
+            "rejectedTags": [
+              "housing-support",
+              "research-evaluation"
+            ],
+            "predictedTags": [
+              "research-evaluation",
+              "arts-culture"
+            ],
+            "predictedDynamicTags": [
+              "budget narrative mostly",
+              "measurement budget narrative",
+              "budget narrative",
+              "outcome measurement budget",
+              "narrative mostly administrative",
+              "stage theatre workshops"
+            ],
+            "truePositives": [],
+            "falsePositives": [
+              "research-evaluation",
+              "arts-culture"
+            ],
+            "falseNegatives": [],
+            "dynamicHits": [],
+            "dynamicMisses": [],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 1
+          },
+          {
+            "id": "supportive-housing-data-9",
+            "text": "The recipient will stage theatre workshops and does not address housing or outcome measurement. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
+            "expectedTags": [],
+            "expectedDynamicTags": [],
+            "rejectedTags": [
+              "housing-support",
+              "research-evaluation"
+            ],
+            "predictedTags": [
+              "research-evaluation",
+              "arts-culture"
+            ],
+            "predictedDynamicTags": [
+              "budget narrative mostly",
+              "measurement budget narrative",
+              "budget narrative",
+              "outcome measurement budget",
+              "narrative mostly administrative",
+              "stage theatre workshops"
+            ],
+            "truePositives": [],
+            "falsePositives": [
+              "research-evaluation",
               "arts-culture"
             ],
             "falseNegatives": [],
@@ -751,84 +715,20 @@
       "modelId": "Xenova/paraphrase-MiniLM-L3-v2",
       "dtype": "q8",
       "estimatedAssetMb": 18,
-      "notes": "Smaller MiniLM variant for low-latency browser use.",
+      "benchmarkConfig": {
+        "minScore": 0.2,
+        "maxSuggestions": 2
+      },
+      "notes": "Smaller MiniLM variant for low-latency browser use. A corpus-wide sweep selected top-2 fixed suggestions for the best F1 balance.",
       "status": "completed",
       "summary": {
         "caseCount": 300,
-        "meanPrecision": 0.6066666666666664,
-        "meanRecall": 0.545,
-        "meanF1": 0.5468888888888895,
+        "meanPrecision": 0.7433333333333333,
+        "meanRecall": 0.615,
+        "meanF1": 0.6577777777777778,
         "meanDynamicRecall": 0.7766666666666655,
-        "exactMatchRate": 0.14,
+        "exactMatchRate": 0.3566666666666667,
         "topMisses": [
-          {
-            "id": "rural-training-8",
-            "text": "The proposal discusses repainting office walls and replacing chairs without any participant training or employment outcomes. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "capacity-building",
-              "workforce-development"
-            ],
-            "predictedTags": [
-              "workforce-development",
-              "capacity-building"
-            ],
-            "predictedDynamicTags": [
-              "discusses repainting office",
-              "repainting office",
-              "repainting office walls",
-              "office walls replacing",
-              "discusses repainting",
-              "narrative mostly administrative"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "workforce-development",
-              "capacity-building"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "rural-training-9",
-            "text": "The proposal discusses repainting office walls and replacing chairs without any participant training or employment outcomes. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "capacity-building",
-              "workforce-development"
-            ],
-            "predictedTags": [
-              "workforce-development",
-              "capacity-building"
-            ],
-            "predictedDynamicTags": [
-              "discusses repainting office",
-              "repainting office",
-              "repainting office walls",
-              "office walls replacing",
-              "discusses repainting",
-              "narrative mostly administrative"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "workforce-development",
-              "capacity-building"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
           {
             "id": "clinic-navigation-6",
             "text": "The work plan includes community health navigators through referral support and health outreach. The recipient describes a phased delivery plan with intake, partner coordination, participant follow-up, and quarterly reporting. The work plan names the service population, explains how staff will document completed activities, and connects the funded work to measurable agreement deliverables. The paragraph also includes surrounding administrative details so the extractor must identify the operational phrases rather than simply matching the word funding.",
@@ -941,330 +841,6 @@
             "dynamicRecall": 1
           },
           {
-            "id": "shelter-renovation-8",
-            "text": "The recipient will run a survey about park usage with no shelter, housing, or construction component. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "housing-support",
-              "infrastructure"
-            ],
-            "predictedTags": [
-              "infrastructure"
-            ],
-            "predictedDynamicTags": [
-              "park usage shelter",
-              "survey park usage",
-              "run survey park",
-              "park usage",
-              "survey park",
-              "usage shelter housing"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "infrastructure"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "shelter-renovation-9",
-            "text": "The recipient will run a survey about park usage with no shelter, housing, or construction component. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "housing-support",
-              "infrastructure"
-            ],
-            "predictedTags": [
-              "infrastructure"
-            ],
-            "predictedDynamicTags": [
-              "park usage shelter",
-              "survey park usage",
-              "run survey park",
-              "park usage",
-              "survey park",
-              "usage shelter housing"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "infrastructure"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "food-hub-8",
-            "text": "The project purchases accounting software and does not deliver meals or nutrition services. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "food-security",
-              "community-benefit"
-            ],
-            "predictedTags": [
-              "food-security"
-            ],
-            "predictedDynamicTags": [
-              "services budget narrative",
-              "budget narrative mostly",
-              "budget narrative",
-              "accounting software meals",
-              "narrative mostly administrative",
-              "insurance office supplies"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "food-security"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "food-hub-9",
-            "text": "The project purchases accounting software and does not deliver meals or nutrition services. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "food-security",
-              "community-benefit"
-            ],
-            "predictedTags": [
-              "food-security"
-            ],
-            "predictedDynamicTags": [
-              "services budget narrative",
-              "budget narrative mostly",
-              "budget narrative",
-              "accounting software meals",
-              "narrative mostly administrative",
-              "insurance office supplies"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "food-security"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "broadband-literacy-8",
-            "text": "The work plan is about replacing a roof and has no connectivity, device, or digital training activities. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "digital-access",
-              "capacity-building"
-            ],
-            "predictedTags": [
-              "capacity-building",
-              "digital-access"
-            ],
-            "predictedDynamicTags": [
-              "activities budget narrative",
-              "insurance office supplies",
-              "administrative insurance office",
-              "budget narrative mostly",
-              "narrative mostly administrative",
-              "budget narrative"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "capacity-building",
-              "digital-access"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "broadband-literacy-9",
-            "text": "The work plan is about replacing a roof and has no connectivity, device, or digital training activities. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "digital-access",
-              "capacity-building"
-            ],
-            "predictedTags": [
-              "capacity-building",
-              "digital-access"
-            ],
-            "predictedDynamicTags": [
-              "activities budget narrative",
-              "insurance office supplies",
-              "administrative insurance office",
-              "budget narrative mostly",
-              "narrative mostly administrative",
-              "budget narrative"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "capacity-building",
-              "digital-access"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "energy-retrofit-8",
-            "text": "The recipient will hire youth mentors and does not mention emissions, conservation, or capital retrofits. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "environmental-sustainability",
-              "infrastructure"
-            ],
-            "predictedTags": [
-              "environmental-sustainability"
-            ],
-            "predictedDynamicTags": [
-              "hire youth mentors",
-              "youth mentors mention",
-              "hire youth",
-              "mentors mention emissions",
-              "retrofits budget narrative",
-              "youth mentors"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "environmental-sustainability"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "energy-retrofit-9",
-            "text": "The recipient will hire youth mentors and does not mention emissions, conservation, or capital retrofits. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "environmental-sustainability",
-              "infrastructure"
-            ],
-            "predictedTags": [
-              "environmental-sustainability"
-            ],
-            "predictedDynamicTags": [
-              "hire youth mentors",
-              "youth mentors mention",
-              "hire youth",
-              "mentors mention emissions",
-              "retrofits budget narrative",
-              "youth mentors"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "environmental-sustainability"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "violence-prevention-8",
-            "text": "The agreement expands a farmers market and has no safety planning or crisis response work. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "public-safety",
-              "capacity-building"
-            ],
-            "predictedTags": [
-              "public-safety"
-            ],
-            "predictedDynamicTags": [
-              "planning crisis response",
-              "crisis response budget",
-              "safety planning crisis",
-              "farmers market safety",
-              "response budget narrative",
-              "planning crisis"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "public-safety"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "violence-prevention-9",
-            "text": "The agreement expands a farmers market and has no safety planning or crisis response work. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "public-safety",
-              "capacity-building"
-            ],
-            "predictedTags": [
-              "public-safety"
-            ],
-            "predictedDynamicTags": [
-              "planning crisis response",
-              "crisis response budget",
-              "safety planning crisis",
-              "farmers market safety",
-              "response budget narrative",
-              "planning crisis"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "public-safety"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
             "id": "evaluation-pilot-8",
             "text": "The proposal buys kitchen freezers for a meal program and does not study outcomes or collect evaluation data. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
             "expectedTags": [],
@@ -1274,8 +850,7 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "food-security",
-              "research-evaluation"
+              "food-security"
             ],
             "predictedDynamicTags": [
               "freezers meal study",
@@ -1287,8 +862,7 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "food-security",
-              "research-evaluation"
+              "food-security"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -1308,8 +882,7 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "food-security",
-              "research-evaluation"
+              "food-security"
             ],
             "predictedDynamicTags": [
               "freezers meal study",
@@ -1321,8 +894,7 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "food-security",
-              "research-evaluation"
+              "food-security"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -1342,8 +914,7 @@
               "community-benefit"
             ],
             "predictedTags": [
-              "digital-access",
-              "arts-culture"
+              "digital-access"
             ],
             "predictedDynamicTags": [
               "narrative mostly administrative",
@@ -1355,8 +926,7 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "digital-access",
-              "arts-culture"
+              "digital-access"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -1376,8 +946,7 @@
               "community-benefit"
             ],
             "predictedTags": [
-              "digital-access",
-              "arts-culture"
+              "digital-access"
             ],
             "predictedDynamicTags": [
               "narrative mostly administrative",
@@ -1389,8 +958,7 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "digital-access",
-              "arts-culture"
+              "digital-access"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -1446,6 +1014,486 @@
             "recall": 0,
             "f1": 0,
             "dynamicRecall": 0.3333333333333333
+          },
+          {
+            "id": "emergency-warming-2",
+            "text": "The project will deliver winter warming centre through temporary overnight spaces and cold-weather response. The recipient describes a phased delivery plan with intake, partner coordination, participant follow-up, and quarterly reporting. The work plan names the service population, explains how staff will document completed activities, and connects the funded work to measurable agreement deliverables. The paragraph also includes surrounding administrative details so the extractor must identify the operational phrases rather than simply matching the word funding.",
+            "expectedTags": [
+              "public-safety",
+              "housing-support"
+            ],
+            "expectedDynamicTags": [
+              "winter warming centre",
+              "temporary overnight spaces",
+              "cold-weather response"
+            ],
+            "rejectedTags": [
+              "digital-access",
+              "arts-culture"
+            ],
+            "predictedTags": [],
+            "predictedDynamicTags": [
+              "warming centre temporary",
+              "winter warming centre",
+              "centre temporary overnight",
+              "warming centre",
+              "cold weather response",
+              "weather response partner"
+            ],
+            "truePositives": [],
+            "falsePositives": [],
+            "falseNegatives": [
+              "public-safety",
+              "housing-support"
+            ],
+            "dynamicHits": [
+              "winter warming centre",
+              "cold-weather response"
+            ],
+            "dynamicMisses": [
+              "temporary overnight spaces"
+            ],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 0.6666666666666666
+          },
+          {
+            "id": "emergency-warming-5",
+            "text": "The agreement mentions winter warming centre through warming centre operations and safety protocols. The recipient describes a phased delivery plan with intake, partner coordination, participant follow-up, and quarterly reporting. The work plan names the service population, explains how staff will document completed activities, and connects the funded work to measurable agreement deliverables. The paragraph also includes surrounding administrative details so the extractor must identify the operational phrases rather than simply matching the word funding.",
+            "expectedTags": [
+              "public-safety",
+              "housing-support"
+            ],
+            "expectedDynamicTags": [
+              "winter warming centre",
+              "warming centre operations",
+              "safety protocols"
+            ],
+            "rejectedTags": [
+              "digital-access",
+              "arts-culture"
+            ],
+            "predictedTags": [],
+            "predictedDynamicTags": [
+              "warming centre operations",
+              "centre warming centre",
+              "warming centre",
+              "winter warming centre",
+              "centre warming",
+              "warming centre warming"
+            ],
+            "truePositives": [],
+            "falsePositives": [],
+            "falseNegatives": [
+              "public-safety",
+              "housing-support"
+            ],
+            "dynamicHits": [
+              "winter warming centre",
+              "warming centre operations"
+            ],
+            "dynamicMisses": [
+              "safety protocols"
+            ],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 0.6666666666666666
+          },
+          {
+            "id": "emergency-warming-6",
+            "text": "The work plan includes winter warming centre through safety protocols and warming centre operations. The recipient describes a phased delivery plan with intake, partner coordination, participant follow-up, and quarterly reporting. The work plan names the service population, explains how staff will document completed activities, and connects the funded work to measurable agreement deliverables. The paragraph also includes surrounding administrative details so the extractor must identify the operational phrases rather than simply matching the word funding.",
+            "expectedTags": [
+              "public-safety",
+              "housing-support"
+            ],
+            "expectedDynamicTags": [
+              "winter warming centre",
+              "safety protocols",
+              "warming centre operations"
+            ],
+            "rejectedTags": [
+              "digital-access",
+              "arts-culture"
+            ],
+            "predictedTags": [
+              "capacity-building"
+            ],
+            "predictedDynamicTags": [
+              "warming centre operations",
+              "protocols warming centre",
+              "warming centre safety",
+              "centre operations partner",
+              "warming centre",
+              "centre operations"
+            ],
+            "truePositives": [],
+            "falsePositives": [
+              "capacity-building"
+            ],
+            "falseNegatives": [
+              "public-safety",
+              "housing-support"
+            ],
+            "dynamicHits": [
+              "winter warming centre",
+              "warming centre operations"
+            ],
+            "dynamicMisses": [
+              "safety protocols"
+            ],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 0.6666666666666666
+          },
+          {
+            "id": "emergency-warming-7",
+            "text": "The recipient proposes winter warming centre through warming centre operations and safety protocols. The recipient describes a phased delivery plan with intake, partner coordination, participant follow-up, and quarterly reporting. The work plan names the service population, explains how staff will document completed activities, and connects the funded work to measurable agreement deliverables. The paragraph also includes surrounding administrative details so the extractor must identify the operational phrases rather than simply matching the word funding.",
+            "expectedTags": [
+              "public-safety",
+              "housing-support"
+            ],
+            "expectedDynamicTags": [
+              "winter warming centre",
+              "warming centre operations",
+              "safety protocols"
+            ],
+            "rejectedTags": [
+              "digital-access",
+              "arts-culture"
+            ],
+            "predictedTags": [],
+            "predictedDynamicTags": [
+              "warming centre operations",
+              "centre warming centre",
+              "warming centre",
+              "centre warming",
+              "winter warming centre",
+              "warming centre warming"
+            ],
+            "truePositives": [],
+            "falsePositives": [],
+            "falseNegatives": [
+              "public-safety",
+              "housing-support"
+            ],
+            "dynamicHits": [
+              "winter warming centre",
+              "warming centre operations"
+            ],
+            "dynamicMisses": [
+              "safety protocols"
+            ],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 0.6666666666666666
+          },
+          {
+            "id": "emergency-warming-8",
+            "text": "The proposal is about digital literacy classes and has no emergency shelter or safety response. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
+            "expectedTags": [],
+            "expectedDynamicTags": [],
+            "rejectedTags": [
+              "public-safety",
+              "housing-support"
+            ],
+            "predictedTags": [
+              "digital-access",
+              "public-safety"
+            ],
+            "predictedDynamicTags": [
+              "response budget narrative",
+              "literacy classes emergency",
+              "digital literacy classes",
+              "narrative mostly administrative",
+              "budget narrative",
+              "budget narrative mostly"
+            ],
+            "truePositives": [],
+            "falsePositives": [
+              "digital-access",
+              "public-safety"
+            ],
+            "falseNegatives": [],
+            "dynamicHits": [],
+            "dynamicMisses": [],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 1
+          },
+          {
+            "id": "emergency-warming-9",
+            "text": "The proposal is about digital literacy classes and has no emergency shelter or safety response. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
+            "expectedTags": [],
+            "expectedDynamicTags": [],
+            "rejectedTags": [
+              "public-safety",
+              "housing-support"
+            ],
+            "predictedTags": [
+              "digital-access",
+              "public-safety"
+            ],
+            "predictedDynamicTags": [
+              "response budget narrative",
+              "literacy classes emergency",
+              "digital literacy classes",
+              "narrative mostly administrative",
+              "budget narrative",
+              "budget narrative mostly"
+            ],
+            "truePositives": [],
+            "falsePositives": [
+              "digital-access",
+              "public-safety"
+            ],
+            "falseNegatives": [],
+            "dynamicHits": [],
+            "dynamicMisses": [],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 1
+          },
+          {
+            "id": "emergency-warming-10",
+            "text": "The contribution focuses on winter warming centre through temporary overnight spaces and cold-weather response. The recipient describes a phased delivery plan with intake, partner coordination, participant follow-up, and quarterly reporting. The work plan names the service population, explains how staff will document completed activities, and connects the funded work to measurable agreement deliverables. The paragraph also includes surrounding administrative details so the extractor must identify the operational phrases rather than simply matching the word funding.",
+            "expectedTags": [
+              "public-safety",
+              "housing-support"
+            ],
+            "expectedDynamicTags": [
+              "winter warming centre",
+              "temporary overnight spaces",
+              "cold-weather response"
+            ],
+            "rejectedTags": [
+              "digital-access",
+              "arts-culture"
+            ],
+            "predictedTags": [],
+            "predictedDynamicTags": [
+              "contribution focuses winter",
+              "warming centre temporary",
+              "winter warming centre",
+              "focuses winter warming",
+              "warming centre",
+              "centre temporary overnight"
+            ],
+            "truePositives": [],
+            "falsePositives": [],
+            "falseNegatives": [
+              "public-safety",
+              "housing-support"
+            ],
+            "dynamicHits": [
+              "winter warming centre"
+            ],
+            "dynamicMisses": [
+              "temporary overnight spaces",
+              "cold-weather response"
+            ],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 0.3333333333333333
+          },
+          {
+            "id": "community-greenhouse-5",
+            "text": "The agreement mentions community greenhouse through greenhouse operations and food access. The recipient describes a phased delivery plan with intake, partner coordination, participant follow-up, and quarterly reporting. The work plan names the service population, explains how staff will document completed activities, and connects the funded work to measurable agreement deliverables. The paragraph also includes surrounding administrative details so the extractor must identify the operational phrases rather than simply matching the word funding.",
+            "expectedTags": [
+              "food-security",
+              "environmental-sustainability"
+            ],
+            "expectedDynamicTags": [
+              "community greenhouse",
+              "greenhouse operations",
+              "food access"
+            ],
+            "rejectedTags": [
+              "health-services",
+              "workforce-development"
+            ],
+            "predictedTags": [],
+            "predictedDynamicTags": [
+              "greenhouse operations food",
+              "mentions community greenhouse",
+              "greenhouse greenhouse operations",
+              "greenhouse operations",
+              "community greenhouse greenhouse",
+              "community greenhouse"
+            ],
+            "truePositives": [],
+            "falsePositives": [],
+            "falseNegatives": [
+              "food-security",
+              "environmental-sustainability"
+            ],
+            "dynamicHits": [
+              "community greenhouse",
+              "greenhouse operations"
+            ],
+            "dynamicMisses": [
+              "food access"
+            ],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 0.6666666666666666
+          },
+          {
+            "id": "community-greenhouse-6",
+            "text": "The work plan includes community greenhouse through food access and greenhouse operations. The recipient describes a phased delivery plan with intake, partner coordination, participant follow-up, and quarterly reporting. The work plan names the service population, explains how staff will document completed activities, and connects the funded work to measurable agreement deliverables. The paragraph also includes surrounding administrative details so the extractor must identify the operational phrases rather than simply matching the word funding.",
+            "expectedTags": [
+              "food-security",
+              "environmental-sustainability"
+            ],
+            "expectedDynamicTags": [
+              "community greenhouse",
+              "food access",
+              "greenhouse operations"
+            ],
+            "rejectedTags": [
+              "health-services",
+              "workforce-development"
+            ],
+            "predictedTags": [],
+            "predictedDynamicTags": [
+              "access greenhouse operations",
+              "greenhouse operations partner",
+              "greenhouse operations",
+              "greenhouse food access",
+              "food access greenhouse",
+              "access greenhouse"
+            ],
+            "truePositives": [],
+            "falsePositives": [],
+            "falseNegatives": [
+              "food-security",
+              "environmental-sustainability"
+            ],
+            "dynamicHits": [
+              "food access",
+              "greenhouse operations"
+            ],
+            "dynamicMisses": [
+              "community greenhouse"
+            ],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 0.6666666666666666
+          },
+          {
+            "id": "community-greenhouse-7",
+            "text": "The recipient proposes community greenhouse through greenhouse operations and food access. The recipient describes a phased delivery plan with intake, partner coordination, participant follow-up, and quarterly reporting. The work plan names the service population, explains how staff will document completed activities, and connects the funded work to measurable agreement deliverables. The paragraph also includes surrounding administrative details so the extractor must identify the operational phrases rather than simply matching the word funding.",
+            "expectedTags": [
+              "food-security",
+              "environmental-sustainability"
+            ],
+            "expectedDynamicTags": [
+              "community greenhouse",
+              "greenhouse operations",
+              "food access"
+            ],
+            "rejectedTags": [
+              "health-services",
+              "workforce-development"
+            ],
+            "predictedTags": [],
+            "predictedDynamicTags": [
+              "greenhouse operations food",
+              "proposes community greenhouse",
+              "greenhouse greenhouse operations",
+              "greenhouse operations",
+              "community greenhouse greenhouse",
+              "community greenhouse"
+            ],
+            "truePositives": [],
+            "falsePositives": [],
+            "falseNegatives": [
+              "food-security",
+              "environmental-sustainability"
+            ],
+            "dynamicHits": [
+              "community greenhouse",
+              "greenhouse operations"
+            ],
+            "dynamicMisses": [
+              "food access"
+            ],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 0.6666666666666666
+          },
+          {
+            "id": "community-greenhouse-8",
+            "text": "The project provides mental health counselling and no food production or environmental work. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
+            "expectedTags": [],
+            "expectedDynamicTags": [],
+            "rejectedTags": [
+              "food-security",
+              "environmental-sustainability"
+            ],
+            "predictedTags": [
+              "health-services"
+            ],
+            "predictedDynamicTags": [
+              "environmental budget narrative",
+              "budget narrative mostly",
+              "narrative mostly administrative",
+              "budget narrative",
+              "counselling food production",
+              "administrative insurance office"
+            ],
+            "truePositives": [],
+            "falsePositives": [
+              "health-services"
+            ],
+            "falseNegatives": [],
+            "dynamicHits": [],
+            "dynamicMisses": [],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 1
+          },
+          {
+            "id": "community-greenhouse-9",
+            "text": "The project provides mental health counselling and no food production or environmental work. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
+            "expectedTags": [],
+            "expectedDynamicTags": [],
+            "rejectedTags": [
+              "food-security",
+              "environmental-sustainability"
+            ],
+            "predictedTags": [
+              "health-services"
+            ],
+            "predictedDynamicTags": [
+              "environmental budget narrative",
+              "budget narrative mostly",
+              "narrative mostly administrative",
+              "budget narrative",
+              "counselling food production",
+              "administrative insurance office"
+            ],
+            "truePositives": [],
+            "falsePositives": [
+              "health-services"
+            ],
+            "falseNegatives": [],
+            "dynamicHits": [],
+            "dynamicMisses": [],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 1
           }
         ]
       }
@@ -1460,11 +1508,11 @@
       "status": "completed",
       "summary": {
         "caseCount": 300,
-        "meanPrecision": 0.42277777777777786,
-        "meanRecall": 0.6966666666666667,
-        "meanF1": 0.5166666666666664,
+        "meanPrecision": 0.4427777777777779,
+        "meanRecall": 0.7166666666666667,
+        "meanF1": 0.5366666666666665,
         "meanDynamicRecall": 0.7655555555555552,
-        "exactMatchRate": 0.05333333333333334,
+        "exactMatchRate": 0.07333333333333333,
         "topMisses": [
           {
             "id": "rural-training-8",
@@ -1476,8 +1524,6 @@
               "workforce-development"
             ],
             "predictedTags": [
-              "workforce-development",
-              "capacity-building",
               "infrastructure",
               "arts-culture"
             ],
@@ -1491,8 +1537,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "workforce-development",
-              "capacity-building",
               "infrastructure",
               "arts-culture"
             ],
@@ -1514,8 +1558,6 @@
               "workforce-development"
             ],
             "predictedTags": [
-              "workforce-development",
-              "capacity-building",
               "infrastructure",
               "arts-culture"
             ],
@@ -1529,8 +1571,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "workforce-development",
-              "capacity-building",
               "infrastructure",
               "arts-culture"
             ],
@@ -1552,8 +1592,7 @@
               "community-benefit"
             ],
             "predictedTags": [
-              "arts-culture",
-              "health-services"
+              "arts-culture"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -1565,8 +1604,7 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "arts-culture",
-              "health-services"
+              "arts-culture"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -1586,8 +1624,7 @@
               "community-benefit"
             ],
             "predictedTags": [
-              "arts-culture",
-              "health-services"
+              "arts-culture"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -1599,8 +1636,7 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "arts-culture",
-              "health-services"
+              "arts-culture"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -1620,8 +1656,6 @@
               "infrastructure"
             ],
             "predictedTags": [
-              "housing-support",
-              "infrastructure",
               "research-evaluation",
               "arts-culture"
             ],
@@ -1635,8 +1669,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "housing-support",
-              "infrastructure",
               "research-evaluation",
               "arts-culture"
             ],
@@ -1658,8 +1690,6 @@
               "infrastructure"
             ],
             "predictedTags": [
-              "housing-support",
-              "infrastructure",
               "research-evaluation",
               "arts-culture"
             ],
@@ -1673,8 +1703,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "housing-support",
-              "infrastructure",
               "research-evaluation",
               "arts-culture"
             ],
@@ -1696,7 +1724,6 @@
               "community-benefit"
             ],
             "predictedTags": [
-              "food-security",
               "arts-culture"
             ],
             "predictedDynamicTags": [
@@ -1709,7 +1736,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "food-security",
               "arts-culture"
             ],
             "falseNegatives": [],
@@ -1730,7 +1756,6 @@
               "community-benefit"
             ],
             "predictedTags": [
-              "food-security",
               "arts-culture"
             ],
             "predictedDynamicTags": [
@@ -1743,7 +1768,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "food-security",
               "arts-culture"
             ],
             "falseNegatives": [],
@@ -1764,8 +1788,6 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "digital-access",
-              "capacity-building",
               "infrastructure"
             ],
             "predictedDynamicTags": [
@@ -1778,8 +1800,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "digital-access",
-              "capacity-building",
               "infrastructure"
             ],
             "falseNegatives": [],
@@ -1800,8 +1820,6 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "digital-access",
-              "capacity-building",
               "infrastructure"
             ],
             "predictedDynamicTags": [
@@ -1814,8 +1832,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "digital-access",
-              "capacity-building",
               "infrastructure"
             ],
             "falseNegatives": [],
@@ -1836,7 +1852,6 @@
               "infrastructure"
             ],
             "predictedTags": [
-              "environmental-sustainability",
               "infrastructure",
               "research-evaluation",
               "arts-culture"
@@ -1851,7 +1866,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "environmental-sustainability",
               "infrastructure",
               "research-evaluation",
               "arts-culture"
@@ -1874,7 +1888,6 @@
               "infrastructure"
             ],
             "predictedTags": [
-              "environmental-sustainability",
               "infrastructure",
               "research-evaluation",
               "arts-culture"
@@ -1889,74 +1902,9 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "environmental-sustainability",
               "infrastructure",
               "research-evaluation",
               "arts-culture"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "violence-prevention-8",
-            "text": "The agreement expands a farmers market and has no safety planning or crisis response work. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "public-safety",
-              "capacity-building"
-            ],
-            "predictedTags": [
-              "public-safety"
-            ],
-            "predictedDynamicTags": [
-              "budget narrative mostly",
-              "response budget narrative",
-              "budget narrative",
-              "crisis response budget",
-              "narrative mostly administrative",
-              "farmers market safety"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "public-safety"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "violence-prevention-9",
-            "text": "The agreement expands a farmers market and has no safety planning or crisis response work. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "public-safety",
-              "capacity-building"
-            ],
-            "predictedTags": [
-              "public-safety"
-            ],
-            "predictedDynamicTags": [
-              "budget narrative mostly",
-              "response budget narrative",
-              "budget narrative",
-              "crisis response budget",
-              "narrative mostly administrative",
-              "farmers market safety"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "public-safety"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -1976,7 +1924,6 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "research-evaluation",
               "food-security"
             ],
             "predictedDynamicTags": [
@@ -1989,7 +1936,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "research-evaluation",
               "food-security"
             ],
             "falseNegatives": [],
@@ -2010,7 +1956,6 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "research-evaluation",
               "food-security"
             ],
             "predictedDynamicTags": [
@@ -2023,7 +1968,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "research-evaluation",
               "food-security"
             ],
             "falseNegatives": [],
@@ -2044,7 +1988,6 @@
               "community-benefit"
             ],
             "predictedTags": [
-              "arts-culture",
               "digital-access",
               "infrastructure"
             ],
@@ -2058,7 +2001,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "arts-culture",
               "digital-access",
               "infrastructure"
             ],
@@ -2080,7 +2022,6 @@
               "community-benefit"
             ],
             "predictedTags": [
-              "arts-culture",
               "digital-access",
               "infrastructure"
             ],
@@ -2094,7 +2035,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "arts-culture",
               "digital-access",
               "infrastructure"
             ],
@@ -2116,7 +2056,6 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "workforce-development",
               "arts-culture"
             ],
             "predictedDynamicTags": [
@@ -2129,7 +2068,6 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "workforce-development",
               "arts-culture"
             ],
             "falseNegatives": [],
@@ -2150,7 +2088,6 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "workforce-development",
               "arts-culture"
             ],
             "predictedDynamicTags": [
@@ -2163,8 +2100,79 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "workforce-development",
               "arts-culture"
+            ],
+            "falseNegatives": [],
+            "dynamicHits": [],
+            "dynamicMisses": [],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 1
+          },
+          {
+            "id": "supportive-housing-data-8",
+            "text": "The recipient will stage theatre workshops and does not address housing or outcome measurement. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
+            "expectedTags": [],
+            "expectedDynamicTags": [],
+            "rejectedTags": [
+              "housing-support",
+              "research-evaluation"
+            ],
+            "predictedTags": [
+              "research-evaluation",
+              "arts-culture",
+              "infrastructure"
+            ],
+            "predictedDynamicTags": [
+              "budget narrative mostly",
+              "budget narrative",
+              "measurement budget narrative",
+              "outcome measurement budget",
+              "narrative mostly administrative",
+              "measurement budget"
+            ],
+            "truePositives": [],
+            "falsePositives": [
+              "research-evaluation",
+              "arts-culture",
+              "infrastructure"
+            ],
+            "falseNegatives": [],
+            "dynamicHits": [],
+            "dynamicMisses": [],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 1
+          },
+          {
+            "id": "supportive-housing-data-9",
+            "text": "The recipient will stage theatre workshops and does not address housing or outcome measurement. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
+            "expectedTags": [],
+            "expectedDynamicTags": [],
+            "rejectedTags": [
+              "housing-support",
+              "research-evaluation"
+            ],
+            "predictedTags": [
+              "research-evaluation",
+              "arts-culture",
+              "infrastructure"
+            ],
+            "predictedDynamicTags": [
+              "budget narrative mostly",
+              "budget narrative",
+              "measurement budget narrative",
+              "outcome measurement budget",
+              "narrative mostly administrative",
+              "measurement budget"
+            ],
+            "truePositives": [],
+            "falsePositives": [
+              "research-evaluation",
+              "arts-culture",
+              "infrastructure"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2203,10 +2211,10 @@
               "workforce-development"
             ],
             "predictedTags": [
-              "workforce-development",
-              "capacity-building",
               "research-evaluation",
-              "arts-culture"
+              "arts-culture",
+              "environmental-sustainability",
+              "public-safety"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2218,10 +2226,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "workforce-development",
-              "capacity-building",
               "research-evaluation",
-              "arts-culture"
+              "arts-culture",
+              "environmental-sustainability",
+              "public-safety"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2241,10 +2249,10 @@
               "workforce-development"
             ],
             "predictedTags": [
-              "workforce-development",
-              "capacity-building",
               "research-evaluation",
-              "arts-culture"
+              "arts-culture",
+              "environmental-sustainability",
+              "public-safety"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2256,10 +2264,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "workforce-development",
-              "capacity-building",
               "research-evaluation",
-              "arts-culture"
+              "arts-culture",
+              "environmental-sustainability",
+              "public-safety"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2280,9 +2288,9 @@
             ],
             "predictedTags": [
               "arts-culture",
-              "health-services",
               "public-safety",
-              "research-evaluation"
+              "research-evaluation",
+              "workforce-development"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2295,9 +2303,9 @@
             "truePositives": [],
             "falsePositives": [
               "arts-culture",
-              "health-services",
               "public-safety",
-              "research-evaluation"
+              "research-evaluation",
+              "workforce-development"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2318,9 +2326,9 @@
             ],
             "predictedTags": [
               "arts-culture",
-              "health-services",
               "public-safety",
-              "research-evaluation"
+              "research-evaluation",
+              "workforce-development"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2333,9 +2341,9 @@
             "truePositives": [],
             "falsePositives": [
               "arts-culture",
-              "health-services",
               "public-safety",
-              "research-evaluation"
+              "research-evaluation",
+              "workforce-development"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2355,10 +2363,10 @@
               "infrastructure"
             ],
             "predictedTags": [
-              "housing-support",
-              "infrastructure",
               "research-evaluation",
-              "food-security"
+              "food-security",
+              "arts-culture",
+              "public-safety"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2370,10 +2378,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "housing-support",
-              "infrastructure",
               "research-evaluation",
-              "food-security"
+              "food-security",
+              "arts-culture",
+              "public-safety"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2393,10 +2401,10 @@
               "infrastructure"
             ],
             "predictedTags": [
-              "housing-support",
-              "infrastructure",
               "research-evaluation",
-              "food-security"
+              "food-security",
+              "arts-culture",
+              "public-safety"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2408,10 +2416,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "housing-support",
-              "infrastructure",
               "research-evaluation",
-              "food-security"
+              "food-security",
+              "arts-culture",
+              "public-safety"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2431,10 +2439,10 @@
               "community-benefit"
             ],
             "predictedTags": [
-              "food-security",
               "health-services",
               "research-evaluation",
-              "workforce-development"
+              "workforce-development",
+              "public-safety"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2446,10 +2454,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "food-security",
               "health-services",
               "research-evaluation",
-              "workforce-development"
+              "workforce-development",
+              "public-safety"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2469,10 +2477,10 @@
               "community-benefit"
             ],
             "predictedTags": [
-              "food-security",
               "health-services",
               "research-evaluation",
-              "workforce-development"
+              "workforce-development",
+              "public-safety"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2484,10 +2492,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "food-security",
               "health-services",
               "research-evaluation",
-              "workforce-development"
+              "workforce-development",
+              "public-safety"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2507,10 +2515,10 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "digital-access",
-              "capacity-building",
               "workforce-development",
-              "research-evaluation"
+              "research-evaluation",
+              "public-safety",
+              "health-services"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2522,10 +2530,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "digital-access",
-              "capacity-building",
               "workforce-development",
-              "research-evaluation"
+              "research-evaluation",
+              "public-safety",
+              "health-services"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2545,10 +2553,10 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "digital-access",
-              "capacity-building",
               "workforce-development",
-              "research-evaluation"
+              "research-evaluation",
+              "public-safety",
+              "health-services"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2560,10 +2568,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "digital-access",
-              "capacity-building",
               "workforce-development",
-              "research-evaluation"
+              "research-evaluation",
+              "public-safety",
+              "health-services"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2583,10 +2591,10 @@
               "infrastructure"
             ],
             "predictedTags": [
-              "environmental-sustainability",
               "research-evaluation",
               "food-security",
-              "workforce-development"
+              "workforce-development",
+              "capacity-building"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2598,10 +2606,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "environmental-sustainability",
               "research-evaluation",
               "food-security",
-              "workforce-development"
+              "workforce-development",
+              "capacity-building"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2621,10 +2629,10 @@
               "infrastructure"
             ],
             "predictedTags": [
-              "environmental-sustainability",
               "research-evaluation",
               "food-security",
-              "workforce-development"
+              "workforce-development",
+              "capacity-building"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2636,10 +2644,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "environmental-sustainability",
               "research-evaluation",
               "food-security",
-              "workforce-development"
+              "workforce-development",
+              "capacity-building"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2659,10 +2667,10 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "public-safety",
               "workforce-development",
               "food-security",
-              "research-evaluation"
+              "research-evaluation",
+              "health-services"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2674,10 +2682,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "public-safety",
               "workforce-development",
               "food-security",
-              "research-evaluation"
+              "research-evaluation",
+              "health-services"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2697,10 +2705,10 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "public-safety",
               "workforce-development",
               "food-security",
-              "research-evaluation"
+              "research-evaluation",
+              "health-services"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2712,10 +2720,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "public-safety",
               "workforce-development",
               "food-security",
-              "research-evaluation"
+              "research-evaluation",
+              "health-services"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2735,10 +2743,10 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "research-evaluation",
               "food-security",
               "public-safety",
-              "environmental-sustainability"
+              "environmental-sustainability",
+              "housing-support"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2750,10 +2758,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "research-evaluation",
               "food-security",
               "public-safety",
-              "environmental-sustainability"
+              "environmental-sustainability",
+              "housing-support"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2773,10 +2781,10 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "research-evaluation",
               "food-security",
               "public-safety",
-              "environmental-sustainability"
+              "environmental-sustainability",
+              "housing-support"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2788,10 +2796,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "research-evaluation",
               "food-security",
               "public-safety",
-              "environmental-sustainability"
+              "environmental-sustainability",
+              "housing-support"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2812,9 +2820,9 @@
             ],
             "predictedTags": [
               "digital-access",
-              "arts-culture",
               "food-security",
-              "community-benefit"
+              "community-benefit",
+              "housing-support"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2827,9 +2835,9 @@
             "truePositives": [],
             "falsePositives": [
               "digital-access",
-              "arts-culture",
               "food-security",
-              "community-benefit"
+              "community-benefit",
+              "housing-support"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2850,9 +2858,9 @@
             ],
             "predictedTags": [
               "digital-access",
-              "arts-culture",
               "food-security",
-              "community-benefit"
+              "community-benefit",
+              "housing-support"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2865,9 +2873,9 @@
             "truePositives": [],
             "falsePositives": [
               "digital-access",
-              "arts-culture",
               "food-security",
-              "community-benefit"
+              "community-benefit",
+              "housing-support"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2887,10 +2895,10 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "workforce-development",
               "research-evaluation",
               "health-services",
-              "food-security"
+              "food-security",
+              "digital-access"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2902,10 +2910,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "workforce-development",
               "research-evaluation",
               "health-services",
-              "food-security"
+              "food-security",
+              "digital-access"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2925,10 +2933,10 @@
               "capacity-building"
             ],
             "predictedTags": [
-              "workforce-development",
               "research-evaluation",
               "health-services",
-              "food-security"
+              "food-security",
+              "digital-access"
             ],
             "predictedDynamicTags": [
               "budget narrative mostly",
@@ -2940,10 +2948,10 @@
             ],
             "truePositives": [],
             "falsePositives": [
-              "workforce-development",
               "research-evaluation",
               "health-services",
-              "food-security"
+              "food-security",
+              "digital-access"
             ],
             "falseNegatives": [],
             "dynamicHits": [],
@@ -2968,76 +2976,12 @@
       "status": "completed",
       "summary": {
         "caseCount": 300,
-        "meanPrecision": 0.5455555555555553,
-        "meanRecall": 0.6666666666666666,
-        "meanF1": 0.5901111111111115,
+        "meanPrecision": 0.5655555555555556,
+        "meanRecall": 0.6866666666666666,
+        "meanF1": 0.6101111111111116,
         "meanDynamicRecall": 0.7588888888888886,
-        "exactMatchRate": 0.19666666666666666,
+        "exactMatchRate": 0.21666666666666667,
         "topMisses": [
-          {
-            "id": "broadband-literacy-8",
-            "text": "The work plan is about replacing a roof and has no connectivity, device, or digital training activities. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "digital-access",
-              "capacity-building"
-            ],
-            "predictedTags": [
-              "digital-access"
-            ],
-            "predictedDynamicTags": [
-              "activities budget narrative",
-              "budget narrative mostly",
-              "budget narrative",
-              "activities budget",
-              "narrative mostly administrative",
-              "training activities budget"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "digital-access"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "broadband-literacy-9",
-            "text": "The work plan is about replacing a roof and has no connectivity, device, or digital training activities. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "digital-access",
-              "capacity-building"
-            ],
-            "predictedTags": [
-              "digital-access"
-            ],
-            "predictedDynamicTags": [
-              "activities budget narrative",
-              "budget narrative mostly",
-              "budget narrative",
-              "activities budget",
-              "narrative mostly administrative",
-              "training activities budget"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "digital-access"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
           {
             "id": "energy-retrofit-1",
             "text": "The agreement funds community building retrofit through heat pump installation and energy efficiency upgrades. The recipient describes a phased delivery plan with intake, partner coordination, participant follow-up, and quarterly reporting. The work plan names the service population, explains how staff will document completed activities, and connects the funded work to measurable agreement deliverables. The paragraph also includes surrounding administrative details so the extractor must identify the operational phrases rather than simply matching the word funding.",
@@ -3135,70 +3079,6 @@
             "recall": 0,
             "f1": 0,
             "dynamicRecall": 0.6666666666666666
-          },
-          {
-            "id": "violence-prevention-8",
-            "text": "The agreement expands a farmers market and has no safety planning or crisis response work. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "public-safety",
-              "capacity-building"
-            ],
-            "predictedTags": [
-              "public-safety"
-            ],
-            "predictedDynamicTags": [
-              "budget narrative mostly",
-              "response budget narrative",
-              "budget narrative",
-              "crisis response budget",
-              "narrative mostly administrative",
-              "narrative mostly"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "public-safety"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "violence-prevention-9",
-            "text": "The agreement expands a farmers market and has no safety planning or crisis response work. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "public-safety",
-              "capacity-building"
-            ],
-            "predictedTags": [
-              "public-safety"
-            ],
-            "predictedDynamicTags": [
-              "budget narrative mostly",
-              "response budget narrative",
-              "budget narrative",
-              "crisis response budget",
-              "narrative mostly administrative",
-              "narrative mostly"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "public-safety"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
           },
           {
             "id": "evaluation-pilot-8",
@@ -3491,70 +3371,6 @@
             "dynamicRecall": 0.6666666666666666
           },
           {
-            "id": "library-connectivity-8",
-            "text": "The agreement pays for emergency shelter staffing and has no devices or connectivity activities. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "digital-access",
-              "community-benefit"
-            ],
-            "predictedTags": [
-              "digital-access"
-            ],
-            "predictedDynamicTags": [
-              "activities budget narrative",
-              "budget narrative mostly",
-              "budget narrative",
-              "pays emergency shelter",
-              "emergency shelter staffing",
-              "shelter staffing"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "digital-access"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
-            "id": "library-connectivity-9",
-            "text": "The agreement pays for emergency shelter staffing and has no devices or connectivity activities. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
-            "expectedTags": [],
-            "expectedDynamicTags": [],
-            "rejectedTags": [
-              "digital-access",
-              "community-benefit"
-            ],
-            "predictedTags": [
-              "digital-access"
-            ],
-            "predictedDynamicTags": [
-              "activities budget narrative",
-              "budget narrative mostly",
-              "budget narrative",
-              "pays emergency shelter",
-              "emergency shelter staffing",
-              "shelter staffing"
-            ],
-            "truePositives": [],
-            "falsePositives": [
-              "digital-access"
-            ],
-            "falseNegatives": [],
-            "dynamicHits": [],
-            "dynamicMisses": [],
-            "precision": 0,
-            "recall": 0,
-            "f1": 0,
-            "dynamicRecall": 1
-          },
-          {
             "id": "senior-meals-3",
             "text": "The recipient will expand senior nutrition outreach through dietitian referrals and meal delivery. The recipient describes a phased delivery plan with intake, partner coordination, participant follow-up, and quarterly reporting. The work plan names the service population, explains how staff will document completed activities, and connects the funded work to measurable agreement deliverables. The paragraph also includes surrounding administrative details so the extractor must identify the operational phrases rather than simply matching the word funding.",
             "expectedTags": [
@@ -3705,6 +3521,217 @@
             "truePositives": [],
             "falsePositives": [
               "digital-access"
+            ],
+            "falseNegatives": [],
+            "dynamicHits": [],
+            "dynamicMisses": [],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 1
+          },
+          {
+            "id": "youth-arts-mentorship-8",
+            "text": "The project funds emergency kits and has no artists, culture, or creative training. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
+            "expectedTags": [],
+            "expectedDynamicTags": [],
+            "rejectedTags": [
+              "arts-culture",
+              "capacity-building"
+            ],
+            "predictedTags": [
+              "public-safety"
+            ],
+            "predictedDynamicTags": [
+              "budget narrative mostly",
+              "budget narrative",
+              "training budget narrative",
+              "creative training budget",
+              "emergency kits artists",
+              "narrative mostly administrative"
+            ],
+            "truePositives": [],
+            "falsePositives": [
+              "public-safety"
+            ],
+            "falseNegatives": [],
+            "dynamicHits": [],
+            "dynamicMisses": [],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 1
+          },
+          {
+            "id": "youth-arts-mentorship-9",
+            "text": "The project funds emergency kits and has no artists, culture, or creative training. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
+            "expectedTags": [],
+            "expectedDynamicTags": [],
+            "rejectedTags": [
+              "arts-culture",
+              "capacity-building"
+            ],
+            "predictedTags": [
+              "public-safety"
+            ],
+            "predictedDynamicTags": [
+              "budget narrative mostly",
+              "budget narrative",
+              "training budget narrative",
+              "creative training budget",
+              "emergency kits artists",
+              "narrative mostly administrative"
+            ],
+            "truePositives": [],
+            "falsePositives": [
+              "public-safety"
+            ],
+            "falseNegatives": [],
+            "dynamicHits": [],
+            "dynamicMisses": [],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 1
+          },
+          {
+            "id": "accessible-playground-8",
+            "text": "The proposal collects survey data about housing and does not build or upgrade public space. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
+            "expectedTags": [],
+            "expectedDynamicTags": [],
+            "rejectedTags": [
+              "infrastructure",
+              "community-benefit"
+            ],
+            "predictedTags": [
+              "housing-support"
+            ],
+            "predictedDynamicTags": [
+              "budget narrative mostly",
+              "budget narrative",
+              "survey data housing",
+              "public space budget",
+              "space budget narrative",
+              "collects survey data"
+            ],
+            "truePositives": [],
+            "falsePositives": [
+              "housing-support"
+            ],
+            "falseNegatives": [],
+            "dynamicHits": [],
+            "dynamicMisses": [],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 1
+          },
+          {
+            "id": "accessible-playground-9",
+            "text": "The proposal collects survey data about housing and does not build or upgrade public space. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
+            "expectedTags": [],
+            "expectedDynamicTags": [],
+            "rejectedTags": [
+              "infrastructure",
+              "community-benefit"
+            ],
+            "predictedTags": [
+              "housing-support"
+            ],
+            "predictedDynamicTags": [
+              "budget narrative mostly",
+              "budget narrative",
+              "survey data housing",
+              "public space budget",
+              "space budget narrative",
+              "collects survey data"
+            ],
+            "truePositives": [],
+            "falsePositives": [
+              "housing-support"
+            ],
+            "falseNegatives": [],
+            "dynamicHits": [],
+            "dynamicMisses": [],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 1
+          },
+          {
+            "id": "community-data-lab-3",
+            "text": "The recipient will expand community data lab through shared devices and open data training. The recipient describes a phased delivery plan with intake, partner coordination, participant follow-up, and quarterly reporting. The work plan names the service population, explains how staff will document completed activities, and connects the funded work to measurable agreement deliverables. The paragraph also includes surrounding administrative details so the extractor must identify the operational phrases rather than simply matching the word funding.",
+            "expectedTags": [
+              "digital-access",
+              "research-evaluation"
+            ],
+            "expectedDynamicTags": [
+              "community data lab",
+              "shared devices",
+              "open data training"
+            ],
+            "rejectedTags": [
+              "food-security",
+              "housing-support"
+            ],
+            "predictedTags": [
+              "community-benefit",
+              "capacity-building"
+            ],
+            "predictedDynamicTags": [
+              "community data lab",
+              "data lab shared",
+              "data training partner",
+              "expand community data",
+              "community data",
+              "data lab"
+            ],
+            "truePositives": [],
+            "falsePositives": [
+              "community-benefit",
+              "capacity-building"
+            ],
+            "falseNegatives": [
+              "digital-access",
+              "research-evaluation"
+            ],
+            "dynamicHits": [
+              "community data lab"
+            ],
+            "dynamicMisses": [
+              "shared devices",
+              "open data training"
+            ],
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "dynamicRecall": 0.3333333333333333
+          },
+          {
+            "id": "community-data-lab-8",
+            "text": "The agreement renovates a shelter kitchen and has no data, devices, or evaluation dashboard. The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.",
+            "expectedTags": [],
+            "expectedDynamicTags": [],
+            "rejectedTags": [
+              "digital-access",
+              "research-evaluation"
+            ],
+            "predictedTags": [
+              "housing-support",
+              "food-security"
+            ],
+            "predictedDynamicTags": [
+              "dashboard budget narrative",
+              "budget narrative mostly",
+              "budget narrative",
+              "shelter kitchen data",
+              "renovates shelter kitchen",
+              "shelter kitchen"
+            ],
+            "truePositives": [],
+            "falsePositives": [
+              "housing-support",
+              "food-security"
             ],
             "falseNegatives": [],
             "dynamicHits": [],

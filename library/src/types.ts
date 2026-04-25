@@ -31,6 +31,8 @@ export type TagExtractorScorerConfig = {
   semanticWeight: number
   lexicalWeight: number
   exactAliasBoost: number
+  negationPenalty: number
+  negationWindow: number
   modelSource: TagExtractorModelSourceConfig
   execution: TagExtractorExecutionConfig
 }
@@ -58,7 +60,7 @@ export type TagExtractionInput = {
   text: string
   tags?: TagDefinition[]
   locale?: TagExtractorLocale
-  config?: Partial<Pick<TagExtractorScorerConfig, 'minScore' | 'maxSuggestions' | 'maxDynamicTags' | 'minDynamicScore' | 'dynamicNgramMin' | 'dynamicNgramMax' | 'semanticWeight' | 'lexicalWeight' | 'exactAliasBoost'>>
+  config?: Partial<Pick<TagExtractorScorerConfig, 'minScore' | 'maxSuggestions' | 'maxDynamicTags' | 'minDynamicScore' | 'dynamicNgramMin' | 'dynamicNgramMax' | 'semanticWeight' | 'lexicalWeight' | 'exactAliasBoost' | 'negationPenalty' | 'negationWindow'>>
 }
 
 export type TagSuggestion = {
@@ -67,6 +69,7 @@ export type TagSuggestion = {
   semanticScore: number
   lexicalScore: number
   exactAliasMatches: string[]
+  negatedTermMatches: string[]
 }
 
 export type DynamicTagSuggestion = {

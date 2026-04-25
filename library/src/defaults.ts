@@ -13,6 +13,8 @@ export const DEFAULT_TAG_EXTRACTOR_CONFIG: TagExtractorScorerConfig = {
   semanticWeight: 0.75,
   lexicalWeight: 0.25,
   exactAliasBoost: 0.45,
+  negationPenalty: 0.45,
+  negationWindow: 6,
   modelSource: {
     mode: 'local',
     localModelPath: '/models/',

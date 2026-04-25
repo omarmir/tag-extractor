@@ -54,5 +54,6 @@ const dualResult = await dualExtractor.extract({
 ```
 
 Returned fixed suggestions include the final score, semantic score, lexical
-score, and any exact alias matches that contributed to the boost. Dynamic
-suggestions include the label, score, n-gram size, and occurrence count.
+score, any exact alias matches that contributed to the boost, and any negated
+term matches that triggered the generic absence penalty. Dynamic suggestions
+include the label, score, n-gram size, and occurrence count.

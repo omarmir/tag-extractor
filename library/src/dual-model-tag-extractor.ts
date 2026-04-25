@@ -1,5 +1,5 @@
 import { resolveTagExtractorConfig } from './defaults'
-import { scoreLexicalOverlap } from './lexical'
+import { applyNegationPenalty, scoreLexicalOverlap } from './lexical'
 import { extractDynamicTags } from './scoring'
 import type {
   DualModelTagExtractorConfigInput,
@@ -141,17 +141,19 @@ async function scoreZeroShotTags(
     .map((tag): TagSuggestion => {
       const label = tag.label[locale] || tag.key
       const zeroShotScore = scores.get(label) ?? 0
-      const lexical = scoreLexicalOverlap(text, tag, mergedConfig.exactAliasBoost, locale)
-      const score = Math.min(
+      const lexical = scoreLexicalOverlap(text, tag, mergedConfig.exactAliasBoost, locale, mergedConfig.negationWindow)
+      const rawScore = Math.min(
         1,
         (zeroShotScore * mergedConfig.semanticWeight) + (lexical.lexicalScore * mergedConfig.lexicalWeight),
       )
+      const score = applyNegationPenalty(rawScore, lexical.negatedTermMatches, mergedConfig.negationPenalty)
       return {
         key: tag.key,
         score,
         semanticScore: zeroShotScore,
         lexicalScore: lexical.lexicalScore,
         exactAliasMatches: lexical.exactAliasMatches,
+        negatedTermMatches: lexical.negatedTermMatches,
       }
     })
     .filter((item) => item.score >= mergedConfig.minScore)
