@@ -6,10 +6,14 @@ without relying on broad business words.
 Good tag definitions include:
 
 - a stable key;
-- bilingual labels;
-- bilingual descriptions;
+- a concise label;
+- a concrete description;
 - aliases users naturally type in notes, tickets, documents, or task summaries.
 
-Prefer concrete aliases such as `training`, `job placements`, `facility
-renovation`, `API reference`, or `support ticket`. Avoid aliases that match
-every document, such as `project`, `task`, or `update`.
+Labels and descriptions can be translated by the consuming application, but the
+standalone public API accepts a single `label` and optional `description` per
+tag.
+
+Prefer concrete aliases such as `release notes`, `root cause analysis`,
+`facility renovation`, `API reference`, or `support ticket`. Avoid aliases that
+match every document, such as `project`, `task`, or `update`.

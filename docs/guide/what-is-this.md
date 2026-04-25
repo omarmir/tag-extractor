@@ -5,7 +5,7 @@ vocabulary against a short narrative and discovering organic phrase tags from
 that same text. It is a standalone library for applications that need local,
 browser-friendly tag extraction without tying scoring logic to a host product.
 
-The package does three things:
+The package does four things:
 
 - normalizes tag definitions into scoring text;
 - combines semantic embedding similarity with lexical and alias boosts for fixed tags;
@@ -13,7 +13,8 @@ The package does three things:
 - ships the default `Xenova/all-MiniLM-L12-v2` model files for local use.
 
 The main API is intentionally narrow: pass `text`, `predefinedTags`,
-`allowDynamicTags`, and `k`.
+`allowDynamicTags`, and `k`. Model choice, quantization, thresholds, and remote
+model loading are benchmark concerns, not part of the main consumer API.
 
 It does not save tags, own persistence, or call host application routes. Those
 responsibilities stay with the consuming application.

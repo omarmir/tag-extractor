@@ -1,7 +1,9 @@
 # Example
 
 Use this demo to test fixed taxonomy matching and dynamic tag extraction with
-the simplified public API. The bundled default model is `Xenova/all-MiniLM-L12-v2`.
+the simplified public API. The bundled default model is
+`Xenova/all-MiniLM-L12-v2`; the only runtime controls are text, taxonomy,
+dynamic-tag allowance, and K.
 
 <script setup lang="ts">
 import TagExtractorExample from '../.vitepress/components/TagExtractorExample.vue'

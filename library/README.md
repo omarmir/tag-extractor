@@ -4,7 +4,8 @@ Browser-side tag extraction for fixed taxonomy suggestions and optional dynamic
 phrase tags.
 
 The package uses `Xenova/all-MiniLM-L12-v2` by default and includes the model
-files in the Git-installable package snapshot.
+files in the Git-installable package snapshot. The main API does not expose
+model choice, quantization, thresholds, or remote model loading.
 
 ## Install From GitHub
 

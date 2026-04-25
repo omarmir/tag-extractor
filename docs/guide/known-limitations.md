@@ -12,6 +12,9 @@ Small embedding models are fast enough for browser use but are imperfect.
 - French support depends on the default model and the quality of translated tag descriptions.
 - The public library uses `Xenova/all-MiniLM-L12-v2` as the bundled default.
   Other model and quantization choices are benchmark-only concerns.
+- The public API returns ranked suggestions, not a guarantee that the top tag
+  is the only correct tag. Use K based on your UI: smaller values for
+  auto-apply flows, larger values for user review.
 
 The benchmark tools are intended to make those limitations visible before the
-library is wired into an extension release.
+library is wired into an application release.

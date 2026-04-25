@@ -1,7 +1,7 @@
 # Tag Extractor
 
-Browser-side TypeScript library for extracting tags from plain text. It
-supports both fixed taxonomy suggestions and dynamic phrase tags from the same
+Browser-side TypeScript library for extracting tags from plain text. It ranks
+predefined taxonomy tags and can also suggest dynamic phrase tags from the same
 document.
 
 This repository follows the same layout as `quality-meter`:
@@ -13,7 +13,43 @@ This repository follows the same layout as `quality-meter`:
 
 The library is intentionally independent of any host application. The public API
 takes plain text, predefined tags, whether dynamic tags are allowed, and a K
-value for ranked suggestions.
+value for ranked suggestions. The default runtime uses the bundled
+`Xenova/all-MiniLM-L12-v2` model and does not expose model selection or
+quantization settings to normal consumers.
+
+## Install
+
+```bash
+npm install github:omarmir/tag-extractor#package-release
+bun add github:omarmir/tag-extractor#package-release
+```
+
+The package snapshot includes `library/models/` in the published package as
+`models/`. Serve those files at `/models/`, or at your Vite `BASE_URL` plus
+`models/` when deploying under a subpath.
+
+## Usage
+
+```ts
+import { createTagExtractor } from '@browser-tag-extractor/core'
+
+const extractor = createTagExtractor()
+await extractor.loadModel()
+
+const result = await extractor.extract({
+  text: 'The document describes API reference cleanup and release note automation.',
+  predefinedTags: [
+    {
+      key: 'content-documentation',
+      label: 'Content and documentation',
+      description: 'Documentation, knowledge bases, release notes, or editorial workflows.',
+      aliases: ['documentation', 'release notes'],
+    },
+  ],
+  allowDynamicTags: true,
+  k: 5,
+})
+```
 
 Two model paths are benchmarked:
 

@@ -1,5 +1,8 @@
 # API Examples
 
+The public API is deliberately narrow. Pass text, predefined tags, whether
+dynamic tags are allowed, and K. The bundled L12 model is used automatically.
+
 ## Direct Extraction
 
 ```ts
@@ -27,4 +30,17 @@ const suggestions = await extractor.extract({
   allowDynamicTags: false,
   k: 2,
 })
+```
+
+## Tag Shape
+
+```ts
+const predefinedTags = [
+  {
+    key: 'incident-response',
+    label: 'Incident response',
+    description: 'Outages, escalation work, remediation, root cause analysis, and service recovery.',
+    aliases: ['outage', 'postmortem', 'escalation'],
+  },
+]
 ```

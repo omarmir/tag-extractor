@@ -12,8 +12,7 @@ Use stable, lowercase keys:
 
 ## Labels
 
-Labels should be concise and user-facing. Keep English and French labels
-parallel when possible.
+Labels should be concise and user-facing.
 
 ## Descriptions
 
@@ -32,7 +31,7 @@ Weak:
 
 Aliases are exact-match boost terms. Use them for common operational language:
 
-- `training`
 - `release notes`
 - `support ticket`
 - `data pipeline`
+- `root cause analysis`

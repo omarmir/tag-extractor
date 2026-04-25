@@ -1,16 +1,17 @@
 # Markdown Examples
 
-Tag definitions should be reviewed as plain text before being benchmarked.
+Tag definitions should be easy to review as plain text before they are passed
+to the extractor or benchmark corpus.
 
 ```md
-## capacity-building
+## incident-response
 
-Training, staffing, coaching, tools, governance, or organizational capability.
+Outages, escalation work, remediation, root cause analysis, and service recovery.
 
 Aliases:
 
-- training
-- skills
-- coaching
-- technical assistance
+- outage
+- postmortem
+- escalation
+- remediation
 ```
