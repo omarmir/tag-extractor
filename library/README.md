@@ -41,7 +41,8 @@ const result = await extractor.extract({
 ```
 
 Returned predefined tags include `key`, `label`, and `score`. Returned dynamic
-tags include `label` and `score`.
+tags include `label` and `score`, with labels normalized as lowercase
+hyphenated strings such as `data-analytics`.
 
 Benchmark-only model, quantization, and source configuration helpers are
 available from `@browser-tag-extractor/core/benchmark` for this repository's

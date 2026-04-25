@@ -5,6 +5,9 @@ the simplified public API. The bundled default model is
 `Xenova/all-MiniLM-L12-v2`; the only runtime controls are text, taxonomy,
 dynamic-tag allowance, and K.
 
+Dynamic suggestions are returned as hyphenated tag labels, such as
+`api-reference` or `release-note-automation`.
+
 <script setup lang="ts">
 import TagExtractorExample from '../.vitepress/components/TagExtractorExample.vue'
 </script>

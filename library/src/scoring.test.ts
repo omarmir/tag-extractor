@@ -81,12 +81,26 @@ describe('tag scoring', () => {
     })
 
     expect(result.predefined).toEqual([])
-    expect(result.dynamic.map((item) => item.label)).toContain('solar training solar')
+    expect(result.dynamic.map((item) => item.label)).toContain('solar-training-solar')
   })
 
   it('generates n-gram candidates after stopword removal', () => {
     const candidates = extractCandidatePhrases('Funding supports emergency shelter safety planning.', 1, 2)
     expect(candidates.map((item) => item.label)).toContain('emergency shelter')
+  })
+
+  it('returns dynamic tags as hyphenated labels', async () => {
+    const result = await extractTags({
+      text: 'The analytics team improved data quality checks and dashboard refresh automation.',
+      tags: [],
+      config: {
+        minDynamicScore: 0,
+        maxDynamicTags: 10,
+      },
+    })
+
+    expect(result.dynamic.map((item) => item.label)).toContain('data-quality-checks')
+    expect(result.dynamic.every((item) => !item.label.includes(' '))).toBe(true)
   })
 })
 

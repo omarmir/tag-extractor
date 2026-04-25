@@ -66,6 +66,9 @@ from the current bakeoff.
 The scorer also applies a generic negation penalty when configured tag terms
 appear near cues such as "no", "not", or "without".
 
+Dynamic tags are returned as lowercase hyphenated labels, for example
+`data-analytics` rather than `data analytics`.
+
 ## Development
 
 ```bash

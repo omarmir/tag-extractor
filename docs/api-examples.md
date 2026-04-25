@@ -2,6 +2,7 @@
 
 The public API is deliberately narrow. Pass text, predefined tags, whether
 dynamic tags are allowed, and K. The bundled L12 model is used automatically.
+Dynamic tag labels are returned as lowercase hyphenated strings.
 
 ## Direct Extraction
 

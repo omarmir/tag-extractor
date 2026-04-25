@@ -104,7 +104,7 @@ export async function extractDynamicTags(
   if (!embed) {
     return candidates
       .map((candidate) => ({
-        label: candidate.label,
+        label: formatDynamicTagLabel(candidate.label),
         score: candidate.lexicalScore,
         semanticScore: 0,
         lexicalScore: candidate.lexicalScore,
@@ -125,7 +125,7 @@ export async function extractDynamicTags(
     )
 
     return {
-      label: candidate.label,
+      label: formatDynamicTagLabel(candidate.label),
       score,
       semanticScore,
       lexicalScore: candidate.lexicalScore,
@@ -238,6 +238,13 @@ function isTaxonomyCandidate(label: string, tags: TagDefinition[], locale: 'en' 
     ]
     return values.some((value) => normalizePhrase(value) === normalized)
   })
+}
+
+export function formatDynamicTagLabel(label: string) {
+  return label
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
 }
 
 function normalizePhrase(value: string) {

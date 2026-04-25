@@ -96,6 +96,11 @@ type TagExtractorResult = {
 }
 ```
 
+Dynamic tag labels are normalized as lowercase hyphenated strings, such as
+`data-analytics` or `incident-response`. The scorer may use space-separated
+phrases internally, but returned dynamic labels are formatted for tag storage
+and display.
+
 ## Package Assets
 
 The package release includes the default model files:
