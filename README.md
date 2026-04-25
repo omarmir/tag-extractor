@@ -22,10 +22,14 @@ Two model paths are benchmarked:
 - dual model: DeBERTa zero-shot classification ranks fixed tags while a small
   embedding model extracts dynamic phrase tags.
 
-The current benchmark winner is `Xenova/paraphrase-MiniLM-L3-v2` with a
-corpus-calibrated top-2 fixed suggestion cap. The scorer also applies a generic
-negation penalty when configured tag terms appear near cues such as "no",
-"not", or "without".
+Benchmarks report both accurate mode for auto-applying a small final tag set and
+exploration mode for ranked top-K suggestions. The current accurate-mode winner
+is `Xenova/paraphrase-MiniLM-L3-v2` with a corpus-calibrated top-2 fixed
+suggestion cap. The strongest exploration-mode dynamic recall comes from the
+dual DeBERTa plus BGE micro path at K = 20.
+
+The scorer also applies a generic negation penalty when configured tag terms
+appear near cues such as "no", "not", or "without".
 
 ## Development
 

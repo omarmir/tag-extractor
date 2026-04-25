@@ -21,6 +21,17 @@ import { getBenchmarkModelCandidates } from '../benchmark/model-catalog'
 
 const REPORTS_DIR = fileURLToPath(new URL('../reports/', import.meta.url))
 const reportName = Bun.argv[2] ?? 'main'
+const EXPLORATION_K_VALUES = [2, 5, 10, 20]
+
+type BenchmarkMode = 'accurate' | 'exploration'
+type BenchmarkEvaluation = ModelCandidate & {
+  mode: BenchmarkMode
+  k: number
+  status: 'completed' | 'failed'
+  primaryMetric: 'f1' | 'dynamicRecall'
+  summary?: ReturnType<typeof summarizeTagEvaluation>
+  error?: string
+}
 
 await mkdir(REPORTS_DIR, { recursive: true })
 
@@ -62,22 +73,29 @@ async function runMainReport() {
 
 async function runModelBakeoff() {
   const candidates = getBenchmarkModelCandidates()
-  const summaries = []
+  const evaluations: BenchmarkEvaluation[] = []
 
   for (const candidate of candidates) {
-    const benchmarkConfig = {
+    const accurateConfig = {
       minScore: candidate.benchmarkConfig?.minScore ?? 0.2,
       maxSuggestions: candidate.benchmarkConfig?.maxSuggestions ?? 4,
+      maxDynamicTags: candidate.benchmarkConfig?.maxDynamicTags ?? 6,
+    }
+    const explorationConfig = {
+      minScore: 0,
+      maxSuggestions: Math.max(...EXPLORATION_K_VALUES),
+      maxDynamicTags: Math.max(...EXPLORATION_K_VALUES),
+      minDynamicScore: 0,
     }
     const extractor = candidate.strategy === 'zero-shot'
-      ? createZeroShotBenchmarkExtractor(candidate, benchmarkConfig)
+      ? createZeroShotBenchmarkExtractor(candidate, explorationConfig)
       : candidate.strategy === 'dual-model'
         ? createDualModelTagExtractor({
           predefinedModelId: candidate.predefinedModelId,
           dynamicModelId: candidate.dynamicModelId,
           predefinedDtype: candidate.dtype,
           dynamicDtype: candidate.dtype,
-          ...benchmarkConfig,
+          ...explorationConfig,
           modelSource: {
             mode: 'huggingface',
             useBrowserCache: false,
@@ -86,14 +104,14 @@ async function runModelBakeoff() {
         : createTransformersTagExtractor({
           modelId: candidate.modelId,
           dtype: candidate.dtype,
-          ...benchmarkConfig,
+          ...explorationConfig,
           modelSource: {
             mode: 'huggingface',
             useBrowserCache: false,
           },
         })
 
-    const results: TagEvaluationResult[] = []
+    const extractions: Array<{ testCase: typeof BENCHMARK_CASES[number]; extraction: TagExtractionResult }> = []
     const progress = createProgressReporter(candidate.id, BENCHMARK_CASES.length)
     try {
       await extractor.loadModel()
@@ -102,22 +120,54 @@ async function runModelBakeoff() {
           text: testCase.text,
           tags: testCase.tags,
         })
-        results.push(evaluateTagSuggestions(testCase, extraction.predefined, extraction.dynamic))
+        extractions.push({ testCase, extraction })
         progress(index + 1, testCase.id)
       }
 
-      const summary = summarizeTagEvaluation(results)
-      summaries.push({
+      const accurateResults = extractions.map(({ testCase, extraction }) =>
+        evaluateTagSuggestions(
+          testCase,
+          extraction.predefined.slice(0, accurateConfig.maxSuggestions)
+            .filter((suggestion) => suggestion.score >= accurateConfig.minScore),
+          extraction.dynamic.slice(0, accurateConfig.maxDynamicTags),
+          { mode: 'accurate' },
+        )
+      )
+      evaluations.push({
         ...candidate,
+        mode: 'accurate',
+        k: accurateConfig.maxSuggestions,
         status: 'completed',
-        summary,
+        primaryMetric: 'f1',
+        summary: summarizeTagEvaluation(accurateResults),
       })
+
+      for (const k of EXPLORATION_K_VALUES) {
+        const explorationResults = extractions.map(({ testCase, extraction }) =>
+          evaluateTagSuggestions(testCase, extraction.predefined, extraction.dynamic, {
+            mode: 'exploration',
+            k,
+          })
+        )
+        evaluations.push({
+          ...candidate,
+          mode: 'exploration',
+          k,
+          status: 'completed',
+          primaryMetric: 'dynamicRecall',
+          summary: summarizeTagEvaluation(explorationResults),
+        })
+      }
     } catch (error) {
-      summaries.push({
-        ...candidate,
-        status: 'failed',
-        error: error instanceof Error ? error.message : 'Unknown model benchmark error',
-      })
+      for (const row of [{ mode: 'accurate' as const, k: accurateConfig.maxSuggestions }, ...EXPLORATION_K_VALUES.map((k) => ({ mode: 'exploration' as const, k }))]) {
+        evaluations.push({
+          ...candidate,
+          ...row,
+          status: 'failed',
+          primaryMetric: row.mode === 'accurate' ? 'f1' : 'dynamicRecall',
+          error: error instanceof Error ? error.message : 'Unknown model benchmark error',
+        })
+      }
     } finally {
       extractor.reset()
     }
@@ -126,16 +176,23 @@ async function runModelBakeoff() {
   await writeReport('model-bakeoff.json', {
     maxModelMb: 100,
     candidateCount: candidates.length,
-    summaries,
+    evaluationCount: evaluations.length,
+    explorationKValues: EXPLORATION_K_VALUES,
+    evaluations,
   })
 
   console.log(JSON.stringify({
     candidateCount: candidates.length,
-    summaries: summaries.map((item) => ({
+    evaluationCount: evaluations.length,
+    accurateWinner: compactEvaluationWinner(findAccurateWinner(evaluations)),
+    explorationWinner: compactEvaluationWinner(findExplorationWinner(evaluations)),
+    evaluations: evaluations.map((item) => ({
       id: item.id,
       status: item.status,
-      summary: 'summary' in item ? compactSummary(item.summary) : undefined,
-      error: 'error' in item ? item.error : undefined,
+      mode: item.mode,
+      k: item.k,
+      summary: item.summary ? compactSummary(item.summary, { includeTopMisses: false }) : undefined,
+      error: item.error,
     })),
   }, null, 2))
 }
@@ -259,14 +316,26 @@ async function writeReport(name: string, value: unknown) {
   )
 }
 
-function compactSummary(summary: ReturnType<typeof summarizeTagEvaluation>) {
-  return {
+function compactSummary(
+  summary: ReturnType<typeof summarizeTagEvaluation>,
+  options: { includeTopMisses?: boolean } = { includeTopMisses: true },
+) {
+  const compact = {
     caseCount: summary.caseCount,
     meanPrecision: round(summary.meanPrecision),
     meanRecall: round(summary.meanRecall),
     meanF1: round(summary.meanF1),
     meanDynamicRecall: round(summary.meanDynamicRecall),
+    meanDiversity: round(summary.meanDiversity),
     exactMatchRate: round(summary.exactMatchRate),
+  }
+
+  if (options.includeTopMisses === false) {
+    return compact
+  }
+
+  return {
+    ...compact,
     topMisses: summary.topMisses.slice(0, 5).map((item) => ({
       id: item.id,
       expectedTags: item.expectedTags,
@@ -275,8 +344,46 @@ function compactSummary(summary: ReturnType<typeof summarizeTagEvaluation>) {
       predictedDynamicTags: item.predictedDynamicTags,
       f1: round(item.f1),
       dynamicRecall: round(item.dynamicRecall),
+      diversity: round(item.diversity),
     })),
   }
+}
+
+function compactEvaluationWinner(evaluation: BenchmarkEvaluation | null) {
+  if (!evaluation) {
+    return null
+  }
+
+  return {
+    id: evaluation.id,
+    strategy: evaluation.strategy,
+    estimatedAssetMb: evaluation.estimatedAssetMb,
+    mode: evaluation.mode,
+    k: evaluation.k,
+    primaryMetric: evaluation.primaryMetric,
+    summary: evaluation.summary ? compactSummary(evaluation.summary, { includeTopMisses: false }) : undefined,
+  }
+}
+
+function findAccurateWinner(evaluations: BenchmarkEvaluation[]) {
+  return evaluations
+    .filter((item) => item.status === 'completed' && item.mode === 'accurate' && item.summary)
+    .sort((left, right) =>
+      right.summary!.meanF1 - left.summary!.meanF1
+      || right.summary!.meanPrecision - left.summary!.meanPrecision
+      || right.summary!.exactMatchRate - left.summary!.exactMatchRate
+    )[0] ?? null
+}
+
+function findExplorationWinner(evaluations: BenchmarkEvaluation[]) {
+  return evaluations
+    .filter((item) => item.status === 'completed' && item.mode === 'exploration' && item.summary)
+    .sort((left, right) =>
+      right.summary!.meanDynamicRecall - left.summary!.meanDynamicRecall
+      || right.summary!.meanRecall - left.summary!.meanRecall
+      || right.summary!.meanDiversity - left.summary!.meanDiversity
+      || right.summary!.meanPrecision - left.summary!.meanPrecision
+    )[0] ?? null
 }
 
 function round(value: number) {

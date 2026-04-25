@@ -9,6 +9,7 @@ export type ModelCandidate = {
   benchmarkConfig?: {
     minScore?: number
     maxSuggestions?: number
+    maxDynamicTags?: number
   }
   notes: string
 }

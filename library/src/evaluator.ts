@@ -6,6 +6,7 @@ export type TagEvaluationCase = {
   expectedTags: string[]
   expectedDynamicTags?: string[]
   rejectedTags: string[]
+  tags?: unknown[]
 }
 
 export type TagEvaluationResult = TagEvaluationCase & {
@@ -20,6 +21,7 @@ export type TagEvaluationResult = TagEvaluationCase & {
   recall: number
   f1: number
   dynamicRecall: number
+  diversity: number
 }
 
 export type TagEvaluationSummary = {
@@ -28,6 +30,7 @@ export type TagEvaluationSummary = {
   meanRecall: number
   meanF1: number
   meanDynamicRecall: number
+  meanDiversity: number
   exactMatchRate: number
   topMisses: TagEvaluationResult[]
 }
@@ -36,9 +39,13 @@ export function evaluateTagSuggestions(
   testCase: TagEvaluationCase,
   suggestions: TagSuggestion[],
   dynamicSuggestions: DynamicTagSuggestion[] = [],
+  options: { k?: number; mode?: 'accurate' | 'exploration' } = {},
 ): TagEvaluationResult {
-  const predictedTags = suggestions.map((suggestion) => suggestion.key)
-  const predictedDynamicTags = dynamicSuggestions.map((suggestion) => suggestion.label)
+  const k = options.k
+  const selectedSuggestions = typeof k === 'number' ? suggestions.slice(0, k) : suggestions
+  const selectedDynamicSuggestions = typeof k === 'number' ? dynamicSuggestions.slice(0, k) : dynamicSuggestions
+  const predictedTags = selectedSuggestions.map((suggestion) => suggestion.key)
+  const predictedDynamicTags = selectedDynamicSuggestions.map((suggestion) => suggestion.label)
   const expected = new Set(testCase.expectedTags)
   const expectedDynamicTags = testCase.expectedDynamicTags ?? []
   const predictedDynamic = predictedDynamicTags.map(normalizeDynamicTag)
@@ -48,10 +55,12 @@ export function evaluateTagSuggestions(
   const falseNegatives = testCase.expectedTags.filter((tag) => !predicted.has(tag))
   const dynamicHits = expectedDynamicTags.filter((tag) => hasDynamicMatch(normalizeDynamicTag(tag), predictedDynamic))
   const dynamicMisses = expectedDynamicTags.filter((tag) => !hasDynamicMatch(normalizeDynamicTag(tag), predictedDynamic))
-  const precision = predictedTags.length > 0 ? truePositives.length / predictedTags.length : expected.size === 0 ? 1 : 0
+  const precisionDenominator = options.mode === 'exploration' && typeof k === 'number' ? k : predictedTags.length
+  const precision = precisionDenominator > 0 ? truePositives.length / precisionDenominator : expected.size === 0 ? 1 : 0
   const recall = expected.size > 0 ? truePositives.length / expected.size : falsePositives.length === 0 ? 1 : 0
   const f1 = precision + recall > 0 ? (2 * precision * recall) / (precision + recall) : 0
   const dynamicRecall = expectedDynamicTags.length > 0 ? dynamicHits.length / expectedDynamicTags.length : 1
+  const diversity = calculateDiversity(predictedTags, testCase.tags?.length, k)
 
   return {
     id: testCase.id,
@@ -70,6 +79,7 @@ export function evaluateTagSuggestions(
     recall,
     f1,
     dynamicRecall,
+    diversity,
   }
 }
 
@@ -88,6 +98,7 @@ export function summarizeTagEvaluation(results: TagEvaluationResult[]): TagEvalu
     meanRecall: average(results.map((result) => result.recall)),
     meanF1: average(results.map((result) => result.f1)),
     meanDynamicRecall: average(results.map((result) => result.dynamicRecall)),
+    meanDiversity: average(results.map((result) => result.diversity)),
     exactMatchRate: caseCount > 0 ? exactMatches / caseCount : 0,
     topMisses,
   }
@@ -99,6 +110,17 @@ function normalizeDynamicTag(value: string) {
 
 function hasDynamicMatch(expected: string, predicted: string[]) {
   return predicted.some((item) => item === expected || item.includes(expected) || expected.includes(item))
+}
+
+function calculateDiversity(predictedTags: string[], tagCount: number | undefined, k: number | undefined) {
+  const denominator = typeof k === 'number'
+    ? Math.min(k, tagCount ?? k)
+    : Math.min(predictedTags.length, tagCount ?? predictedTags.length)
+  if (denominator === 0) {
+    return 1
+  }
+
+  return Math.min(1, new Set(predictedTags).size / denominator)
 }
 
 function average(values: number[]) {

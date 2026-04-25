@@ -1,8 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import { resolveTagExtractorConfig } from './defaults'
+import { evaluateTagSuggestions } from './evaluator'
 import { rankTagsByKeywordOverlap } from './lexical'
 import { extractCandidatePhrases, extractTags, scoreTagSuggestions } from './scoring'
-import type { TagDefinition } from './types'
+import type { DynamicTagSuggestion, TagDefinition, TagSuggestion } from './types'
 
 const tags: TagDefinition[] = [
   {
@@ -88,3 +89,79 @@ describe('tag scoring', () => {
     expect(candidates.map((item) => item.label)).toContain('emergency shelter')
   })
 })
+
+describe('tag evaluation', () => {
+  const suggestions: TagSuggestion[] = [
+    suggestion('capacity-building'),
+    suggestion('infrastructure'),
+    suggestion('irrelevant'),
+  ]
+  const dynamicSuggestions: DynamicTagSuggestion[] = [
+    dynamicSuggestion('solar installation coaching', 0.9),
+    dynamicSuggestion('community retrofit planning', 0.8),
+    dynamicSuggestion('unrelated phrase', 0.7),
+  ]
+  const testCase = {
+    id: 'evaluation-case',
+    text: 'The work includes training, facilities, and solar coaching.',
+    tags,
+    expectedTags: ['capacity-building', 'infrastructure'],
+    expectedDynamicTags: ['solar installation coaching', 'community retrofit planning'],
+    rejectedTags: ['irrelevant'],
+  }
+
+  it('keeps accurate mode based on selected predictions', () => {
+    const result = evaluateTagSuggestions(testCase, suggestions.slice(0, 2), dynamicSuggestions.slice(0, 1), {
+      mode: 'accurate',
+    })
+
+    expect(result.precision).toBe(1)
+    expect(result.recall).toBe(1)
+    expect(result.f1).toBe(1)
+    expect(result.dynamicRecall).toBe(0.5)
+  })
+
+  it('evaluates exploration mode with ranked top-k suggestions', () => {
+    const result = evaluateTagSuggestions(testCase, suggestions, dynamicSuggestions, {
+      mode: 'exploration',
+      k: 3,
+    })
+
+    expect(result.precision).toBeCloseTo(2 / 3)
+    expect(result.recall).toBe(1)
+    expect(result.dynamicRecall).toBe(1)
+    expect(result.diversity).toBe(1)
+  })
+
+  it('uses k as the exploration precision denominator even when fewer tags are returned', () => {
+    const result = evaluateTagSuggestions(testCase, suggestions.slice(0, 1), dynamicSuggestions, {
+      mode: 'exploration',
+      k: 2,
+    })
+
+    expect(result.precision).toBe(0.5)
+    expect(result.recall).toBe(0.5)
+  })
+})
+
+function suggestion(key: string): TagSuggestion {
+  return {
+    key,
+    score: 1,
+    semanticScore: 1,
+    lexicalScore: 0,
+    exactAliasMatches: [],
+    negatedTermMatches: [],
+  }
+}
+
+function dynamicSuggestion(label: string, score: number): DynamicTagSuggestion {
+  return {
+    label,
+    score,
+    semanticScore: score,
+    lexicalScore: 0,
+    occurrences: 1,
+    ngramSize: label.split(' ').length,
+  }
+}

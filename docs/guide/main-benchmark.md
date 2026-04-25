@@ -13,7 +13,7 @@ Each case has:
 - expected negative tags.
 
 The report summarizes fixed-tag precision, fixed-tag recall, fixed-tag F1,
-dynamic-tag recall, and top misses.
+dynamic-tag recall, diversity, and top misses.
 
 Current lexical baseline:
 
@@ -24,6 +24,7 @@ Current lexical baseline:
 | Mean recall | 0.620 |
 | Mean F1 | 0.639 |
 | Mean dynamic recall | 0.673 |
+| Mean diversity | 1.000 |
 | Exact match rate | 0.337 |
 
 The lexical baseline is intentionally kept as a fallback. The model bakeoff

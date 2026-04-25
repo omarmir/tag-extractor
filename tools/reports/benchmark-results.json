@@ -6,6 +6,7 @@
     "meanRecall": 0.62,
     "meanF1": 0.6385555555555552,
     "meanDynamicRecall": 0.6733333333333321,
+    "meanDiversity": 1,
     "exactMatchRate": 0.33666666666666667,
     "topMisses": [
       {
@@ -38,7 +39,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "roadmap-prioritization-9",
@@ -70,7 +72,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "api-refactor-8",
@@ -106,7 +109,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "api-refactor-9",
@@ -142,7 +146,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "access-review-8",
@@ -174,7 +179,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "access-review-9",
@@ -206,7 +212,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "dashboard-migration-8",
@@ -240,7 +247,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "dashboard-migration-9",
@@ -274,7 +282,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "support-playbook-8",
@@ -308,7 +317,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "support-playbook-9",
@@ -342,7 +352,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "campaign-launch-8",
@@ -376,7 +387,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "campaign-launch-9",
@@ -410,7 +422,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "billing-dispute-8",
@@ -444,7 +457,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "billing-dispute-9",
@@ -478,7 +492,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "vendor-contract-8",
@@ -514,7 +529,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "vendor-contract-9",
@@ -550,7 +566,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "manager-training-8",
@@ -584,7 +601,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "manager-training-9",
@@ -618,7 +636,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "usability-study-8",
@@ -654,7 +673,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       },
       {
         "id": "usability-study-9",
@@ -690,7 +710,8 @@
         "precision": 0,
         "recall": 0,
         "f1": 0,
-        "dynamicRecall": 1
+        "dynamicRecall": 1,
+        "diversity": 1
       }
     ]
   },
@@ -739,7 +760,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "roadmap-prioritization-2",
@@ -785,7 +807,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "roadmap-prioritization-3",
@@ -831,7 +854,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "roadmap-prioritization-4",
@@ -877,7 +901,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "roadmap-prioritization-5",
@@ -923,7 +948,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "roadmap-prioritization-6",
@@ -969,7 +995,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "roadmap-prioritization-7",
@@ -1015,7 +1042,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "roadmap-prioritization-8",
@@ -1047,7 +1075,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "roadmap-prioritization-9",
@@ -1079,7 +1108,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "roadmap-prioritization-10",
@@ -1125,7 +1155,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "api-refactor-1",
@@ -1174,7 +1205,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "api-refactor-2",
@@ -1223,7 +1255,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "api-refactor-3",
@@ -1269,7 +1302,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "api-refactor-4",
@@ -1318,7 +1352,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "api-refactor-5",
@@ -1364,7 +1399,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "api-refactor-6",
@@ -1410,7 +1446,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "api-refactor-7",
@@ -1456,7 +1493,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "api-refactor-8",
@@ -1492,7 +1530,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "api-refactor-9",
@@ -1528,7 +1567,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "api-refactor-10",
@@ -1577,7 +1617,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "access-review-1",
@@ -1623,7 +1664,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "access-review-2",
@@ -1669,7 +1711,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "access-review-3",
@@ -1715,7 +1758,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "access-review-4",
@@ -1761,7 +1805,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "access-review-5",
@@ -1810,7 +1855,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "access-review-6",
@@ -1859,7 +1905,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "access-review-7",
@@ -1908,7 +1955,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "access-review-8",
@@ -1940,7 +1988,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "access-review-9",
@@ -1972,7 +2021,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "access-review-10",
@@ -2018,7 +2068,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "dashboard-migration-1",
@@ -2064,7 +2115,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "dashboard-migration-2",
@@ -2110,7 +2162,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "dashboard-migration-3",
@@ -2156,7 +2209,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "dashboard-migration-4",
@@ -2202,7 +2256,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "dashboard-migration-5",
@@ -2248,7 +2303,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "dashboard-migration-6",
@@ -2294,7 +2350,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "dashboard-migration-7",
@@ -2340,7 +2397,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "dashboard-migration-8",
@@ -2374,7 +2432,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "dashboard-migration-9",
@@ -2408,7 +2467,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "dashboard-migration-10",
@@ -2454,7 +2514,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "support-playbook-1",
@@ -2500,7 +2561,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "support-playbook-2",
@@ -2546,7 +2608,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "support-playbook-3",
@@ -2591,7 +2654,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0
+      "dynamicRecall": 0,
+      "diversity": 1
     },
     {
       "id": "support-playbook-4",
@@ -2637,7 +2701,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "support-playbook-5",
@@ -2683,7 +2748,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "support-playbook-6",
@@ -2729,7 +2795,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "support-playbook-7",
@@ -2775,7 +2842,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "support-playbook-8",
@@ -2809,7 +2877,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "support-playbook-9",
@@ -2843,7 +2912,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "support-playbook-10",
@@ -2889,7 +2959,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "campaign-launch-1",
@@ -2938,7 +3009,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "campaign-launch-2",
@@ -2984,7 +3056,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "campaign-launch-3",
@@ -3033,7 +3106,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "campaign-launch-4",
@@ -3082,7 +3156,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "campaign-launch-5",
@@ -3128,7 +3203,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "campaign-launch-6",
@@ -3174,7 +3250,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "campaign-launch-7",
@@ -3220,7 +3297,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "campaign-launch-8",
@@ -3254,7 +3332,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "campaign-launch-9",
@@ -3288,7 +3367,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "campaign-launch-10",
@@ -3334,7 +3414,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "billing-dispute-1",
@@ -3380,7 +3461,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "billing-dispute-2",
@@ -3426,7 +3508,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "billing-dispute-3",
@@ -3472,7 +3555,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "billing-dispute-4",
@@ -3518,7 +3602,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "billing-dispute-5",
@@ -3564,7 +3649,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "billing-dispute-6",
@@ -3610,7 +3696,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "billing-dispute-7",
@@ -3656,7 +3743,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "billing-dispute-8",
@@ -3690,7 +3778,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "billing-dispute-9",
@@ -3724,7 +3813,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "billing-dispute-10",
@@ -3770,7 +3860,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "vendor-contract-1",
@@ -3816,7 +3907,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "vendor-contract-2",
@@ -3862,7 +3954,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "vendor-contract-3",
@@ -3908,7 +4001,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "vendor-contract-4",
@@ -3954,7 +4048,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "vendor-contract-5",
@@ -4000,7 +4095,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "vendor-contract-6",
@@ -4045,7 +4141,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "vendor-contract-7",
@@ -4091,7 +4188,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "vendor-contract-8",
@@ -4127,7 +4225,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "vendor-contract-9",
@@ -4163,7 +4262,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "vendor-contract-10",
@@ -4209,7 +4309,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "manager-training-1",
@@ -4258,7 +4359,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "manager-training-2",
@@ -4307,7 +4409,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "manager-training-3",
@@ -4356,7 +4459,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "manager-training-4",
@@ -4405,7 +4509,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "manager-training-5",
@@ -4454,7 +4559,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "manager-training-6",
@@ -4503,7 +4609,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "manager-training-7",
@@ -4552,7 +4659,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "manager-training-8",
@@ -4586,7 +4694,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "manager-training-9",
@@ -4620,7 +4729,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "manager-training-10",
@@ -4669,7 +4779,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "usability-study-1",
@@ -4715,7 +4826,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "usability-study-2",
@@ -4761,7 +4873,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "usability-study-3",
@@ -4807,7 +4920,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "usability-study-4",
@@ -4853,7 +4967,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "usability-study-5",
@@ -4899,7 +5014,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "usability-study-6",
@@ -4945,7 +5061,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "usability-study-7",
@@ -4991,7 +5108,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "usability-study-8",
@@ -5027,7 +5145,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "usability-study-9",
@@ -5063,7 +5182,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "usability-study-10",
@@ -5109,7 +5229,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "release-notes-1",
@@ -5155,7 +5276,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "release-notes-2",
@@ -5201,7 +5323,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "release-notes-3",
@@ -5247,7 +5370,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "release-notes-4",
@@ -5293,7 +5417,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "release-notes-5",
@@ -5339,7 +5464,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "release-notes-6",
@@ -5385,7 +5511,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "release-notes-7",
@@ -5431,7 +5558,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "release-notes-8",
@@ -5463,7 +5591,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "release-notes-9",
@@ -5495,7 +5624,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "release-notes-10",
@@ -5541,7 +5671,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "incident-runbook-1",
@@ -5587,7 +5718,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "incident-runbook-2",
@@ -5633,7 +5765,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "incident-runbook-3",
@@ -5676,7 +5809,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "incident-runbook-4",
@@ -5722,7 +5856,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "incident-runbook-5",
@@ -5768,7 +5903,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "incident-runbook-6",
@@ -5813,7 +5949,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "incident-runbook-7",
@@ -5859,7 +5996,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "incident-runbook-8",
@@ -5895,7 +6033,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "incident-runbook-9",
@@ -5931,7 +6070,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "incident-runbook-10",
@@ -5977,7 +6117,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "privacy-assessment-1",
@@ -6023,7 +6164,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "privacy-assessment-2",
@@ -6072,7 +6214,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "privacy-assessment-3",
@@ -6121,7 +6264,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "privacy-assessment-4",
@@ -6167,7 +6311,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "privacy-assessment-5",
@@ -6213,7 +6358,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "privacy-assessment-6",
@@ -6259,7 +6405,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "privacy-assessment-7",
@@ -6305,7 +6452,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "privacy-assessment-8",
@@ -6341,7 +6489,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "privacy-assessment-9",
@@ -6377,7 +6526,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "privacy-assessment-10",
@@ -6426,7 +6576,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-pipeline-1",
@@ -6472,7 +6623,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-pipeline-2",
@@ -6518,7 +6670,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-pipeline-3",
@@ -6564,7 +6717,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-pipeline-4",
@@ -6610,7 +6764,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-pipeline-5",
@@ -6656,7 +6811,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-pipeline-6",
@@ -6702,7 +6858,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-pipeline-7",
@@ -6748,7 +6905,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-pipeline-8",
@@ -6782,7 +6940,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "data-pipeline-9",
@@ -6816,7 +6975,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "data-pipeline-10",
@@ -6862,7 +7022,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "sales-enablement-1",
@@ -6908,7 +7069,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "sales-enablement-2",
@@ -6954,7 +7116,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "sales-enablement-3",
@@ -7000,7 +7163,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "sales-enablement-4",
@@ -7046,7 +7210,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "sales-enablement-5",
@@ -7092,7 +7257,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "sales-enablement-6",
@@ -7137,7 +7303,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "sales-enablement-7",
@@ -7183,7 +7350,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "sales-enablement-8",
@@ -7217,7 +7385,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "sales-enablement-9",
@@ -7251,7 +7420,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "sales-enablement-10",
@@ -7297,7 +7467,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "hiring-plan-1",
@@ -7346,7 +7517,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "hiring-plan-2",
@@ -7395,7 +7567,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "hiring-plan-3",
@@ -7441,7 +7614,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "hiring-plan-4",
@@ -7490,7 +7664,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "hiring-plan-5",
@@ -7536,7 +7711,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "hiring-plan-6",
@@ -7582,7 +7758,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "hiring-plan-7",
@@ -7628,7 +7805,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "hiring-plan-8",
@@ -7656,7 +7834,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "hiring-plan-9",
@@ -7684,7 +7863,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "hiring-plan-10",
@@ -7733,7 +7913,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "contract-api-1",
@@ -7782,7 +7963,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "contract-api-2",
@@ -7831,7 +8013,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "contract-api-3",
@@ -7877,7 +8060,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "contract-api-4",
@@ -7926,7 +8110,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "contract-api-5",
@@ -7977,7 +8162,8 @@
       "precision": 0.5,
       "recall": 1,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "contract-api-6",
@@ -8028,7 +8214,8 @@
       "precision": 0.5,
       "recall": 1,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "contract-api-7",
@@ -8079,7 +8266,8 @@
       "precision": 0.5,
       "recall": 1,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "contract-api-8",
@@ -8113,7 +8301,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "contract-api-9",
@@ -8147,7 +8336,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "contract-api-10",
@@ -8196,7 +8386,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "support-analytics-1",
@@ -8242,7 +8433,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "support-analytics-2",
@@ -8288,7 +8480,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "support-analytics-3",
@@ -8334,7 +8527,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "support-analytics-4",
@@ -8380,7 +8574,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "support-analytics-5",
@@ -8429,7 +8624,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "support-analytics-6",
@@ -8478,7 +8674,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "support-analytics-7",
@@ -8527,7 +8724,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "support-analytics-8",
@@ -8561,7 +8759,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "support-analytics-9",
@@ -8595,7 +8794,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "support-analytics-10",
@@ -8641,7 +8841,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "security-runbook-1",
@@ -8687,7 +8888,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "security-runbook-2",
@@ -8733,7 +8935,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "security-runbook-3",
@@ -8776,7 +8979,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "security-runbook-4",
@@ -8822,7 +9026,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "security-runbook-5",
@@ -8868,7 +9073,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "security-runbook-6",
@@ -8914,7 +9120,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "security-runbook-7",
@@ -8960,7 +9167,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "security-runbook-8",
@@ -8992,7 +9200,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "security-runbook-9",
@@ -9024,7 +9233,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "security-runbook-10",
@@ -9070,7 +9280,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "content-audit-1",
@@ -9119,7 +9330,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "content-audit-2",
@@ -9168,7 +9380,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "content-audit-3",
@@ -9217,7 +9430,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "content-audit-4",
@@ -9266,7 +9480,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "content-audit-5",
@@ -9315,7 +9530,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "content-audit-6",
@@ -9364,7 +9580,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "content-audit-7",
@@ -9413,7 +9630,8 @@
       "precision": 0.6666666666666666,
       "recall": 1,
       "f1": 0.8,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "content-audit-8",
@@ -9447,7 +9665,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "content-audit-9",
@@ -9481,7 +9700,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "content-audit-10",
@@ -9530,7 +9750,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "forecast-model-1",
@@ -9576,7 +9797,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "forecast-model-2",
@@ -9622,7 +9844,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "forecast-model-3",
@@ -9668,7 +9891,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "forecast-model-4",
@@ -9714,7 +9938,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "forecast-model-5",
@@ -9760,7 +9985,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "forecast-model-6",
@@ -9806,7 +10032,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "forecast-model-7",
@@ -9852,7 +10079,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "forecast-model-8",
@@ -9890,7 +10118,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "forecast-model-9",
@@ -9928,7 +10157,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "forecast-model-10",
@@ -9974,7 +10204,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "frontend-accessibility-1",
@@ -10020,7 +10251,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "frontend-accessibility-2",
@@ -10066,7 +10298,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "frontend-accessibility-3",
@@ -10112,7 +10345,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "frontend-accessibility-4",
@@ -10158,7 +10392,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "frontend-accessibility-5",
@@ -10204,7 +10439,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "frontend-accessibility-6",
@@ -10250,7 +10486,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "frontend-accessibility-7",
@@ -10296,7 +10533,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "frontend-accessibility-8",
@@ -10332,7 +10570,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "frontend-accessibility-9",
@@ -10368,7 +10607,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "frontend-accessibility-10",
@@ -10414,7 +10654,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "market-research-1",
@@ -10460,7 +10701,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "market-research-2",
@@ -10506,7 +10748,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "market-research-3",
@@ -10552,7 +10795,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "market-research-4",
@@ -10598,7 +10842,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "market-research-5",
@@ -10644,7 +10889,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "market-research-6",
@@ -10689,7 +10935,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "market-research-7",
@@ -10735,7 +10982,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "market-research-8",
@@ -10769,7 +11017,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "market-research-9",
@@ -10803,7 +11052,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "market-research-10",
@@ -10849,7 +11099,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "procurement-controls-1",
@@ -10898,7 +11149,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "procurement-controls-2",
@@ -10947,7 +11199,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "procurement-controls-3",
@@ -10996,7 +11249,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "procurement-controls-4",
@@ -11045,7 +11299,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "procurement-controls-5",
@@ -11094,7 +11349,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "procurement-controls-6",
@@ -11143,7 +11399,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "procurement-controls-7",
@@ -11192,7 +11449,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "procurement-controls-8",
@@ -11224,7 +11482,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "procurement-controls-9",
@@ -11256,7 +11515,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "procurement-controls-10",
@@ -11305,7 +11565,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "customer-onboarding-1",
@@ -11354,7 +11615,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "customer-onboarding-2",
@@ -11403,7 +11665,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "customer-onboarding-3",
@@ -11452,7 +11715,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "customer-onboarding-4",
@@ -11501,7 +11765,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "customer-onboarding-5",
@@ -11550,7 +11815,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "customer-onboarding-6",
@@ -11599,7 +11865,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "customer-onboarding-7",
@@ -11648,7 +11915,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "customer-onboarding-8",
@@ -11680,7 +11948,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "customer-onboarding-9",
@@ -11712,7 +11981,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "customer-onboarding-10",
@@ -11761,7 +12031,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "developer-docs-1",
@@ -11807,7 +12078,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "developer-docs-2",
@@ -11853,7 +12125,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "developer-docs-3",
@@ -11899,7 +12172,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "developer-docs-4",
@@ -11945,7 +12219,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "developer-docs-5",
@@ -11991,7 +12266,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "developer-docs-6",
@@ -12036,7 +12312,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "developer-docs-7",
@@ -12082,7 +12359,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "developer-docs-8",
@@ -12118,7 +12396,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "developer-docs-9",
@@ -12154,7 +12433,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "developer-docs-10",
@@ -12200,7 +12480,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-privacy-1",
@@ -12246,7 +12527,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-privacy-2",
@@ -12292,7 +12574,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-privacy-3",
@@ -12338,7 +12621,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-privacy-4",
@@ -12384,7 +12668,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-privacy-5",
@@ -12430,7 +12715,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-privacy-6",
@@ -12476,7 +12762,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-privacy-7",
@@ -12522,7 +12809,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "data-privacy-8",
@@ -12558,7 +12846,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "data-privacy-9",
@@ -12594,7 +12883,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "data-privacy-10",
@@ -12640,7 +12930,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "benefits-support-1",
@@ -12686,7 +12977,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "benefits-support-2",
@@ -12732,7 +13024,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "benefits-support-3",
@@ -12778,7 +13071,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "benefits-support-4",
@@ -12824,7 +13118,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "benefits-support-5",
@@ -12869,7 +13164,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0
+      "dynamicRecall": 0,
+      "diversity": 1
     },
     {
       "id": "benefits-support-6",
@@ -12915,7 +13211,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "benefits-support-7",
@@ -12960,7 +13257,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0
+      "dynamicRecall": 0,
+      "diversity": 1
     },
     {
       "id": "benefits-support-8",
@@ -12998,7 +13296,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "benefits-support-9",
@@ -13036,7 +13335,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "benefits-support-10",
@@ -13082,7 +13382,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.3333333333333333
+      "dynamicRecall": 0.3333333333333333,
+      "diversity": 1
     },
     {
       "id": "deployment-costs-1",
@@ -13131,7 +13432,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "deployment-costs-2",
@@ -13180,7 +13482,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "deployment-costs-3",
@@ -13226,7 +13529,8 @@
       "precision": 1,
       "recall": 0.5,
       "f1": 0.6666666666666666,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "deployment-costs-4",
@@ -13275,7 +13579,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "deployment-costs-5",
@@ -13324,7 +13629,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "deployment-costs-6",
@@ -13372,7 +13678,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "deployment-costs-7",
@@ -13421,7 +13728,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "deployment-costs-8",
@@ -13457,7 +13765,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "deployment-costs-9",
@@ -13493,7 +13802,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "deployment-costs-10",
@@ -13542,7 +13852,8 @@
       "precision": 0.5,
       "recall": 0.5,
       "f1": 0.5,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "policy-docs-1",
@@ -13588,7 +13899,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "policy-docs-2",
@@ -13634,7 +13946,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "policy-docs-3",
@@ -13680,7 +13993,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "policy-docs-4",
@@ -13726,7 +14040,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "policy-docs-5",
@@ -13772,7 +14087,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "policy-docs-6",
@@ -13818,7 +14134,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "policy-docs-7",
@@ -13864,7 +14181,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     },
     {
       "id": "policy-docs-8",
@@ -13900,7 +14218,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "policy-docs-9",
@@ -13936,7 +14255,8 @@
       "precision": 0,
       "recall": 0,
       "f1": 0,
-      "dynamicRecall": 1
+      "dynamicRecall": 1,
+      "diversity": 1
     },
     {
       "id": "policy-docs-10",
@@ -13982,7 +14302,8 @@
       "precision": 1,
       "recall": 1,
       "f1": 1,
-      "dynamicRecall": 0.6666666666666666
+      "dynamicRecall": 0.6666666666666666,
+      "diversity": 1
     }
   ]
 }
