@@ -31,67 +31,90 @@ explore.
 
 ## Current Results
 
+### Model Labels
+
+| Label | Candidate/model | Strategy | MB |
+| --- | --- | --- | ---: |
+| L6 | `Xenova/all-MiniLM-L6-v2` | unified-embedding | 23 |
+| L3 | `Xenova/paraphrase-MiniLM-L3-v2` | unified-embedding | 18 |
+| L12 | `Xenova/all-MiniLM-L12-v2` | unified-embedding | 45 |
+| BGE small | `Xenova/bge-small-en-v1.5` | unified-embedding | 67 |
+| DeBERTa | `Xenova/nli-deberta-v3-xsmall` | zero-shot | 33 |
+| DeBERTa + L6 | `Xenova/nli-deberta-v3-xsmall` + `Xenova/all-MiniLM-L6-v2` | dual-model | 55 |
+| DeBERTa + BGE micro | `Xenova/nli-deberta-v3-xsmall` + `SmartComponents/bge-micro-v2` | dual-model | 78 |
+
 ### Winners
 
-| Mode | Candidate/model | Strategy | K | F1 | Dynamic recall | Exact |
-| --- | --- | --- | ---: | ---: | ---: | ---: |
-| Accurate | `paraphrase-minilm-l3-v2-q8` | unified-embedding | 2 | 0.615 | 0.641 | 0.447 |
-| Exploration | `dual-deberta-xsmall-bge-micro-v2-q8` | dual-model | 20 | 0.145 | 0.921 | 0.000 |
+| Mode | Candidate | K | F1 | Dynamic recall | Exact |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Accurate | L3 | 2 | 0.615 | 0.641 | 0.447 |
+| Exploration | DeBERTa + BGE micro | 20 | 0.145 | 0.921 | 0.000 |
 
 ### Exploration Dynamic Recall by K
 
 DynamicRecall@K is the primary exploration metric. Higher K values intentionally
 trade precision for coverage.
 
-| Candidate/model | Strategy | K=2 | K=5 | K=10 | K=20 |
-| --- | --- | ---: | ---: | ---: | ---: |
-| `all-minilm-l6-v2-q8` | unified-embedding | 0.437 | 0.601 | 0.781 | 0.914 |
-| `paraphrase-minilm-l3-v2-q8` | unified-embedding | 0.386 | 0.596 | 0.779 | 0.916 |
-| `all-minilm-l12-v2-q8` | unified-embedding | 0.443 | 0.636 | 0.818 | 0.921 |
-| `bge-small-en-v1-5-q8` | unified-embedding | 0.437 | 0.630 | 0.793 | 0.909 |
-| `nli-deberta-v3-xsmall-q8` | zero-shot | 0.200 | 0.200 | 0.200 | 0.200 |
-| `dual-deberta-xsmall-minilm-l6-v2-q8` | dual-model | 0.437 | 0.601 | 0.781 | 0.914 |
-| `dual-deberta-xsmall-bge-micro-v2-q8` | dual-model | 0.427 | 0.631 | 0.806 | 0.921 |
+| Candidate | K=2 | K=5 | K=10 | K=20 |
+| --- | ---: | ---: | ---: | ---: |
+| L6 | 0.437 | 0.601 | 0.781 | 0.914 |
+| L3 | 0.386 | 0.596 | 0.779 | 0.916 |
+| L12 | 0.443 | 0.636 | 0.818 | 0.921 |
+| BGE small | 0.437 | 0.630 | 0.793 | 0.909 |
+| DeBERTa | 0.200 | 0.200 | 0.200 | 0.200 |
+| DeBERTa + L6 | 0.437 | 0.601 | 0.781 | 0.914 |
+| DeBERTa + BGE micro | 0.427 | 0.631 | 0.806 | 0.921 |
 
-### Full Matrix
+### Accurate Mode Detail
 
-| Candidate/model | Strategy | Estimated MB | Mode | K | Precision | Recall | F1 | Dynamic recall | Exact | Diversity |
-| --- | --- | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| `all-minilm-l6-v2-q8` | unified-embedding | 23 | accurate | 4 | 0.378 | 0.743 | 0.500 | 0.649 | 0.007 | 1.000 |
-| `all-minilm-l6-v2-q8` | unified-embedding | 23 | exploration | 2 | 0.642 | 0.642 | 0.642 | 0.437 | 0.483 | 1.000 |
-| `all-minilm-l6-v2-q8` | unified-embedding | 23 | exploration | 5 | 0.306 | 0.765 | 0.437 | 0.601 | 0.000 | 1.000 |
-| `all-minilm-l6-v2-q8` | unified-embedding | 23 | exploration | 10 | 0.158 | 0.792 | 0.264 | 0.781 | 0.000 | 1.000 |
-| `all-minilm-l6-v2-q8` | unified-embedding | 23 | exploration | 20 | 0.080 | 0.800 | 0.145 | 0.914 | 0.000 | 1.000 |
-| `paraphrase-minilm-l3-v2-q8` | unified-embedding | 18 | accurate | 2 | 0.615 | 0.615 | 0.615 | 0.641 | 0.447 | 1.000 |
-| `paraphrase-minilm-l3-v2-q8` | unified-embedding | 18 | exploration | 2 | 0.608 | 0.608 | 0.608 | 0.386 | 0.440 | 1.000 |
-| `paraphrase-minilm-l3-v2-q8` | unified-embedding | 18 | exploration | 5 | 0.291 | 0.727 | 0.415 | 0.596 | 0.000 | 1.000 |
-| `paraphrase-minilm-l3-v2-q8` | unified-embedding | 18 | exploration | 10 | 0.159 | 0.793 | 0.264 | 0.779 | 0.000 | 1.000 |
-| `paraphrase-minilm-l3-v2-q8` | unified-embedding | 18 | exploration | 20 | 0.080 | 0.800 | 0.145 | 0.916 | 0.000 | 0.998 |
-| `all-minilm-l12-v2-q8` | unified-embedding | 45 | accurate | 4 | 0.366 | 0.723 | 0.485 | 0.697 | 0.007 | 1.000 |
-| `all-minilm-l12-v2-q8` | unified-embedding | 45 | exploration | 2 | 0.620 | 0.620 | 0.620 | 0.443 | 0.457 | 1.000 |
-| `all-minilm-l12-v2-q8` | unified-embedding | 45 | exploration | 5 | 0.294 | 0.735 | 0.420 | 0.636 | 0.000 | 1.000 |
-| `all-minilm-l12-v2-q8` | unified-embedding | 45 | exploration | 10 | 0.158 | 0.788 | 0.263 | 0.818 | 0.000 | 1.000 |
-| `all-minilm-l12-v2-q8` | unified-embedding | 45 | exploration | 20 | 0.080 | 0.800 | 0.145 | 0.921 | 0.000 | 1.000 |
-| `bge-small-en-v1-5-q8` | unified-embedding | 67 | accurate | 4 | 0.361 | 0.722 | 0.481 | 0.667 | 0.000 | 1.000 |
-| `bge-small-en-v1-5-q8` | unified-embedding | 67 | exploration | 2 | 0.658 | 0.658 | 0.658 | 0.437 | 0.520 | 1.000 |
-| `bge-small-en-v1-5-q8` | unified-embedding | 67 | exploration | 5 | 0.297 | 0.743 | 0.425 | 0.630 | 0.000 | 1.000 |
-| `bge-small-en-v1-5-q8` | unified-embedding | 67 | exploration | 10 | 0.158 | 0.792 | 0.264 | 0.793 | 0.000 | 1.000 |
-| `bge-small-en-v1-5-q8` | unified-embedding | 67 | exploration | 20 | 0.080 | 0.800 | 0.145 | 0.909 | 0.000 | 1.000 |
-| `nli-deberta-v3-xsmall-q8` | zero-shot | 33 | accurate | 4 | 0.653 | 0.598 | 0.597 | 0.200 | 0.243 | 1.000 |
-| `nli-deberta-v3-xsmall-q8` | zero-shot | 33 | exploration | 2 | 0.602 | 0.602 | 0.602 | 0.200 | 0.430 | 1.000 |
-| `nli-deberta-v3-xsmall-q8` | zero-shot | 33 | exploration | 5 | 0.291 | 0.727 | 0.415 | 0.200 | 0.000 | 1.000 |
-| `nli-deberta-v3-xsmall-q8` | zero-shot | 33 | exploration | 10 | 0.158 | 0.788 | 0.263 | 0.200 | 0.000 | 1.000 |
-| `nli-deberta-v3-xsmall-q8` | zero-shot | 33 | exploration | 20 | 0.080 | 0.800 | 0.145 | 0.200 | 0.000 | 1.000 |
-| `dual-deberta-xsmall-minilm-l6-v2-q8` | dual-model | 55 | accurate | 4 | 0.653 | 0.598 | 0.597 | 0.649 | 0.243 | 1.000 |
-| `dual-deberta-xsmall-minilm-l6-v2-q8` | dual-model | 55 | exploration | 2 | 0.602 | 0.602 | 0.602 | 0.437 | 0.430 | 1.000 |
-| `dual-deberta-xsmall-minilm-l6-v2-q8` | dual-model | 55 | exploration | 5 | 0.291 | 0.727 | 0.415 | 0.601 | 0.000 | 1.000 |
-| `dual-deberta-xsmall-minilm-l6-v2-q8` | dual-model | 55 | exploration | 10 | 0.158 | 0.788 | 0.263 | 0.781 | 0.000 | 1.000 |
-| `dual-deberta-xsmall-minilm-l6-v2-q8` | dual-model | 55 | exploration | 20 | 0.080 | 0.800 | 0.145 | 0.914 | 0.000 | 1.000 |
-| `dual-deberta-xsmall-bge-micro-v2-q8` | dual-model | 78 | accurate | 4 | 0.653 | 0.598 | 0.597 | 0.670 | 0.243 | 1.000 |
-| `dual-deberta-xsmall-bge-micro-v2-q8` | dual-model | 78 | exploration | 2 | 0.602 | 0.602 | 0.602 | 0.427 | 0.430 | 1.000 |
-| `dual-deberta-xsmall-bge-micro-v2-q8` | dual-model | 78 | exploration | 5 | 0.291 | 0.727 | 0.415 | 0.631 | 0.000 | 1.000 |
-| `dual-deberta-xsmall-bge-micro-v2-q8` | dual-model | 78 | exploration | 10 | 0.158 | 0.788 | 0.263 | 0.806 | 0.000 | 1.000 |
-| `dual-deberta-xsmall-bge-micro-v2-q8` | dual-model | 78 | exploration | 20 | 0.080 | 0.800 | 0.145 | 0.921 | 0.000 | 1.000 |
+| Candidate | K | Precision | Recall | F1 | Dynamic recall | Exact |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| L6 | 4 | 0.378 | 0.743 | 0.500 | 0.649 | 0.007 |
+| L3 | 2 | 0.615 | 0.615 | 0.615 | 0.641 | 0.447 |
+| L12 | 4 | 0.366 | 0.723 | 0.485 | 0.697 | 0.007 |
+| BGE small | 4 | 0.361 | 0.722 | 0.481 | 0.667 | 0.000 |
+| DeBERTa | 4 | 0.653 | 0.598 | 0.597 | 0.200 | 0.243 |
+| DeBERTa + L6 | 4 | 0.653 | 0.598 | 0.597 | 0.649 | 0.243 |
+| DeBERTa + BGE micro | 4 | 0.653 | 0.598 | 0.597 | 0.670 | 0.243 |
+
+### Exploration Precision@K
+
+| Candidate | K=2 | K=5 | K=10 | K=20 |
+| --- | ---: | ---: | ---: | ---: |
+| L6 | 0.642 | 0.306 | 0.158 | 0.080 |
+| L3 | 0.608 | 0.291 | 0.159 | 0.080 |
+| L12 | 0.620 | 0.294 | 0.158 | 0.080 |
+| BGE small | 0.658 | 0.297 | 0.158 | 0.080 |
+| DeBERTa | 0.602 | 0.291 | 0.158 | 0.080 |
+| DeBERTa + L6 | 0.602 | 0.291 | 0.158 | 0.080 |
+| DeBERTa + BGE micro | 0.602 | 0.291 | 0.158 | 0.080 |
+
+### Exploration Recall@K
+
+| Candidate | K=2 | K=5 | K=10 | K=20 |
+| --- | ---: | ---: | ---: | ---: |
+| L6 | 0.642 | 0.765 | 0.792 | 0.800 |
+| L3 | 0.608 | 0.727 | 0.793 | 0.800 |
+| L12 | 0.620 | 0.735 | 0.788 | 0.800 |
+| BGE small | 0.658 | 0.743 | 0.792 | 0.800 |
+| DeBERTa | 0.602 | 0.727 | 0.788 | 0.800 |
+| DeBERTa + L6 | 0.602 | 0.727 | 0.788 | 0.800 |
+| DeBERTa + BGE micro | 0.602 | 0.727 | 0.788 | 0.800 |
+
+### Exploration F1@K
+
+| Candidate | K=2 | K=5 | K=10 | K=20 |
+| --- | ---: | ---: | ---: | ---: |
+| L6 | 0.642 | 0.437 | 0.264 | 0.145 |
+| L3 | 0.608 | 0.415 | 0.264 | 0.145 |
+| L12 | 0.620 | 0.420 | 0.263 | 0.145 |
+| BGE small | 0.658 | 0.425 | 0.264 | 0.145 |
+| DeBERTa | 0.602 | 0.415 | 0.263 | 0.145 |
+| DeBERTa + L6 | 0.602 | 0.415 | 0.263 | 0.145 |
+| DeBERTa + BGE micro | 0.602 | 0.415 | 0.263 | 0.145 |
+
+All completed exploration rows have Diversity@K of `1.000`, except
+`paraphrase-minilm-l3-v2-q8` at K = 20, which is `0.998`.
 
 ## Interpretation
 
