@@ -7,7 +7,7 @@ const base = process.env.VITE_BASE_PATH ?? '/'
 export default defineConfig({
   base,
   title: 'Tag Extractor',
-  description: 'A TypeScript library to extract configured tags from short agreement narratives using small browser models',
+  description: 'A TypeScript library to extract fixed taxonomy tags and dynamic phrase tags from plain text using small browser models',
   head: [
     ['link', { rel: 'icon', href: `${base}favicon.svg`, type: 'image/svg+xml' }],
   ],

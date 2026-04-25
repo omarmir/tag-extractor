@@ -279,7 +279,7 @@ function tag(key: string, label: string, description: string, aliases: string[])
 
 .tag-example__controls {
   grid-column: 1 / -1;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(120px, 1fr)) minmax(220px, auto);
   align-items: end;
   border-top: 1px solid var(--vp-c-divider);
   padding-top: 16px;
@@ -299,9 +299,13 @@ function tag(key: string, label: string, description: string, aliases: string[])
 .tag-example__buttons {
   display: flex;
   gap: 8px;
+  min-width: 220px;
 }
 
 .tag-example button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 38px;
   border: 1px solid var(--vp-c-brand-1);
   border-radius: 8px;
@@ -310,6 +314,7 @@ function tag(key: string, label: string, description: string, aliases: string[])
   font-weight: 700;
   padding: 0 14px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .tag-example button.tag-example__secondary {
@@ -383,6 +388,10 @@ function tag(key: string, label: string, description: string, aliases: string[])
 
   .tag-example__controls {
     grid-template-columns: 1fr;
+  }
+
+  .tag-example__buttons {
+    min-width: 0;
   }
 }
 

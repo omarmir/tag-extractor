@@ -31,6 +31,30 @@ explore.
 
 ## Current Results
 
+### Winners
+
+| Mode | Candidate/model | Strategy | K | F1 | Dynamic recall | Exact |
+| --- | --- | --- | ---: | ---: | ---: | ---: |
+| Accurate | `paraphrase-minilm-l3-v2-q8` | unified-embedding | 2 | 0.615 | 0.641 | 0.447 |
+| Exploration | `dual-deberta-xsmall-bge-micro-v2-q8` | dual-model | 20 | 0.145 | 0.921 | 0.000 |
+
+### Exploration Dynamic Recall by K
+
+DynamicRecall@K is the primary exploration metric. Higher K values intentionally
+trade precision for coverage.
+
+| Candidate/model | Strategy | K=2 | K=5 | K=10 | K=20 |
+| --- | --- | ---: | ---: | ---: | ---: |
+| `all-minilm-l6-v2-q8` | unified-embedding | 0.437 | 0.601 | 0.781 | 0.914 |
+| `paraphrase-minilm-l3-v2-q8` | unified-embedding | 0.386 | 0.596 | 0.779 | 0.916 |
+| `all-minilm-l12-v2-q8` | unified-embedding | 0.443 | 0.636 | 0.818 | 0.921 |
+| `bge-small-en-v1-5-q8` | unified-embedding | 0.437 | 0.630 | 0.793 | 0.909 |
+| `nli-deberta-v3-xsmall-q8` | zero-shot | 0.200 | 0.200 | 0.200 | 0.200 |
+| `dual-deberta-xsmall-minilm-l6-v2-q8` | dual-model | 0.437 | 0.601 | 0.781 | 0.914 |
+| `dual-deberta-xsmall-bge-micro-v2-q8` | dual-model | 0.427 | 0.631 | 0.806 | 0.921 |
+
+### Full Matrix
+
 | Candidate/model | Strategy | Estimated MB | Mode | K | Precision | Recall | F1 | Dynamic recall | Exact | Diversity |
 | --- | --- | ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | `all-minilm-l6-v2-q8` | unified-embedding | 23 | accurate | 4 | 0.378 | 0.743 | 0.500 | 0.649 | 0.007 | 1.000 |
