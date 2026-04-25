@@ -1,0 +1,13 @@
+{
+  "name": "@browser-tag-extractor/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./worker-runtime": "./src/worker-runtime.ts"
+  },
+  "peerDependencies": {
+    "@huggingface/transformers": "^4.0.1"
+  }
+}

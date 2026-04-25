@@ -1,0 +1,32 @@
+{
+  "name": "tag-extractor-monorepo",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "docs",
+    "library"
+  ],
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "build:library": "tsup --config library/tsup.config.ts",
+    "preview": "vitepress preview docs",
+    "report:main": "bun tools/scripts/run-report.ts main",
+    "report:model-bakeoff": "bun tools/scripts/run-report.ts model-bakeoff",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "package:library": "bun tools/scripts/create-package-release.ts"
+  },
+  "dependencies": {
+    "@browser-tag-extractor/core": "workspace:*",
+    "@huggingface/transformers": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.5",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.0.18",
+    "vitepress": "^2.0.0-alpha.17"
+  }
+}
