@@ -2,12 +2,14 @@ import tailwindcss from '@tailwindcss/vite'
 import type { PluginOption } from 'vite'
 import { defineConfig } from 'vitepress'
 
+const base = process.env.VITE_BASE_PATH ?? '/'
+
 export default defineConfig({
-  base: process.env.VITE_BASE_PATH ?? '/',
+  base,
   title: 'Tag Extractor',
   description: 'A TypeScript library to extract configured tags from short agreement narratives using small browser models',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'icon', href: `${base}favicon.svg`, type: 'image/svg+xml' }],
   ],
   vite: {
     plugins: [tailwindcss() as unknown as PluginOption],

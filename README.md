@@ -1,8 +1,8 @@
 # Tag Extractor
 
-Nuxt extension support package for browser-side agreement tag extraction. It
+Browser-side TypeScript library for extracting tags from plain text. It
 supports both fixed taxonomy suggestions and dynamic phrase tags from the same
-narrative.
+document.
 
 This repository follows the same layout as `quality-meter`:
 
@@ -11,9 +11,9 @@ This repository follows the same layout as `quality-meter`:
 - `tools/benchmark/`: benchmark datasets and model catalog.
 - `tools/scripts/`: report and packaging scripts.
 
-The library is intentionally independent of GCS-SSC host APIs. A future
-`gcs-agreement-tags` extension update can consume this package for tag ranking,
-worker runtime, and benchmark-calibrated defaults.
+The library is intentionally independent of any host application. It works with
+plain text, tag definitions, scoring configuration, and optional browser worker
+runtime helpers.
 
 Two model paths are benchmarked:
 

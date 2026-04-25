@@ -1,6 +1,6 @@
 export type ModelCandidate = {
   id: string
-  strategy: 'unified-embedding' | 'dual-model'
+  strategy: 'unified-embedding' | 'zero-shot' | 'dual-model'
   modelId: string
   predefinedModelId?: string
   dynamicModelId?: string
@@ -22,7 +22,7 @@ export const MODEL_CANDIDATES: ModelCandidate[] = [
     modelId: 'Xenova/all-MiniLM-L6-v2',
     dtype: 'q8',
     estimatedAssetMb: 23,
-    notes: 'Current agreement-tags model; strong baseline for English short-text similarity.',
+    notes: 'Small sentence embedding baseline for English short-text similarity.',
   },
   {
     id: 'paraphrase-minilm-l3-v2-q8',
@@ -53,6 +53,15 @@ export const MODEL_CANDIDATES: ModelCandidate[] = [
     notes: 'Small retrieval model; useful for tag-description matching.',
   },
   {
+    id: 'nli-deberta-v3-xsmall-q8',
+    strategy: 'zero-shot',
+    modelId: 'Xenova/nli-deberta-v3-xsmall',
+    predefinedModelId: 'Xenova/nli-deberta-v3-xsmall',
+    dtype: 'q8',
+    estimatedAssetMb: 33,
+    notes: 'Zero-shot classification only for fixed taxonomy tags; dynamic extraction is intentionally disabled for this benchmark.',
+  },
+  {
     id: 'dual-deberta-xsmall-minilm-l6-v2-q8',
     strategy: 'dual-model',
     modelId: 'Xenova/all-MiniLM-L6-v2',
@@ -65,9 +74,9 @@ export const MODEL_CANDIDATES: ModelCandidate[] = [
   {
     id: 'dual-deberta-xsmall-bge-micro-v2-q8',
     strategy: 'dual-model',
-    modelId: 'Xenova/bge-micro-v2',
+    modelId: 'SmartComponents/bge-micro-v2',
     predefinedModelId: 'Xenova/nli-deberta-v3-xsmall',
-    dynamicModelId: 'Xenova/bge-micro-v2',
+    dynamicModelId: 'SmartComponents/bge-micro-v2',
     dtype: 'q8',
     estimatedAssetMb: 78,
     notes: 'Dual path: zero-shot NLI for predefined tags plus BGE micro dynamic extraction.',

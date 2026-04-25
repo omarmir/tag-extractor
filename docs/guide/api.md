@@ -9,7 +9,7 @@ import {
 const extractor = createTransformersTagExtractor({
   modelSource: {
     mode: 'local',
-    localModelPath: '/extensions/gcs-agreement-tags/models/',
+    localModelPath: '/models/',
   },
 })
 
@@ -28,7 +28,7 @@ const tags = [
 ]
 
 const result = await extractor.extract({
-  text: 'The agreement funds training and coaching for local coordinators.',
+  text: 'The document describes training and coaching for local coordinators.',
   tags,
 })
 ```
@@ -48,7 +48,7 @@ const dualExtractor = createDualModelTagExtractor({
 })
 
 const dualResult = await dualExtractor.extract({
-  text: 'The agreement funds training and coaching for local coordinators.',
+  text: 'The document describes training and coaching for local coordinators.',
   tags,
 })
 ```

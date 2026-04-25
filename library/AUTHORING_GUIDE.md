@@ -7,8 +7,8 @@ Tag extraction quality depends more on tag definitions than on the model.
 Use stable, lowercase keys:
 
 - `capacity-building`
-- `housing-support`
-- `public-safety`
+- `content-documentation`
+- `software-engineering`
 
 ## Labels
 
@@ -18,21 +18,21 @@ parallel when possible.
 ## Descriptions
 
 Descriptions should include concrete activities and nouns. Avoid broad terms
-that match every agreement.
+that match every document.
 
 Good:
 
-> Training, staffing, coaching, tools, governance, or organizational capability.
+> Documentation, knowledge bases, release notes, editorial workflows, or style guidance.
 
 Weak:
 
-> Supports important program work.
+> Supports important work.
 
 ## Aliases
 
 Aliases are exact-match boost terms. Use them for common operational language:
 
 - `training`
-- `job placement`
-- `food bank`
-- `emergency preparedness`
+- `release notes`
+- `support ticket`
+- `data pipeline`

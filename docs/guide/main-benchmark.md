@@ -1,12 +1,12 @@
 # Main Benchmark
 
-The main benchmark uses a 300-example corpus covering workforce, health,
-housing, infrastructure, community, environment, food security, safety, arts,
-and digital inclusion agreements.
+The main benchmark uses a 300-example corpus covering common software,
+operations, support, finance, legal, HR, research, marketing, data, product,
+and documentation use cases.
 
 Each case has:
 
-- agreement text;
+- source text;
 - the configured tag vocabulary;
 - expected positive tags;
 - expected dynamic phrase tags;
@@ -20,11 +20,11 @@ Current lexical baseline:
 | Metric | Value |
 | --- | ---: |
 | Cases | 300 |
-| Mean precision | 0.618 |
-| Mean recall | 0.480 |
-| Mean F1 | 0.521 |
-| Mean dynamic recall | 0.849 |
-| Exact match rate | 0.213 |
+| Mean precision | 0.706 |
+| Mean recall | 0.620 |
+| Mean F1 | 0.639 |
+| Mean dynamic recall | 0.673 |
+| Exact match rate | 0.337 |
 
 The lexical baseline is intentionally kept as a fallback. The model bakeoff
 shows higher dynamic recall and stronger fixed-tag F1 for the best small model

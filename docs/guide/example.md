@@ -15,16 +15,16 @@ import TagExtractorExample from '../.vitepress/components/TagExtractorExample.vu
 import { extractTags, resolveTagExtractorConfig } from '@browser-tag-extractor/core'
 
 const result = await extractTags({
-  text: 'We are looking to increase the trainers ability to perform tasks by providing them training.',
+  text: 'The document describes API reference cleanup and release note automation.',
   tags: [
     {
-      key: 'capacity-building',
-      label: { en: 'Capacity building', fr: 'Renforcement des capacités' },
+      key: 'content-documentation',
+      label: { en: 'Content and documentation', fr: 'Content and documentation' },
       description: {
-        en: 'Training, staffing, tools, or organizational capacity.',
-        fr: 'Formation, dotation, outils ou capacité organisationnelle.',
+        en: 'Documentation, knowledge bases, release notes, editorial workflows, or style guidance.',
+        fr: 'Documentation, knowledge bases, release notes, editorial workflows, or style guidance.',
       },
-      aliases: ['training'],
+      aliases: ['documentation', 'release notes'],
     },
   ],
 }, undefined, resolveTagExtractorConfig({ minScore: 0 }))

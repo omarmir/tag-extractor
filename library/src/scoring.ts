@@ -166,12 +166,12 @@ function dedupeTags(tags: TagDefinition[]): TagDefinition[] {
 }
 
 const STOPWORDS = new Set([
-  'about', 'above', 'after', 'again', 'against', 'agreement', 'also', 'and', 'are', 'because', 'been', 'being',
+  'about', 'above', 'after', 'again', 'against', 'also', 'and', 'are', 'because', 'been', 'being',
   'between', 'both', 'but', 'can', 'completed', 'connects', 'coordination', 'could', 'deliver', 'deliverables',
-  'delivery', 'described', 'describes', 'details', 'does', 'document', 'explains', 'for', 'from', 'funded',
-  'funding', 'funds', 'had', 'has', 'have', 'identify', 'includes', 'intake', 'into', 'its', 'matching',
+  'delivery', 'described', 'describes', 'details', 'does', 'document', 'explains', 'for', 'from',
+  'had', 'has', 'have', 'identify', 'includes', 'intake', 'into', 'its', 'matching',
   'measurable', 'must', 'names', 'not', 'operational', 'over', 'paragraph', 'participant', 'phased', 'phrases',
-  'plan', 'program', 'project', 'proposal', 'provides', 'quarterly', 'rather', 'recipient', 'reporting',
+  'plan', 'program', 'project', 'proposal', 'provides', 'quarterly', 'rather', 'reporting',
   'service', 'simply', 'staff', 'support', 'supports', 'surrounding', 'taxonomy', 'that', 'the', 'their',
   'them', 'this', 'through', 'will', 'with', 'without', 'work',
 ])

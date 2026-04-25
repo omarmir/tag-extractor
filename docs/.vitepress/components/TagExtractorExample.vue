@@ -7,15 +7,15 @@ import {
   type TagExtractionResult,
 } from '@browser-tag-extractor/core'
 
-const sampleText = `We are looking to increase the trainers ability to perform tasks by providing them training. The agreement also funds coaching materials, peer learning sessions, and follow-up support for regional coordinators who will document participant progress over the next two quarters.`
+const sampleText = `The document describes a developer documentation portal with API reference cleanup, code example testing, and release note automation. The team will validate each example against the current SDK, update the knowledge base navigation, and publish a short migration guide for users.`
 
 const defaultTags: TagDefinition[] = [
-  tag('capacity-building', 'Capacity building', 'Training, staffing, coaching, tools, governance, or organizational capability.', ['training', 'skills', 'coaching', 'technical assistance']),
-  tag('infrastructure', 'Infrastructure', 'Construction, renovation, facilities, equipment, capital assets, or physical upgrades.', ['construction', 'renovation', 'facility', 'equipment']),
-  tag('community-benefit', 'Community benefit', 'Direct benefit to residents, neighbourhoods, public users, or community partners.', ['public benefit', 'community impact', 'local benefit']),
-  tag('health-services', 'Health services', 'Clinical, public health, mental health, prevention, treatment, or care navigation services.', ['clinic', 'mental health', 'public health', 'care navigation']),
-  tag('workforce-development', 'Workforce development', 'Employment services, job placements, apprenticeships, labour-market access, or career training.', ['job placement', 'employment', 'apprenticeship', 'workforce']),
-  tag('digital-access', 'Digital access', 'Broadband, devices, digital literacy, connectivity, or online service access.', ['broadband', 'devices', 'digital literacy', 'connectivity']),
+  tag('software-engineering', 'Software engineering', 'Application code, APIs, frontend work, backend services, testing, refactoring, or developer workflows.', ['api', 'frontend', 'backend', 'tests']),
+  tag('content-documentation', 'Content and documentation', 'Documentation, knowledge bases, release notes, editorial workflows, training material, or style guidance.', ['documentation', 'knowledge base', 'release notes', 'style guide']),
+  tag('product-management', 'Product management', 'Roadmaps, product discovery, prioritization, release planning, requirements, or feature adoption.', ['roadmap', 'requirements', 'product discovery', 'feature adoption']),
+  tag('customer-support', 'Customer support', 'Ticket triage, help desk operations, customer onboarding, support playbooks, escalations, or service recovery.', ['support ticket', 'help desk', 'onboarding', 'escalation']),
+  tag('security-compliance', 'Security and compliance', 'Access controls, audit readiness, privacy, risk reviews, encryption, policy controls, or compliance evidence.', ['access control', 'audit', 'privacy', 'encryption']),
+  tag('data-analytics', 'Data and analytics', 'Dashboards, metrics, data pipelines, reporting, experimentation, warehouse models, or analytics instrumentation.', ['dashboard', 'metrics', 'data pipeline', 'analytics']),
 ]
 
 const text = ref(sampleText)
