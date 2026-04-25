@@ -1,7 +1,7 @@
 # @browser-tag-extractor/core
 
 Browser-side tag extraction for fixed taxonomy suggestions and optional dynamic
-phrase tags.
+slug-style tags.
 
 The package uses `Xenova/all-MiniLM-L12-v2` by default and includes the model
 files in the Git-installable package snapshot. The main API does not expose
@@ -42,7 +42,8 @@ const result = await extractor.extract({
 
 Returned predefined tags include `key`, `label`, and `score`. Returned dynamic
 tags include `label` and `score`, with labels normalized as lowercase
-hyphenated strings such as `data-analytics`.
+hyphenated strings such as `data-analytics`, not display phrases such as
+`data analytics`.
 
 Benchmark-only model, quantization, and source configuration helpers are
 available from `@browser-tag-extractor/core/benchmark` for this repository's

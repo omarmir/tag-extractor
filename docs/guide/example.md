@@ -6,7 +6,8 @@ the simplified public API. The bundled default model is
 dynamic-tag allowance, and K.
 
 Dynamic suggestions are returned as hyphenated tag labels, such as
-`api-reference` or `release-note-automation`.
+`api-reference` or `release-note-automation`, so the demo chips should not show
+spaces inside dynamic tag labels.
 
 <script setup lang="ts">
 import TagExtractorExample from '../.vitepress/components/TagExtractorExample.vue'

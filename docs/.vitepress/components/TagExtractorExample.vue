@@ -144,7 +144,7 @@ function tag(key: string, label: string, description: string, aliases: string[])
             {{ item.key }}
             <small>{{ scoreLabel(item.score) }}</small>
           </span>
-          <span v-if="topPredefined.length === 0" class="tag-example__empty">No fixed tags above threshold</span>
+          <span v-if="topPredefined.length === 0" class="tag-example__empty">No fixed tags returned</span>
         </div>
       </div>
 
@@ -155,7 +155,7 @@ function tag(key: string, label: string, description: string, aliases: string[])
             {{ item.label }}
             <small>{{ scoreLabel(item.score) }}</small>
           </span>
-          <span v-if="topDynamic.length === 0" class="tag-example__empty">No dynamic tags above threshold</span>
+          <span v-if="topDynamic.length === 0" class="tag-example__empty">No dynamic tags returned</span>
         </div>
       </div>
     </div>

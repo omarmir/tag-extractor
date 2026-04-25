@@ -2,7 +2,8 @@
 
 The public API is deliberately narrow. Pass text, predefined tags, whether
 dynamic tags are allowed, and K. The bundled L12 model is used automatically.
-Dynamic tag labels are returned as lowercase hyphenated strings.
+Dynamic tag labels are returned as lowercase hyphenated strings, for example
+`release-note-automation`.
 
 ## Direct Extraction
 
@@ -15,6 +16,9 @@ const suggestions = await extractTextTags({
   allowDynamicTags: true,
   k: 5,
 })
+
+console.log(suggestions.dynamic.map((item) => item.label))
+// ["release-note-automation", "api-reference-cleanup", ...]
 ```
 
 ## Reused Extractor

@@ -1,15 +1,16 @@
 # What Is This?
 
 Tag Extractor is a small TypeScript package for ranking a configured tag
-vocabulary against a short narrative and discovering organic phrase tags from
+vocabulary against a short narrative and discovering organic dynamic tags from
 that same text. It is a standalone library for applications that need local,
 browser-friendly tag extraction without tying scoring logic to a host product.
 
-The package does four things:
+The package does five things:
 
 - normalizes tag definitions into scoring text;
 - combines semantic embedding similarity with lexical and alias boosts for fixed tags;
-- extracts dynamic n-gram tags with a KeyBERT-style document-similarity pass;
+- extracts dynamic n-gram candidates with a KeyBERT-style document-similarity pass;
+- returns dynamic labels as lowercase hyphenated strings, such as `data-analytics`;
 - ships the default `Xenova/all-MiniLM-L12-v2` model files for local use.
 
 The main API is intentionally narrow: pass `text`, `predefinedTags`,

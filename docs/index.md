@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Tag Extractor
   text: Browser-first tag extraction
-  tagline: Rank predefined tags and discover dynamic phrase tags with one bundled local model.
+  tagline: Rank predefined tags and discover dynamic slug-style tags with one bundled local model.
   actions:
     - theme: brand
       text: Read the Guide

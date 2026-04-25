@@ -1,8 +1,8 @@
 # Tag Extractor
 
 Browser-side TypeScript library for extracting tags from plain text. It ranks
-predefined taxonomy tags and can also suggest dynamic phrase tags from the same
-document.
+predefined taxonomy tags and can also suggest dynamic slug-style tags from the
+same document.
 
 This repository follows the same layout as `quality-meter`:
 
@@ -54,9 +54,9 @@ const result = await extractor.extract({
 Two model paths are benchmarked:
 
 - unified embedding: one small feature-extraction model ranks fixed tags and
-  dynamic phrase candidates;
+  dynamic phrase candidates, then returns dynamic labels as hyphenated tags;
 - dual model: DeBERTa zero-shot classification ranks fixed tags while a small
-  embedding model extracts dynamic phrase tags.
+  embedding model extracts dynamic tag candidates.
 
 Benchmarks report both accurate mode for auto-applying a small final tag set and
 exploration mode for ranked top-K suggestions. The library default is
@@ -67,7 +67,8 @@ The scorer also applies a generic negation penalty when configured tag terms
 appear near cues such as "no", "not", or "without".
 
 Dynamic tags are returned as lowercase hyphenated labels, for example
-`data-analytics` rather than `data analytics`.
+`data-analytics` rather than `data analytics`. This keeps predefined and dynamic
+tag output in the same key-like shape.
 
 ## Development
 

@@ -409,7 +409,7 @@ Each case has:
 - source text;
 - the configured tag vocabulary;
 - expected positive tags;
-- expected dynamic phrase tags;
+- expected dynamic tags;
 - expected negative tags.
 
 The report summarizes fixed-tag precision, fixed-tag recall, fixed-tag F1,
