@@ -1,13 +1,13 @@
 import { mkdir } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import {
+  createDualModelTagExtractor,
   createTransformersTagExtractor,
   evaluateTagSuggestions,
   extractTags,
   resolveTagExtractorConfig,
   summarizeTagEvaluation,
   type TagEvaluationResult,
-  type TagSuggestion,
 } from '@browser-tag-extractor/core'
 import { BENCHMARK_CASES } from '../benchmark/cases'
 import { getBenchmarkModelCandidates } from '../benchmark/model-catalog'
@@ -34,12 +34,12 @@ async function runMainReport() {
   const progress = createProgressReporter('main benchmark', BENCHMARK_CASES.length)
 
   for (const [index, testCase] of BENCHMARK_CASES.entries()) {
-    const suggestions = await extractTags({
+    const extraction = await extractTags({
       text: testCase.text,
       tags: testCase.tags,
       config,
     })
-    results.push(evaluateTagSuggestions(testCase, suggestions))
+    results.push(evaluateTagSuggestions(testCase, extraction.predefined, extraction.dynamic))
     progress(index + 1, testCase.id)
   }
 
@@ -58,27 +58,40 @@ async function runModelBakeoff() {
   const summaries = []
 
   for (const candidate of candidates) {
-    const extractor = createTransformersTagExtractor({
-      modelId: candidate.modelId,
-      dtype: candidate.dtype,
-      minScore: 0.2,
-      maxSuggestions: 4,
-      modelSource: {
-        mode: 'huggingface',
-        useBrowserCache: false,
-      },
-    })
+    const extractor = candidate.strategy === 'dual-model'
+      ? createDualModelTagExtractor({
+          predefinedModelId: candidate.predefinedModelId,
+          dynamicModelId: candidate.dynamicModelId,
+          predefinedDtype: candidate.dtype,
+          dynamicDtype: candidate.dtype,
+          minScore: 0.2,
+          maxSuggestions: 4,
+          modelSource: {
+            mode: 'huggingface',
+            useBrowserCache: false,
+          },
+        })
+      : createTransformersTagExtractor({
+          modelId: candidate.modelId,
+          dtype: candidate.dtype,
+          minScore: 0.2,
+          maxSuggestions: 4,
+          modelSource: {
+            mode: 'huggingface',
+            useBrowserCache: false,
+          },
+        })
 
     const results: TagEvaluationResult[] = []
     const progress = createProgressReporter(candidate.id, BENCHMARK_CASES.length)
     try {
       await extractor.loadModel()
       for (const [index, testCase] of BENCHMARK_CASES.entries()) {
-        const suggestions = await extractor.extract({
+        const extraction = await extractor.extract({
           text: testCase.text,
           tags: testCase.tags,
         })
-        results.push(evaluateTagSuggestions(testCase, suggestions))
+        results.push(evaluateTagSuggestions(testCase, extraction.predefined, extraction.dynamic))
         progress(index + 1, testCase.id)
       }
 
@@ -129,12 +142,16 @@ function compactSummary(summary: ReturnType<typeof summarizeTagEvaluation>) {
     meanPrecision: round(summary.meanPrecision),
     meanRecall: round(summary.meanRecall),
     meanF1: round(summary.meanF1),
+    meanDynamicRecall: round(summary.meanDynamicRecall),
     exactMatchRate: round(summary.exactMatchRate),
     topMisses: summary.topMisses.slice(0, 5).map((item) => ({
       id: item.id,
       expectedTags: item.expectedTags,
       predictedTags: item.predictedTags,
+      expectedDynamicTags: item.expectedDynamicTags,
+      predictedDynamicTags: item.predictedDynamicTags,
       f1: round(item.f1),
+      dynamicRecall: round(item.dynamicRecall),
     })),
   }
 }

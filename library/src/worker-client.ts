@@ -6,11 +6,11 @@ import type {
   TagExtractorWorkerClient,
   TagExtractorWorkerClientOptions,
   TagExtractorWorkerEvent,
-  TagSuggestion,
+  TagExtractionResult,
 } from './types'
 
 type PendingRequest = {
-  resolve: (value: TagSuggestion[]) => void
+  resolve: (value: TagExtractionResult) => void
   reject: (reason: Error) => void
 }
 
@@ -48,7 +48,7 @@ export function createTagExtractorWorkerClient(options: TagExtractorWorkerClient
       }
 
       pending.delete(message.requestId)
-      request.resolve(message.suggestions)
+      request.resolve(message.result)
       return
     }
 
@@ -80,7 +80,7 @@ export function createTagExtractorWorkerClient(options: TagExtractorWorkerClient
       const requestId = String(nextRequestId)
       nextRequestId += 1
 
-      return new Promise<TagSuggestion[]>((resolve, reject) => {
+      return new Promise<TagExtractionResult>((resolve, reject) => {
         pending.set(requestId, { resolve, reject })
         worker.postMessage({
           type: 'EXTRACT_TAGS',

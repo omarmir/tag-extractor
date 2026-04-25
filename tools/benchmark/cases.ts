@@ -7,6 +7,7 @@ export type BenchmarkCase = {
   text: string
   tags: TagDefinition[]
   expectedTags: string[]
+  expectedDynamicTags: string[]
   rejectedTags: string[]
 }
 
@@ -89,6 +90,7 @@ export const BENCHMARK_CASES: BenchmarkCase[] = SCENARIOS.flatMap((item) =>
     text: renderText(item, variant),
     tags: BENCHMARK_TAGS,
     expectedTags: variant.profile === 'negative' ? [] : item.expectedTags,
+    expectedDynamicTags: variant.profile === 'negative' ? [] : buildExpectedDynamicTags(item, variant),
     rejectedTags: variant.profile === 'negative' ? item.expectedTags : item.rejectedTags,
   }))
 )
@@ -134,12 +136,24 @@ function scenario(
 
 function renderText(item: Scenario, variant: typeof VARIANTS[number]) {
   if (variant.profile === 'negative') {
-    return item.negativeText
+    return `${item.negativeText} The budget narrative is mostly administrative: it describes insurance, office supplies, board minutes, and routine reporting. It deliberately avoids naming service delivery, participant outcomes, or the operational phrases tied to the rejected taxonomy so the extractor must leave those fixed tags unused.`
   }
 
   const details = variant.profile === 'direct' ? item.directDetails : item.mixedDetails
   const detail = details[variant.detailIndex % details.length] ?? details[0] ?? item.subject
   const secondDetail = details[(variant.detailIndex + 1) % details.length] ?? detail
 
-  return `${variant.prefix} ${item.subject} through ${detail} and ${secondDetail}. The activities are described as measurable agreement deliverables for the recipient.`
+  return `${variant.prefix} ${item.subject} through ${detail} and ${secondDetail}. The recipient describes a phased delivery plan with intake, partner coordination, participant follow-up, and quarterly reporting. The work plan names the service population, explains how staff will document completed activities, and connects the funded work to measurable agreement deliverables. The paragraph also includes surrounding administrative details so the extractor must identify the operational phrases rather than simply matching the word funding.`
+}
+
+function buildExpectedDynamicTags(item: Scenario, variant: typeof VARIANTS[number]) {
+  const details = variant.profile === 'direct' ? item.directDetails : item.mixedDetails
+  const detail = details[variant.detailIndex % details.length] ?? details[0]
+  const secondDetail = details[(variant.detailIndex + 1) % details.length] ?? detail
+
+  return [
+    item.subject,
+    detail,
+    secondDetail,
+  ].filter(Boolean)
 }

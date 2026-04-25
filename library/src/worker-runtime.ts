@@ -46,11 +46,11 @@ export function registerTagExtractorWorker(scope: WorkerScope = self as unknown 
             throw new Error('Model is not initialized. Call loadModel() before extracting tags.')
           }
 
-          const suggestions = await extractor.extract(message.input)
+          const result = await extractor.extract(message.input)
           post(scope, {
             type: 'EXTRACT_RESULT',
             requestId: message.requestId,
-            suggestions,
+            result,
           })
         } catch (error) {
           post(scope, {

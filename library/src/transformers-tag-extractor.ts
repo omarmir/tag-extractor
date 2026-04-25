@@ -1,5 +1,4 @@
 import { resolveTagExtractorConfig } from './defaults'
-import { scoreTagSuggestions } from './scoring'
 import type {
   TagExtractionInput,
   TagExtractor,
@@ -63,9 +62,11 @@ export function createTransformersTagExtractor(inputConfig: TagExtractorScorerCo
     loadModel,
     async extract(input: TagExtractionInput) {
       try {
-        return await scoreTagSuggestions(input, config, embed)
+        const { extractTags } = await import('./scoring')
+        return await extractTags(input, embed, config)
       } catch {
-        return await scoreTagSuggestions(input, config)
+        const { extractTags } = await import('./scoring')
+        return await extractTags(input, undefined, config)
       }
     },
     reset(nextConfig: TagExtractorScorerConfigInput = {}) {

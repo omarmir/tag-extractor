@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { resolveTagExtractorConfig } from './defaults'
 import { rankTagsByKeywordOverlap } from './lexical'
-import { scoreTagSuggestions } from './scoring'
+import { extractCandidatePhrases, extractTags, scoreTagSuggestions } from './scoring'
 import type { TagDefinition } from './types'
 
 const tags: TagDefinition[] = [
@@ -49,5 +49,24 @@ describe('tag scoring', () => {
 
     expect(result[0]?.key).toBe('capacity-building')
     expect(result[0]?.score).toBeGreaterThan(0)
+  })
+
+  it('extracts dynamic candidate tags without a predefined taxonomy', async () => {
+    const result = await extractTags({
+      text: 'The program provides solar training, solar installation coaching, and community retrofit planning.',
+      tags: [],
+      config: {
+        minDynamicScore: 0,
+        maxDynamicTags: 5,
+      },
+    })
+
+    expect(result.predefined).toEqual([])
+    expect(result.dynamic.map((item) => item.label)).toContain('solar training solar')
+  })
+
+  it('generates n-gram candidates after stopword removal', () => {
+    const candidates = extractCandidatePhrases('Funding supports emergency shelter safety planning.', 1, 2)
+    expect(candidates.map((item) => item.label)).toContain('emergency shelter')
   })
 })

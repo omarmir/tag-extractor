@@ -1,6 +1,8 @@
 # Tag Extractor
 
-Nuxt extension support package for browser-side agreement tag extraction.
+Nuxt extension support package for browser-side agreement tag extraction. It
+supports both fixed taxonomy suggestions and dynamic phrase tags from the same
+narrative.
 
 This repository follows the same layout as `quality-meter`:
 
@@ -12,6 +14,13 @@ This repository follows the same layout as `quality-meter`:
 The library is intentionally independent of GCS-SSC host APIs. A future
 `gcs-agreement-tags` extension update can consume this package for tag ranking,
 worker runtime, and benchmark-calibrated defaults.
+
+Two model paths are benchmarked:
+
+- unified embedding: one small feature-extraction model ranks fixed tags and
+  dynamic phrase candidates;
+- dual model: DeBERTa zero-shot classification ranks fixed tags while a small
+  embedding model extracts dynamic phrase tags.
 
 ## Development
 

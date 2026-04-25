@@ -1,9 +1,20 @@
 # Example
 
+Use this demo to test fixed taxonomy matching and dynamic tag extraction with
+the lexical fallback. The model-backed APIs use the same scoring knobs, but
+replace the fallback similarity with Transformers.js embeddings or the dual
+zero-shot plus embedding path.
+
+<script setup lang="ts">
+import TagExtractorExample from '../.vitepress/components/TagExtractorExample.vue'
+</script>
+
+<TagExtractorExample />
+
 ```ts
 import { extractTags, resolveTagExtractorConfig } from '@browser-tag-extractor/core'
 
-const suggestions = await extractTags({
+const result = await extractTags({
   text: 'We are looking to increase the trainers ability to perform tasks by providing them training.',
   tags: [
     {
@@ -18,8 +29,6 @@ const suggestions = await extractTags({
   ],
 }, undefined, resolveTagExtractorConfig({ minScore: 0 }))
 
-console.log(suggestions[0]?.key)
+console.log(result.predefined[0]?.key)
+console.log(result.dynamic.map((item) => item.label))
 ```
-
-The lexical fallback should rank `capacity-building` for this sentence even
-when the embedding model is unavailable.

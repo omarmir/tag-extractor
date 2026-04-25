@@ -24,6 +24,10 @@ export type TagExtractorScorerConfig = {
   dtype: 'auto' | 'q8' | 'fp32' | 'fp16' | 'int8' | 'uint8' | 'q4' | 'bnb4' | 'q4f16'
   minScore: number
   maxSuggestions: number
+  maxDynamicTags: number
+  minDynamicScore: number
+  dynamicNgramMin: number
+  dynamicNgramMax: number
   semanticWeight: number
   lexicalWeight: number
   exactAliasBoost: number
@@ -36,6 +40,13 @@ export type TagExtractorScorerConfigInput = Partial<Omit<TagExtractorScorerConfi
   execution?: Partial<TagExtractorExecutionConfig>
 }
 
+export type DualModelTagExtractorConfigInput = TagExtractorScorerConfigInput & {
+  predefinedModelId?: string
+  predefinedDtype?: TagExtractorScorerConfig['dtype']
+  dynamicModelId?: string
+  dynamicDtype?: TagExtractorScorerConfig['dtype']
+}
+
 export type TagDefinition = {
   key: string
   label: Record<TagExtractorLocale, string>
@@ -45,9 +56,9 @@ export type TagDefinition = {
 
 export type TagExtractionInput = {
   text: string
-  tags: TagDefinition[]
+  tags?: TagDefinition[]
   locale?: TagExtractorLocale
-  config?: Partial<Pick<TagExtractorScorerConfig, 'minScore' | 'maxSuggestions' | 'semanticWeight' | 'lexicalWeight' | 'exactAliasBoost'>>
+  config?: Partial<Pick<TagExtractorScorerConfig, 'minScore' | 'maxSuggestions' | 'maxDynamicTags' | 'minDynamicScore' | 'dynamicNgramMin' | 'dynamicNgramMax' | 'semanticWeight' | 'lexicalWeight' | 'exactAliasBoost'>>
 }
 
 export type TagSuggestion = {
@@ -56,6 +67,20 @@ export type TagSuggestion = {
   semanticScore: number
   lexicalScore: number
   exactAliasMatches: string[]
+}
+
+export type DynamicTagSuggestion = {
+  label: string
+  score: number
+  semanticScore: number
+  lexicalScore: number
+  occurrences: number
+  ngramSize: number
+}
+
+export type TagExtractionResult = {
+  predefined: TagSuggestion[]
+  dynamic: DynamicTagSuggestion[]
 }
 
 export type TagExtractorModelStatusEvent = {
@@ -78,7 +103,7 @@ export type TagExtractorLoadCallbacks = {
 export type TagExtractor = {
   readonly config: TagExtractorScorerConfig
   loadModel(callbacks?: TagExtractorLoadCallbacks): Promise<void>
-  extract(input: TagExtractionInput): Promise<TagSuggestion[]>
+  extract(input: TagExtractionInput): Promise<TagExtractionResult>
   reset(nextConfig?: TagExtractorScorerConfigInput): void
 }
 
@@ -91,7 +116,7 @@ export type TagExtractorWorkerClientOptions = {
 
 export type TagExtractorWorkerClient = {
   loadModel(nextConfig?: TagExtractorScorerConfigInput): Promise<void>
-  extract(input: TagExtractionInput): Promise<TagSuggestion[]>
+  extract(input: TagExtractionInput): Promise<TagExtractionResult>
   reset(nextConfig?: TagExtractorScorerConfigInput): Promise<void>
   terminate(): void
   getConfig(): TagExtractorScorerConfig
@@ -124,7 +149,7 @@ export type TagExtractorWorkerEvent =
   | {
       type: 'EXTRACT_RESULT'
       requestId: string
-      suggestions: TagSuggestion[]
+      result: TagExtractionResult
     }
   | {
       type: 'WORKER_ERROR'
