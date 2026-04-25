@@ -127,6 +127,8 @@ The exploration-mode winner is DeBERTa + BGE micro at K = 20.
 It has the strongest DynamicRecall@K under the current benchmark ranking while
 staying under the 100 MB browser asset budget.
 
+The public library default is L12 at K = 5, which keeps one bundled embedding model while scoring F1 `0.420` and DynamicRecall@K `0.636`.
+
 Diversity is normalized against the available fixed taxonomy size. In this
 corpus it mainly acts as a guardrail against repeated or collapsed suggestion
 lists.

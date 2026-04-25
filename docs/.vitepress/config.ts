@@ -1,8 +1,12 @@
+import { cpSync, existsSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
+import { resolve } from 'node:path'
 import tailwindcss from '@tailwindcss/vite'
 import type { PluginOption } from 'vite'
 import { defineConfig } from 'vitepress'
 
 const base = process.env.VITE_BASE_PATH ?? '/'
+const configDir = fileURLToPath(new URL('.', import.meta.url))
 
 export default defineConfig({
   base,
@@ -12,7 +16,10 @@ export default defineConfig({
     ['link', { rel: 'icon', href: `${base}favicon.svg`, type: 'image/svg+xml' }],
   ],
   vite: {
-    plugins: [tailwindcss() as unknown as PluginOption],
+    plugins: [
+      tailwindcss() as unknown as PluginOption,
+      copyBundledModels() as unknown as PluginOption,
+    ],
   },
   themeConfig: {
     nav: [
@@ -45,3 +52,16 @@ export default defineConfig({
     ],
   },
 })
+
+function copyBundledModels() {
+  return {
+    name: 'copy-bundled-tag-extractor-models',
+    closeBundle() {
+      const source = resolve(configDir, '../../library/models')
+      const target = resolve(configDir, '../.vitepress/dist/models')
+      if (existsSync(source)) {
+        cpSync(source, target, { recursive: true })
+      }
+    },
+  }
+}

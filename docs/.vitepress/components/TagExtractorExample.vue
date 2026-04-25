@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue'
 import {
-  extractTags,
-  resolveTagExtractorConfig,
-  type TagDefinition,
-  type TagExtractionResult,
+  createTagExtractor,
+  type PredefinedTag,
+  type TagExtractorResult,
 } from '@browser-tag-extractor/core'
 
 const sampleText = `The document describes a developer documentation portal with API reference cleanup, code example testing, and release note automation. The team will validate each example against the current SDK, update the knowledge base navigation, and publish a short migration guide for users.`
 
-const defaultTags: TagDefinition[] = [
+const defaultTags: PredefinedTag[] = [
   tag('software-engineering', 'Software engineering', 'Application code, APIs, frontend work, backend services, testing, refactoring, or developer workflows.', ['api', 'frontend', 'backend', 'tests']),
   tag('content-documentation', 'Content and documentation', 'Documentation, knowledge bases, release notes, editorial workflows, training material, or style guidance.', ['documentation', 'knowledge base', 'release notes', 'style guide']),
   tag('product-management', 'Product management', 'Roadmaps, product discovery, prioritization, release planning, requirements, or feature adoption.', ['roadmap', 'requirements', 'product discovery', 'feature adoption']),
@@ -19,14 +18,12 @@ const defaultTags: TagDefinition[] = [
 ]
 
 const text = ref(sampleText)
-const taxonomyText = ref(defaultTags.map((item) => `${item.key}: ${item.label.en} - ${item.description.en}`).join('\n'))
-const minScore = ref(0.2)
-const maxSuggestions = ref(4)
-const minDynamicScore = ref(0.34)
-const maxDynamicTags = ref(6)
-const dynamicNgramMax = ref(3)
+const taxonomyText = ref(defaultTags.map((item) => `${item.key}: ${item.label} - ${item.description}`).join('\n'))
+const k = ref(5)
+const allowDynamicTags = ref(true)
 const status = ref('Ready')
-const result = ref<TagExtractionResult>({ predefined: [], dynamic: [] })
+const result = ref<TagExtractorResult>({ predefined: [], dynamic: [] })
+const extractor = createTagExtractor()
 
 let runToken = 0
 
@@ -44,13 +41,13 @@ const parsedTags = computed(() => taxonomyText.value
       labelPart.toLowerCase().split(/\s+/).filter((word) => word.length > 4),
     )
   })
-  .filter((item) => item.key && item.label.en))
+    .filter((item) => item.key && item.label))
 
 const topPredefined = computed(() => result.value.predefined)
 const topDynamic = computed(() => result.value.dynamic)
 
 onMounted(() => {
-  watch([text, taxonomyText, minScore, maxSuggestions, minDynamicScore, maxDynamicTags, dynamicNgramMax], () => {
+  watch([text, taxonomyText, k, allowDynamicTags], () => {
     const token = runToken + 1
     runToken = token
     status.value = 'Calculating'
@@ -65,17 +62,12 @@ onMounted(() => {
 async function runExtractor() {
   const token = runToken
   status.value = 'Calculating'
-  result.value = await extractTags({
+  result.value = await extractor.extract({
     text: text.value,
-    tags: parsedTags.value,
-    config: {
-      minScore: minScore.value,
-      maxSuggestions: maxSuggestions.value,
-      minDynamicScore: minDynamicScore.value,
-      maxDynamicTags: maxDynamicTags.value,
-      dynamicNgramMax: dynamicNgramMax.value,
-    },
-  }, undefined, resolveTagExtractorConfig())
+    predefinedTags: parsedTags.value,
+    allowDynamicTags: allowDynamicTags.value,
+    k: k.value,
+  })
 
   if (token === runToken) {
     status.value = 'Ready'
@@ -84,23 +76,20 @@ async function runExtractor() {
 
 function resetExample() {
   text.value = sampleText
-  taxonomyText.value = defaultTags.map((item) => `${item.key}: ${item.label.en} - ${item.description.en}`).join('\n')
-  minScore.value = 0.2
-  maxSuggestions.value = 4
-  minDynamicScore.value = 0.34
-  maxDynamicTags.value = 6
-  dynamicNgramMax.value = 3
+  taxonomyText.value = defaultTags.map((item) => `${item.key}: ${item.label} - ${item.description}`).join('\n')
+  k.value = 5
+  allowDynamicTags.value = true
 }
 
 function scoreLabel(value: number) {
   return value.toFixed(3)
 }
 
-function tag(key: string, label: string, description: string, aliases: string[]): TagDefinition {
+function tag(key: string, label: string, description: string, aliases: string[]): PredefinedTag {
   return {
     key,
-    label: { en: label, fr: label },
-    description: { en: description, fr: description },
+    label,
+    description,
     aliases,
   }
 }
@@ -132,29 +121,13 @@ function tag(key: string, label: string, description: string, aliases: string[])
 
       <div class="tag-example__panel tag-example__controls">
         <label>
-          <span>Minimum fixed score</span>
-          <input v-model.number="minScore" type="range" min="0" max="1" step="0.01">
-          <strong>{{ scoreLabel(minScore) }}</strong>
+          <span>Suggestion count K</span>
+          <input v-model.number="k" type="range" min="1" max="20" step="1">
+          <strong>{{ k }}</strong>
         </label>
-        <label>
-          <span>Fixed tag limit</span>
-          <input v-model.number="maxSuggestions" type="range" min="1" max="8" step="1">
-          <strong>{{ maxSuggestions }}</strong>
-        </label>
-        <label>
-          <span>Minimum dynamic score</span>
-          <input v-model.number="minDynamicScore" type="range" min="0" max="1" step="0.01">
-          <strong>{{ scoreLabel(minDynamicScore) }}</strong>
-        </label>
-        <label>
-          <span>Dynamic tag limit</span>
-          <input v-model.number="maxDynamicTags" type="range" min="1" max="12" step="1">
-          <strong>{{ maxDynamicTags }}</strong>
-        </label>
-        <label>
-          <span>Maximum n-gram size</span>
-          <input v-model.number="dynamicNgramMax" type="range" min="1" max="4" step="1">
-          <strong>{{ dynamicNgramMax }}</strong>
+        <label class="tag-example__toggle">
+          <input v-model="allowDynamicTags" type="checkbox">
+          <span>Dynamic tags</span>
         </label>
         <div class="tag-example__buttons">
           <button type="button" @click="runExtractor">Run extractor</button>
@@ -279,7 +252,7 @@ function tag(key: string, label: string, description: string, aliases: string[])
 
 .tag-example__controls {
   grid-column: 1 / -1;
-  grid-template-columns: repeat(5, minmax(120px, 1fr)) minmax(220px, auto);
+  grid-template-columns: minmax(180px, 1fr) minmax(140px, auto) minmax(220px, auto);
   align-items: end;
   border-top: 1px solid var(--vp-c-divider);
   padding-top: 16px;
@@ -293,6 +266,16 @@ function tag(key: string, label: string, description: string, aliases: string[])
 
 .tag-example input[type="range"] {
   width: 100%;
+  accent-color: var(--vp-c-brand-1);
+}
+
+.tag-example__toggle {
+  display: inline-flex !important;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.tag-example__toggle input {
   accent-color: var(--vp-c-brand-1);
 }
 

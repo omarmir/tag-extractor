@@ -14,7 +14,7 @@ import {
   type TagExtractionResult,
   type TagExtractorScorerConfig,
   type TagSuggestion,
-} from '@browser-tag-extractor/core'
+} from '@browser-tag-extractor/core/benchmark'
 import type { ModelCandidate } from '../benchmark/model-catalog'
 import { BENCHMARK_CASES } from '../benchmark/cases'
 import { getBenchmarkModelCandidates } from '../benchmark/model-catalog'
@@ -438,6 +438,7 @@ function renderModelBakeoffDoc(evaluations: BenchmarkEvaluation[]) {
   const labels = createCandidateLabels(evaluations)
   const accurateWinner = findAccurateWinner(evaluations)
   const explorationWinner = findExplorationWinner(evaluations)
+  const defaultEvaluation = completed.find((item) => item.id === 'all-minilm-l12-v2-q8' && item.mode === 'exploration' && item.k === 5)
   const explorationKs = [...new Set(completed
     .filter((item) => item.mode === 'exploration')
     .map((item) => item.k))]
@@ -526,6 +527,12 @@ tag set.
 The exploration-mode winner is ${renderWinnerName(explorationWinner, labels)}.
 It has the strongest DynamicRecall@K under the current benchmark ranking while
 staying under the 100 MB browser asset budget.
+
+The public library default is ${labels.get('all-minilm-l12-v2-q8')?.label ?? 'L12'}${
+  defaultEvaluation?.summary
+    ? ` at K = ${defaultEvaluation.k}, which keeps one bundled embedding model while scoring F1 \`${formatMetric(defaultEvaluation.summary.meanF1)}\` and DynamicRecall@K \`${formatMetric(defaultEvaluation.summary.meanDynamicRecall)}\`.`
+    : ', which keeps one bundled embedding model for the main package API.'
+}
 
 Diversity is normalized against the available fixed taxonomy size. In this
 corpus it mainly acts as a guardrail against repeated or collapsed suggestion

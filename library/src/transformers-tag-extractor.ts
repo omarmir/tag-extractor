@@ -85,8 +85,8 @@ function configureTransformers(
   transformers.env.allowRemoteModels = config.modelSource.mode === 'huggingface' || config.modelSource.mode === 'url'
   transformers.env.allowLocalModels = config.modelSource.mode === 'local'
   transformers.env.useBrowserCache = config.modelSource.useBrowserCache === 'auto'
-    ? true
-    : config.modelSource.useBrowserCache
+    ? typeof caches !== 'undefined'
+    : config.modelSource.useBrowserCache && typeof caches !== 'undefined'
 
   if (config.modelSource.mode === 'local') {
     transformers.env.localModelPath = config.modelSource.localModelPath

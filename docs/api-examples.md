@@ -1,23 +1,30 @@
 # API Examples
 
-## Lexical Fallback
+## Direct Extraction
 
 ```ts
-import { extractTags } from '@browser-tag-extractor/core'
+import { extractTextTags } from '@browser-tag-extractor/core'
 
-const suggestions = await extractTags({ text, tags })
+const suggestions = await extractTextTags({
+  text,
+  predefinedTags,
+  allowDynamicTags: true,
+  k: 5,
+})
 ```
 
-## Worker Runtime
+## Reused Extractor
 
 ```ts
-import { createTagExtractorWorkerClient } from '@browser-tag-extractor/core'
+import { createTagExtractor } from '@browser-tag-extractor/core'
 
-const client = createTagExtractorWorkerClient({
-  config: {},
-  createWorker: () => new Worker('/tag-extractor-worker.js', { type: 'module' }),
+const extractor = createTagExtractor()
+await extractor.loadModel()
+
+const suggestions = await extractor.extract({
+  text,
+  predefinedTags,
+  allowDynamicTags: false,
+  k: 2,
 })
-
-await client.loadModel()
-const suggestions = await client.extract({ text, tags })
 ```

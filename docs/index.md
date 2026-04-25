@@ -15,9 +15,9 @@ hero:
 
 features:
   - title: Host Agnostic
-    details: The core library knows about text, tags, scoring, and workers, not host routes or persistence.
+    details: The public API only needs text, predefined tags, a dynamic-tags flag, and K.
   - title: Browser Friendly
-    details: Designed for small embedding models, local assets, cached vectors, and one shared worker per page.
+    details: Ships with the default L12 embedding model files for local browser use.
   - title: Benchmark Driven
     details: Tools compare lexical-only scoring and model-backed scoring over a 300-example general document corpus.
 ---

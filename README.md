@@ -11,9 +11,9 @@ This repository follows the same layout as `quality-meter`:
 - `tools/benchmark/`: benchmark datasets and model catalog.
 - `tools/scripts/`: report and packaging scripts.
 
-The library is intentionally independent of any host application. It works with
-plain text, tag definitions, scoring configuration, and optional browser worker
-runtime helpers.
+The library is intentionally independent of any host application. The public API
+takes plain text, predefined tags, whether dynamic tags are allowed, and a K
+value for ranked suggestions.
 
 Two model paths are benchmarked:
 
@@ -23,10 +23,9 @@ Two model paths are benchmarked:
   embedding model extracts dynamic phrase tags.
 
 Benchmarks report both accurate mode for auto-applying a small final tag set and
-exploration mode for ranked top-K suggestions. The current accurate-mode winner
-is `Xenova/paraphrase-MiniLM-L3-v2` with a corpus-calibrated top-2 fixed
-suggestion cap. The strongest exploration-mode dynamic recall comes from the
-dual DeBERTa plus BGE micro path at K = 20.
+exploration mode for ranked top-K suggestions. The library default is
+`Xenova/all-MiniLM-L12-v2`, which is the best practical single-model default
+from the current bakeoff.
 
 The scorer also applies a generic negation penalty when configured tag terms
 appear near cues such as "no", "not", or "without".

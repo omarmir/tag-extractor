@@ -10,7 +10,10 @@ The package does three things:
 - normalizes tag definitions into scoring text;
 - combines semantic embedding similarity with lexical and alias boosts for fixed tags;
 - extracts dynamic n-gram tags with a KeyBERT-style document-similarity pass;
-- exposes the same worker-client pattern used by the quality-meter package.
+- ships the default `Xenova/all-MiniLM-L12-v2` model files for local use.
+
+The main API is intentionally narrow: pass `text`, `predefinedTags`,
+`allowDynamicTags`, and `k`.
 
 It does not save tags, own persistence, or call host application routes. Those
 responsibilities stay with the consuming application.

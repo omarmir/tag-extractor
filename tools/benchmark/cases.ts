@@ -1,4 +1,4 @@
-import type { TagDefinition } from '@browser-tag-extractor/core'
+import type { TagDefinition } from '@browser-tag-extractor/core/benchmark'
 
 export type BenchmarkCase = {
   id: string

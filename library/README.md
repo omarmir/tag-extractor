@@ -1,34 +1,47 @@
 # @browser-tag-extractor/core
 
-Host-agnostic browser tag extraction for configured tag vocabularies.
+Browser-side tag extraction for fixed taxonomy suggestions and optional dynamic
+phrase tags.
 
-The package exposes:
+The package uses `Xenova/all-MiniLM-L12-v2` by default and includes the model
+files in the Git-installable package snapshot.
 
-- lexical fallback ranking;
-- Transformers.js embedding-backed ranking;
-- model configuration defaults;
-- evaluation helpers;
-- a worker runtime and worker client.
-
-## Install
+## Install From GitHub
 
 ```bash
-bun add @browser-tag-extractor/core @huggingface/transformers
+npm install github:omarmir/tag-extractor#package-release
+bun add github:omarmir/tag-extractor#package-release
 ```
+
+The package includes `models/`. Serve that directory at `/models/` in your app,
+or at your Vite `BASE_URL` plus `models/` when deploying under a subpath.
 
 ## Usage
 
 ```ts
-import { createTransformersTagExtractor } from '@browser-tag-extractor/core'
+import { createTagExtractor } from '@browser-tag-extractor/core'
 
-const extractor = createTransformersTagExtractor({
-  modelId: 'Xenova/all-MiniLM-L6-v2',
-  modelSource: {
-    mode: 'local',
-    localModelPath: '/models/',
-  },
-})
-
+const extractor = createTagExtractor()
 await extractor.loadModel()
-const suggestions = await extractor.extract({ text, tags })
+
+const result = await extractor.extract({
+  text: 'The document describes API reference cleanup and release note automation.',
+  predefinedTags: [
+    {
+      key: 'content-documentation',
+      label: 'Content and documentation',
+      description: 'Documentation, knowledge bases, release notes, editorial workflows, or style guidance.',
+      aliases: ['documentation', 'release notes'],
+    },
+  ],
+  allowDynamicTags: true,
+  k: 5,
+})
 ```
+
+Returned predefined tags include `key`, `label`, and `score`. Returned dynamic
+tags include `label` and `score`.
+
+Benchmark-only model, quantization, and source configuration helpers are
+available from `@browser-tag-extractor/core/benchmark` for this repository's
+report runners, but they are not part of the main consumer API.

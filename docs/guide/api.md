@@ -1,59 +1,96 @@
 # API
 
+The public API is intentionally small. The library ships with
+`Xenova/all-MiniLM-L12-v2` as the default local model, so callers choose the
+text, the predefined taxonomy, whether dynamic tags are allowed, and the K value
+for the ranked suggestions.
+
+## Installation
+
+```bash
+npm install github:omarmir/tag-extractor#package-release
+bun add github:omarmir/tag-extractor#package-release
+```
+
+The Git-installable package includes the model files under `models/`. Serve
+that directory at `/models/`, or at your Vite `BASE_URL` plus `models/` when
+deploying under a subpath.
+
+## Usage
+
 ```ts
-import {
-  createDualModelTagExtractor,
-  createTransformersTagExtractor,
-} from '@browser-tag-extractor/core'
+import { createTagExtractor } from '@browser-tag-extractor/core'
 
-const extractor = createTransformersTagExtractor({
-  modelSource: {
-    mode: 'local',
-    localModelPath: '/models/',
-  },
-})
-
+const extractor = createTagExtractor()
 await extractor.loadModel()
 
-const tags = [
-  {
-    key: 'capacity-building',
-    label: { en: 'Capacity building', fr: 'Renforcement des capacités' },
-    description: {
-      en: 'Training, staffing, tools, and organizational capacity.',
-      fr: 'Formation, dotation, outils et capacité organisationnelle.',
-    },
-    aliases: ['training', 'skills development'],
-  },
-]
-
 const result = await extractor.extract({
-  text: 'The document describes training and coaching for local coordinators.',
-  tags,
+  text: 'The document describes API reference cleanup and release note automation.',
+  predefinedTags: [
+    {
+      key: 'content-documentation',
+      label: 'Content and documentation',
+      description: 'Documentation, knowledge bases, release notes, editorial workflows, or style guidance.',
+      aliases: ['documentation', 'release notes'],
+    },
+  ],
+  allowDynamicTags: true,
+  k: 5,
 })
 ```
 
-`result.predefined` contains configured taxonomy matches. `result.dynamic`
-contains organic phrase tags extracted from the narrative.
-
-For the highest-accuracy benchmark path, load a zero-shot classifier for fixed
-tags and an embedding model for dynamic KeyBERT-style extraction:
+For one-off calls, use `extractTextTags(...)`:
 
 ```ts
-const dualExtractor = createDualModelTagExtractor({
-  predefinedModelId: 'Xenova/nli-deberta-v3-xsmall',
-  dynamicModelId: 'Xenova/all-MiniLM-L6-v2',
-  predefinedDtype: 'q8',
-  dynamicDtype: 'q8',
-})
+import { extractTextTags } from '@browser-tag-extractor/core'
 
-const dualResult = await dualExtractor.extract({
-  text: 'The document describes training and coaching for local coordinators.',
-  tags,
+const result = await extractTextTags({
+  text,
+  predefinedTags,
+  allowDynamicTags: false,
+  k: 2,
 })
 ```
 
-Returned fixed suggestions include the final score, semantic score, lexical
-score, any exact alias matches that contributed to the boost, and any negated
-term matches that triggered the generic absence penalty. Dynamic suggestions
-include the label, score, n-gram size, and occurrence count.
+## Request
+
+```ts
+type TagExtractorRequest = {
+  text: string
+  predefinedTags: PredefinedTag[]
+  allowDynamicTags?: boolean
+  k?: number
+}
+
+type PredefinedTag = {
+  key: string
+  label: string
+  description?: string
+  aliases?: string[]
+}
+```
+
+- `text`: the text to tag.
+- `predefinedTags`: your fixed taxonomy.
+- `allowDynamicTags`: set `false` when you only want taxonomy matches.
+- `k`: the ranked suggestion count for both predefined and dynamic tags.
+
+## Result
+
+```ts
+type TagExtractorResult = {
+  predefined: Array<{
+    key: string
+    label: string
+    score: number
+  }>
+  dynamic: Array<{
+    label: string
+    score: number
+  }>
+}
+```
+
+The benchmark-only model, dtype, and source configuration APIs are kept out of
+the main package entrypoint. Benchmark tooling imports them from
+`@browser-tag-extractor/core/benchmark`.
