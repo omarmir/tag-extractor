@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tag Extractor">
-  <path fill="#2563eb" d="M8 14a6 6 0 0 1 6-6h20a8 8 0 0 1 5.66 2.34l14 14a8 8 0 0 1 0 11.32l-18 18a8 8 0 0 1-11.32 0l-14-14A8 8 0 0 1 8 34V14Z"/>
-  <circle cx="22" cy="22" r="5" fill="#eff6ff"/>
-  <path fill="#93c5fd" d="M31 25h18v6H31zM25 35h18v6H25z"/>
-</svg>

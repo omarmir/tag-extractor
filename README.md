@@ -1,32 +1,21 @@
-# Tag Extractor
+# @browser-tag-extractor/core
 
-Browser-side TypeScript library for extracting tags from plain text. It ranks
-predefined taxonomy tags and can also suggest dynamic slug-style tags from the
-same document.
+Browser-side tag extraction for fixed taxonomy suggestions and optional dynamic
+slug-style tags.
 
-This repository follows the same layout as `quality-meter`:
+The package uses `Xenova/all-MiniLM-L12-v2` by default and includes the model
+files in the Git-installable package snapshot. The main API does not expose
+model choice, quantization, thresholds, or remote model loading.
 
-- `library/`: the host-agnostic TypeScript package.
-- `docs/`: VitePress documentation.
-- `tools/benchmark/`: benchmark datasets and model catalog.
-- `tools/scripts/`: report and packaging scripts.
-
-The library is intentionally independent of any host application. The public API
-takes plain text, predefined tags, whether dynamic tags are allowed, and a K
-value for ranked suggestions. The default runtime uses the bundled
-`Xenova/all-MiniLM-L12-v2` model and does not expose model selection or
-quantization settings to normal consumers.
-
-## Install
+## Install From GitHub
 
 ```bash
 npm install github:omarmir/tag-extractor#package-release
 bun add github:omarmir/tag-extractor#package-release
 ```
 
-The package snapshot includes `library/models/` in the published package as
-`models/`. Serve those files at `/models/`, or at your Vite `BASE_URL` plus
-`models/` when deploying under a subpath.
+The package includes `models/`. Serve that directory at `/models/` in your app,
+or at your Vite `BASE_URL` plus `models/` when deploying under a subpath.
 
 ## Usage
 
@@ -42,7 +31,7 @@ const result = await extractor.extract({
     {
       key: 'content-documentation',
       label: 'Content and documentation',
-      description: 'Documentation, knowledge bases, release notes, or editorial workflows.',
+      description: 'Documentation, knowledge bases, release notes, editorial workflows, or style guidance.',
       aliases: ['documentation', 'release notes'],
     },
   ],
@@ -51,31 +40,11 @@ const result = await extractor.extract({
 })
 ```
 
-Two model paths are benchmarked:
+Returned predefined tags include `key`, `label`, and `score`. Returned dynamic
+tags include `label` and `score`, with labels normalized as lowercase
+hyphenated strings such as `data-analytics`, not display phrases such as
+`data analytics`.
 
-- unified embedding: one small feature-extraction model ranks fixed tags and
-  dynamic phrase candidates, then returns dynamic labels as hyphenated tags;
-- dual model: DeBERTa zero-shot classification ranks fixed tags while a small
-  embedding model extracts dynamic tag candidates.
-
-Benchmarks report both accurate mode for auto-applying a small final tag set and
-exploration mode for ranked top-K suggestions. The library default is
-`Xenova/all-MiniLM-L12-v2`, which is the best practical single-model default
-from the current bakeoff.
-
-The scorer also applies a generic negation penalty when configured tag terms
-appear near cues such as "no", "not", or "without".
-
-Dynamic tags are returned as lowercase hyphenated labels, for example
-`data-analytics` rather than `data analytics`. This keeps predefined and dynamic
-tag output in the same key-like shape.
-
-## Development
-
-```bash
-bun install
-bun run build:library
-bun run report:main
-bun run report:model-bakeoff
-bun run docs:dev
-```
+Benchmark-only model, quantization, and source configuration helpers are
+available from `@browser-tag-extractor/core/benchmark` for this repository's
+report runners, but they are not part of the main consumer API.
